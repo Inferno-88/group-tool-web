@@ -10,13 +10,9 @@ interface AvailablePersons {
 }
 
 const getUrl = (available: AvailablePersons) =>
-  `http://192.168.178.19:8080/splits/generate?raid1=${available.raid1.join(
+  `${process.env.REACT_APP_URL}/splits/generate?raid1=${available.raid1.join(
     ","
   )}&raid2=${available.raid2.join(",")}`;
-
-const url: string =
-  "http://192.168.178.19:8080/splits/generate?raid1=dave,paco,mist,zul,frostyboy,mayv,kelthal,hallheim,fiachna,bullette,doggle,deadly,aryl,tj,nurgl,barrious,bride,sala,ethupan,koobo,cotolento,edenian,jj,kondo,swerved,emipian,dauran,jeyp,khaya,nagosa,haumea&raid2=dave,paco,mist,zul,frostyboy,mayv,kelthal,hallheim,bullette,fiachna,deadly,tj,aryl,barrious,bride,nurgl,sala,ethupan,koobo,edenian,cotolento,jj,kondo,swerved,emipian,dauran,jeyp,haumea,khaya,nagosa";
-//"http://192.168.178.19:8080/splits/generate?raid1=dave,paco,tj,khaya,aryl&raid2=dave,jj,paco,bulettle,jeyp";
 
 function App() {
   const [splits, setSplits] = useState<Split[]>([]);

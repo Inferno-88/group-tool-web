@@ -17,15 +17,15 @@ export const PersonsPage = ({ generate }: Props) => {
   const [raid2, setRaid2] = useState<string[]>([]);
 
   useEffect(() => {
-    // const url = "http://192.168.178.19:8080/persons";
-    // fetch(url)
-    //   .then((data) => data.json())
-    //   .then((data) => {
-    //     setPersons(data);
-    //   });
+    const url = `${process.env.REACT_APP_URL}/persons`;
+    fetch(url)
+      .then((data) => data.json())
+      .then((data) => {
+        setPersons(data);
+      });
 
     // MOCKS
-    setPersons(mockedPersons);
+    //setPersons(mockedPersons);
   }, []);
 
   return (
