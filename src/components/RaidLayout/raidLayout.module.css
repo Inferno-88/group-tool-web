@@ -1,0 +1,31 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+        "tanks dps items items items"
+            "healers dps items items items"
+            "available available items items items"
+            ". . items items items";
+}
+
+.tanks {
+    grid-area: tanks;
+}
+
+.dps {
+    grid-area: dps;
+}
+
+.healers {
+    grid-area: healers;
+}
+
+.available {
+    grid-area: available;
+}
+
+.items {
+    grid-area: items;
+}
