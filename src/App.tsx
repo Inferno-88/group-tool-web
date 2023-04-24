@@ -18,14 +18,14 @@ function App() {
   const [splits, setSplits] = useState<Split[]>([]);
 
   const generate = (available: AvailablePersons) => {
-    fetch(getUrl(available))
-      .then((data) => data.json())
-      .then((data) => {
-        setSplits(data);
-      });
+    // fetch(getUrl(available))
+    //   .then((data) => data.json())
+    //   .then((data) => {
+    //     setSplits(data);
+    //   });
 
     // MOCKS
-    //setSplits(mockedSplits);
+    setSplits(mockedSplits);
   };
 
   return (
