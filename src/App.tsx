@@ -1,6 +1,6 @@
 import { MainPage } from "./components/MainPage/MainPage";
 import { useState } from "react";
-import { Split } from "src/types";
+import { Character, Split } from "src/types";
 import { mockedSplits } from "src/mocks/mockedSplits";
 import { PersonsPage } from "./components/PersonsPage/PersonsPage";
 
@@ -33,10 +33,59 @@ function App() {
     }
   };
 
+  const onAddorRemove =
+    (splitIndex: number) =>
+    (raidName: "raid1" | "raid2") =>
+    (character: Character, action: "add" | "remove") => {
+      const currentSplit = splits[splitIndex];
+
+      let newOccupied: Character[];
+      if (action === "add") {
+        newOccupied = [...currentSplit[raidName].occupiedCharacters, character];
+      } else {
+        newOccupied = currentSplit[raidName].occupiedCharacters.filter(
+          (c) => c.name !== character.name
+        );
+      }
+
+      const newSplit: Split = {
+        ...currentSplit,
+        [raidName]: {
+          ...currentSplit[raidName],
+          occupiedCharacters: newOccupied,
+        },
+      };
+
+      if (process.env.REACT_APP_USE_MOCKS !== "true") {
+        fetch(`${process.env.REACT_APP_URL}/splits`, {
+          method: "PUT",
+          body: JSON.stringify(newSplit),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+          .then((data) => data.json())
+          .then((data) => {
+            setSplits((oldSplits) => {
+              const newSplits = [...oldSplits];
+              newSplits[splitIndex] = data;
+              return newSplits;
+            });
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      } else {
+        // MOCKS
+        console.log("MOCKS");
+        setSplits(mockedSplits);
+      }
+    };
+
   return (
     <div>
       {splits.length > 0 ? (
-        <MainPage splits={splits} />
+        <MainPage splits={splits} onAddorRemove={onAddorRemove} />
       ) : (
         <PersonsPage generate={generate} loading={loading} />
       )}
