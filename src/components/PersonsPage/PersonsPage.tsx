@@ -4,6 +4,7 @@ import { Person } from "src/types";
 
 interface Props {
   generate: (available: AvailablePersons) => void;
+  loading: boolean;
 }
 
 interface AvailablePersons {
@@ -11,21 +12,23 @@ interface AvailablePersons {
   raid2: string[];
 }
 
-export const PersonsPage = ({ generate }: Props) => {
+export const PersonsPage = ({ generate, loading }: Props) => {
   const [persons, setPersons] = useState<Person[]>([]);
   const [raid1, setRaid1] = useState<string[]>([]);
   const [raid2, setRaid2] = useState<string[]>([]);
 
   useEffect(() => {
-    const url = `${process.env.REACT_APP_URL}/persons`;
-    // fetch(url)
-    //   .then((data) => data.json())
-    //   .then((data) => {
-    //     setPersons(data);
-    //   });
-
-    // MOCKS
-    setPersons(mockedPersons);
+    if (process.env.REACT_APP_USE_MOCKS !== "true") {
+      const url = `${process.env.REACT_APP_URL}/persons`;
+      fetch(url)
+        .then((data) => data.json())
+        .then((data) => {
+          setPersons(data);
+        });
+    } else {
+      // MOCKS
+      setPersons(mockedPersons);
+    }
   }, []);
 
   const selectAll = () => {
@@ -44,12 +47,14 @@ export const PersonsPage = ({ generate }: Props) => {
       <div className="flex mb-7 justify-center">
         <div className="mr-6">
           <button
+            disabled={loading}
             className="block border font-bold py-2 px-4 rounded h-10 mb-6 w-full"
             onClick={() => selectAll()}
           >
             Select All
           </button>
           <button
+            disabled={loading}
             className="block border font-bold py-2 px-4 rounded h-10 w-full"
             onClick={() => clearAll()}
           >
@@ -63,10 +68,11 @@ export const PersonsPage = ({ generate }: Props) => {
           {raid2.join(", ")}
         </div>
         <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded h-10"
+          disabled={loading}
+          className="bg-blue-500 hover:bg-blue-700 disabled:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded h-10"
           onClick={() => generate({ raid1, raid2 })}
         >
-          Generate!
+          {loading ? "Loading..." : "Generate!"}
         </button>
       </div>
       {persons.length > 0 ? (
