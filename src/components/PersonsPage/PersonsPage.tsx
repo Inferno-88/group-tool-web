@@ -42,10 +42,10 @@ export const PersonsPage = ({ generate, loading }: Props) => {
   };
 
   return (
-    <div className="text-center p-5">
-      <h1 className="mb-4 text-3xl font-bold">Choose available persons</h1>
-      <div className="flex mb-7 justify-center">
-        <div className="mr-6">
+    <div className="text-center p-3 h-screen flex flex-col">
+      <h1 className="mb-4 text-2xl font-bold">Choose available persons</h1>
+      <div className="flex mb-7 justify-center h-1/3">
+        <div className="mr-4">
           <button
             disabled={loading}
             className="block border font-bold py-2 px-4 rounded h-10 mb-6 w-full"
@@ -61,10 +61,10 @@ export const PersonsPage = ({ generate, loading }: Props) => {
             Clear All
           </button>
         </div>
-        <div className="border w-1/3 p-3 mr-6 capitalize h-52">
+        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">
           {raid1.join(", ")}
         </div>
-        <div className="border w-1/3 p-3 mr-6 capitalize h-52">
+        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">
           {raid2.join(", ")}
         </div>
         <button
@@ -76,16 +76,16 @@ export const PersonsPage = ({ generate, loading }: Props) => {
         </button>
       </div>
       {persons.length > 0 ? (
-        <div className="flex flex-wrap">
+        <div className="flex flex-col flex-wrap h-2/3">
           {persons.map((person, index) => (
-            <div className="border mb-2 gap-1 w-96 flex mr-2" key={person.name}>
-              <p className="capitalize p-2.5 w-1/4">{person.name}</p>
-              <label htmlFor={`raid1${person.name}`} className="mr-2 p-2.5">
+            <div className="border text-sm mb-2 flex mr-2 justify-around" key={person.name}>
+              <p className="capitalize p-2 w-1/4">{person.name}</p>
+              <label htmlFor={`raid1${person.name}`} className="mr-1 p-2 whitespace-nowrap">
                 <input
                   type="checkbox"
                   id={`raid1${person.name}`}
                   name={`raid1${person.name}`}
-                  className="mr-2"
+                  className="mr-1"
                   checked={raid1.includes(person.name)}
                   onChange={(e) => {
                     if (e.target.checked) {
@@ -98,12 +98,12 @@ export const PersonsPage = ({ generate, loading }: Props) => {
                 Wednesday
               </label>
 
-              <label htmlFor={`raid2${person.name}`} className="mr-2 p-2.5">
+              <label htmlFor={`raid2${person.name}`} className="mr-1 p-2 whitespace-nowrap">
                 <input
                   type="checkbox"
                   id={`raid2${person.name}`}
                   name={`raid2${person.name}`}
-                  className="mr-2"
+                  className="mr-1"
                   checked={raid2.includes(person.name)}
                   onChange={(e) => {
                     if (e.target.checked) {

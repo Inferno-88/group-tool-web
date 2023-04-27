@@ -4,6 +4,7 @@ import {
   CharacterClass,
   characterColorsText,
   ItemCharactersMap,
+  FreeItem,
 } from "src/types";
 import styles from "src/components/RaidLayout/raidLayout.module.css";
 
@@ -19,9 +20,9 @@ export const RaidLayout = ({
   console.log(raid);
 
   return (
-    <div className="border border-slate-200 rounded shadow-lg shadow-slate-100 w-full">
-      <h3 className="text-lg font-semibold">{name}</h3>
+    <div className="border border-slate-200 rounded shadow-lg shadow-slate-100 w-full h-screen">
       <div className={`${styles.container}`}>
+        <h3 className={`text-md font-semibold ${styles.title}`}>{name}</h3>
         <GroupLayout
           group={raid.tanks}
           name={"Tanks"}
@@ -51,6 +52,7 @@ export const RaidLayout = ({
           onAction={onAddorRemove}
         />
         <ItemsLayout items={raid.itemCharactersMap} />
+        <FreeItems freeItems={raid.freeItems} />
       </div>
     </div>
   );
@@ -71,7 +73,7 @@ const GroupLayout = ({
 }) => {
   return (
     <div className={`border border-slate-200 ${className}`}>
-      <p className="font-semibold">{name}</p>
+      <p className="font-sm font-semibold">{name}</p>
       {group.map((character) => (
         <CharacterLayout
           key={character.name}
@@ -95,7 +97,7 @@ const CharacterLayout = ({
   action?: "add" | "remove" | "none";
   onAction?: (character: Character, action: "add" | "remove") => void;
 }) => {
-  const style = `capitalize px-1 border relative ${
+  const style = `capitalize px-1 border relative text-sm ${
     characterColorsText[character.className as CharacterClass]
   } ${className}`;
 
@@ -105,7 +107,7 @@ const CharacterLayout = ({
       {action !== "none" && (
         <div
           onClick={(e) => onAction(character, action)}
-          className=" bg-zinc-600 text-red-100 border border-black rounded-sm h-4 w-4 absolute top-1 right-1 leading-3 cursor-pointer"
+          className="bg-zinc-600 text-red-100 border border-black rounded-sm absolute top-0.5 right-1 cursor-pointer h-3 w-3 leading-[8px]"
         >
           {action === "add" ? "+" : "-"}
         </div>
@@ -115,11 +117,14 @@ const CharacterLayout = ({
 };
 
 const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
+  const itemsNames = Object.keys(items);
+  const sortedItemsNames = itemsNames.sort((a,b)=> (items[b].length -items[a].length));
+
   return (
-    <div className={`border border-slate-200 p-2 ${styles.items}`}>
+    <div className={`border border-slate-200 p-2 overflow-auto ${styles.items}`}>
       <p className="font-semibold">Items</p>
 
-      {Object.keys(items).map((item) => (
+      {sortedItemsNames.map((item) => (
         <div className="text-left mb-1 text-sm" key={item}>
           <div>
             {item} ({items[item].length}):{" "}
@@ -133,6 +138,21 @@ const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
           </div>
         </div>
       ))}
+    </div>
+  );
+};
+
+const FreeItems = ({ freeItems }: { freeItems: FreeItem[] }) => {
+  return (
+    <div className={`border border-slate-200 p-2 overflow-auto ${styles.freeItems}`}>
+      <p className="font-semibold">Free Items</p>
+      <div className="grid grid-cols-2 gap-x-0.5">
+        {freeItems.map((item) => (
+          <div className="text-left mb-1 text-sm" key={item.item.name}>
+            {item.item.name}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

@@ -14,7 +14,7 @@ export const MainPage = ({ splits, onAddorRemove }: Props) => {
   console.log(splits);
   return (
     <div className="text-center p-5">
-      <h1 className="text-3xl font-bold mb-5">Generated splits</h1>
+      <h1 className="text-md font-bold mb-1">Generated splits</h1>
       <div className="">
         {splits?.map((split, index) => {
           return (
@@ -43,8 +43,8 @@ const SplitLayout = ({
   ) => (character: Character, action: "add" | "remove") => void;
 }) => {
   return (
-    <div className="border border-slate-400 mb-10">
-      <h2 className="text-xl font-bold">Split {index + 1}</h2>
+    <div className="mb-10">
+      <h2 className="text-sm font-bold">Split {index + 1}</h2>
       <div className="flex gap-x-2">
         <RaidLayout
           raid={split.raid1}
