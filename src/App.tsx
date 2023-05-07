@@ -1,8 +1,8 @@
-import { MainPage } from "./components/MainPage/MainPage";
+import { SplitsPage } from "./pages/SplitsPage/SplitsPage";
 import { useState } from "react";
 import { Character, Split } from "src/types";
 import { mockedSplits } from "src/mocks/mockedSplits";
-import { PersonsPage } from "./components/PersonsPage/PersonsPage";
+import { PersonsPage } from "./pages/PersonsPage/PersonsPage";
 
 interface AvailablePersons {
   raid1: string[];
@@ -85,7 +85,7 @@ function App() {
   return (
     <div>
       {splits.length > 0 ? (
-        <MainPage splits={splits} onAddorRemove={onAddorRemove} />
+        <SplitsPage splits={splits} onAddorRemove={onAddorRemove} />
       ) : (
         <PersonsPage generate={generate} loading={loading} />
       )}

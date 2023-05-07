@@ -1,5 +1,5 @@
 import { Character, Split } from "src/types";
-import { RaidLayout } from "src/components/RaidLayout/RaidLayout";
+import { RaidLayout } from "src/pages/SplitsPage/RaidLayout/RaidLayout";
 
 interface Props {
   splits: Split[];
@@ -10,7 +10,7 @@ interface Props {
   ) => (character: Character, action: "add" | "remove") => void;
 }
 
-export const MainPage = ({ splits, onAddorRemove }: Props) => {
+export const SplitsPage = ({ splits, onAddorRemove }: Props) => {
   console.log(splits);
   return (
     <div className="text-center p-5">

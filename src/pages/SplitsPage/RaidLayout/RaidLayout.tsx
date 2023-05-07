@@ -5,7 +5,7 @@ import {
   characterColorsText,
   ItemCharactersMap,
 } from "src/types";
-import styles from "src/components/RaidLayout/raidLayout.module.css";
+import styles from "./raidLayout.module.css";
 
 export const RaidLayout = ({
   raid,

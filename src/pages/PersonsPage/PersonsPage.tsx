@@ -78,9 +78,9 @@ export const PersonsPage = ({ generate, loading }: Props) => {
       {persons.length > 0 ? (
         <div className="flex flex-wrap">
           {persons.map((person, index) => (
-            <div className="border mb-2 gap-1 w-96 flex mr-2" key={person.name}>
-              <p className="capitalize p-2.5 w-1/4">{person.name}</p>
-              <label htmlFor={`raid1${person.name}`} className="mr-2 p-2.5">
+            <div className="border mb-2 gap-1 w-60 flex mr-2" key={person.name}>
+              <p className="capitalize p-1.5 w-20">{person.name}</p>
+              <label htmlFor={`raid1${person.name}`} className="mr-2 p-1.5">
                 <input
                   type="checkbox"
                   id={`raid1${person.name}`}
@@ -95,10 +95,10 @@ export const PersonsPage = ({ generate, loading }: Props) => {
                     }
                   }}
                 />
-                Wednesday
+                Wed
               </label>
 
-              <label htmlFor={`raid2${person.name}`} className="mr-2 p-2.5">
+              <label htmlFor={`raid2${person.name}`} className="mr-2 p-1.5">
                 <input
                   type="checkbox"
                   id={`raid2${person.name}`}
@@ -113,7 +113,7 @@ export const PersonsPage = ({ generate, loading }: Props) => {
                     }
                   }}
                 />
-                Sunday
+                Sun
               </label>
             </div>
           ))}
