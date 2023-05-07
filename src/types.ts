@@ -95,3 +95,10 @@ export interface Person {
   mainClassName: CharacterClass;
 }
 
+export interface ItemCharecterSplit {
+  item: string;
+  characterLeft: string;
+  characterRight: string;
+}
+
+export const localStorageICSKey = 'itemCaracterSplits';  

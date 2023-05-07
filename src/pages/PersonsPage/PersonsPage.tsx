@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
-import { Person, characterColorsText } from 'src/types';
+import { ItemCharecterSplit, Person, characterColorsText, localStorageICSKey } from 'src/types';
 
 interface Props {
   generate: (available: AvailablePersons) => void;
@@ -44,7 +44,7 @@ export const PersonsPage = ({ generate, loading }: Props) => {
   return (
     <div className="text-center p-3 h-screen flex flex-col">
       <h1 className="mb-4 text-2xl font-bold">Choose available persons</h1>
-      <div className="flex mb-7 justify-center h-1/3">
+      <div className="flex mb-7 justify-center h-36">
         <div className="mr-4">
           <button
             disabled={loading}
@@ -71,33 +71,126 @@ export const PersonsPage = ({ generate, loading }: Props) => {
           {loading ? 'Loading...' : 'Generate!'}
         </button>
       </div>
-      {persons.length > 0 ? (
-        <div className="flex flex-col flex-wrap content-start h-2/3">
-          {persons.map(person => (
-            <PersonLayout
-              key={person.name}
-              person={person}
-              checkedWed={raid1.includes(person.name)}
-              checkedSun={raid2.includes(person.name)}
-              onChangeWed={e => {
-                if (e.target.checked) {
-                  setRaid1([...raid1, person.name]);
-                } else {
-                  setRaid1(raid1.filter(name => name !== person.name));
-                }
-              }}
-              onChangeSun={e => {
-                if (e.target.checked) {
-                  setRaid2([...raid2, person.name]);
-                } else {
-                  setRaid2(raid2.filter(name => name !== person.name));
-                }
-              }}
-            />
-          ))}
+      <div className="flex overflow-auto">
+        {persons.length > 0 ? (
+          <div className="flex flex-col flex-wrap content-start w-2/3">
+            {persons.map(person => (
+              <PersonLayout
+                key={person.name}
+                person={person}
+                checkedWed={raid1.includes(person.name)}
+                checkedSun={raid2.includes(person.name)}
+                onChangeWed={e => {
+                  if (e.target.checked) {
+                    setRaid1([...raid1, person.name]);
+                  } else {
+                    setRaid1(raid1.filter(name => name !== person.name));
+                  }
+                }}
+                onChangeSun={e => {
+                  if (e.target.checked) {
+                    setRaid2([...raid2, person.name]);
+                  } else {
+                    setRaid2(raid2.filter(name => name !== person.name));
+                  }
+                }}
+              />
+            ))}
+          </div>
+        ) : (
+          <p>Loading...</p>
+        )}
+        <ItemCaracterSplitLayout />
+      </div>
+    </div>
+  );
+};
+
+const ItemCaracterSplitLayout = () => {
+  const [isAdd, setIsAdd] = useState<boolean>(false);
+  const [item, setItem] = useState<string>('');
+  const [characterLeft, setCharacterLeft] = useState<string>('');
+  const [characterRight, setCharacterRight] = useState<string>('');
+
+  const currentICS = localStorage.getItem(localStorageICSKey);
+  let currentICSparse = [];
+  if (currentICS) {
+    try {
+      currentICSparse = JSON.parse(currentICS);
+    } catch (e) {
+      localStorage.removeItem(localStorageICSKey);
+    }
+  }
+
+  const onSave = () => {
+    setIsAdd(false);
+    setItem('');
+    setCharacterLeft('');
+    setCharacterRight('');
+
+    const current = localStorage.getItem(localStorageICSKey);
+    if (current) {
+      try {
+        const currentJson = JSON.parse(current) as ItemCharecterSplit[];
+        localStorage.setItem(
+          localStorageICSKey,
+          JSON.stringify([...currentJson, { item: item, characterLeft, characterRight }]),
+        );
+      } catch (e) {
+        localStorage.setItem(localStorageICSKey, JSON.stringify([{ item: item, characterLeft, characterRight }]));
+      }
+    } else {
+      localStorage.setItem(localStorageICSKey, JSON.stringify([{ item: item, characterLeft, characterRight }]));
+    }
+  };
+
+  return (
+    <div className="w-1/3 bg-red-100">
+      {isAdd ? (
+        <div>
+          <input
+            type="text"
+            placeholder="Item name"
+            className="border p-2 w-60 mr-2"
+            value={item}
+            onChange={e => setItem(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Cherecters left"
+            className="border p-2 w-60 mr-2"
+            value={characterLeft}
+            onChange={e => setCharacterLeft(e.target.value)}
+          />
+          <input
+            type="text"
+            placeholder="Cherecters left"
+            className="border p-2 w-60 mr-2"
+            value={characterRight}
+            onChange={e => setCharacterRight(e.target.value)}
+          />
+          <button className="block border font-bold py-2 px-4 rounded h-10" onClick={onSave}>
+            Save
+          </button>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div>
+          {currentICSparse.map((ics: ItemCharecterSplit) => (
+            <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
+              <p className="capitalize p-2 w-20">{ics.item}</p>
+              <p className="capitalize p-2 w-20">{ics.characterLeft}</p>
+              <p className="capitalize p-2 w-20">{ics.characterRight}</p>
+            </div>
+          ))}
+          <button
+            className="block border font-bold py-2 px-4 rounded h-10"
+            onClick={() => {
+              setIsAdd(true);
+            }}
+          >
+            Add another item
+          </button>
+        </div>
       )}
     </div>
   );
