@@ -1,13 +1,19 @@
 .container {
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(5, auto);
     grid-gap: 10px;
     grid-template-areas:
-        "tanks dps items items items"
-            "healers dps items items items"
-            "available available items items items"
-            ". . items items items";
+        "title     title       title       title       title"
+        "tanks      dps         items       items       items"
+        "healers    dps         items       items       items"
+        "available  available   freeItems   freeItems   freeItems"
+        ".          .           freeItems   freeItems   freeItems";
+}
+
+.title {
+    grid-area: title;
 }
 
 .tanks {
@@ -28,4 +34,8 @@
 
 .items {
     grid-area: items;
+}
+
+.freeItems {
+    grid-area: freeItems;
 }

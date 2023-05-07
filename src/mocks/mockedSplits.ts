@@ -2983,6 +2983,7 @@ const raid1: Raid = {
       },
     ],
   },
+  freeItems: []
 };
 
 const raid2: Raid = {
@@ -6156,6 +6157,7 @@ const raid2: Raid = {
       },
     ],
   },
+  freeItems: []
 };
 
 const raid3: Raid = {
@@ -9141,6 +9143,7 @@ const raid3: Raid = {
       },
     ],
   },
+  freeItems: []
 };
 
 const raid4: Raid = {
@@ -12314,6 +12317,7 @@ const raid4: Raid = {
       },
     ],
   },
+  freeItems: []
 };
 
 const raid5: Raid = {
@@ -15299,6 +15303,7 @@ const raid5: Raid = {
       },
     ],
   },
+  freeItems: []
 };
 
 const raid6: Raid = {
@@ -18472,6 +18477,7 @@ const raid6: Raid = {
       },
     ],
   },
+  freeItems: []
 };
 
 export const mockedSplits: Split[] = [
