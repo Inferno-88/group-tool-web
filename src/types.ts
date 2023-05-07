@@ -92,5 +92,6 @@ export const characterColorsText: Record<CharacterClass, string> = {
 
 export interface Person {
   name: string;
+  mainClassName: CharacterClass;
 }
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
-import { Person } from "src/types";
+import { Person, characterColorsText } from 'src/types';
 
 interface Props {
   generate: (available: AvailablePersons) => void;
@@ -18,11 +18,11 @@ export const PersonsPage = ({ generate, loading }: Props) => {
   const [raid2, setRaid2] = useState<string[]>([]);
 
   useEffect(() => {
-    if (process.env.REACT_APP_USE_MOCKS !== "true") {
+    if (process.env.REACT_APP_USE_MOCKS !== 'true') {
       const url = `${process.env.REACT_APP_URL}/persons`;
       fetch(url)
-        .then((data) => data.json())
-        .then((data) => {
+        .then(data => data.json())
+        .then(data => {
           setPersons(data);
         });
     } else {
@@ -32,8 +32,8 @@ export const PersonsPage = ({ generate, loading }: Props) => {
   }, []);
 
   const selectAll = () => {
-    setRaid1(persons.map((person) => person.name));
-    setRaid2(persons.map((person) => person.name));
+    setRaid1(persons.map(person => person.name));
+    setRaid2(persons.map(person => person.name));
   };
 
   const clearAll = () => {
@@ -61,66 +61,84 @@ export const PersonsPage = ({ generate, loading }: Props) => {
             Clear All
           </button>
         </div>
-        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">
-          {raid1.join(", ")}
-        </div>
-        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">
-          {raid2.join(", ")}
-        </div>
+        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid1.join(', ')}</div>
+        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid2.join(', ')}</div>
         <button
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-700 disabled:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded h-10"
           onClick={() => generate({ raid1, raid2 })}
         >
-          {loading ? "Loading..." : "Generate!"}
+          {loading ? 'Loading...' : 'Generate!'}
         </button>
       </div>
       {persons.length > 0 ? (
-        <div className="flex flex-col flex-wrap h-2/3">
-          {persons.map((person, index) => (
-            <div className="border text-sm mb-2 flex mr-2 justify-around" key={person.name}>
-              <p className="capitalize p-2 w-1/4">{person.name}</p>
-              <label htmlFor={`raid1${person.name}`} className="mr-1 p-2 whitespace-nowrap">
-                <input
-                  type="checkbox"
-                  id={`raid1${person.name}`}
-                  name={`raid1${person.name}`}
-                  className="mr-1"
-                  checked={raid1.includes(person.name)}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRaid1([...raid1, person.name]);
-                    } else {
-                      setRaid1(raid1.filter((name) => name !== person.name));
-                    }
-                  }}
-                />
-                Wednesday
-              </label>
-
-              <label htmlFor={`raid2${person.name}`} className="mr-1 p-2 whitespace-nowrap">
-                <input
-                  type="checkbox"
-                  id={`raid2${person.name}`}
-                  name={`raid2${person.name}`}
-                  className="mr-1"
-                  checked={raid2.includes(person.name)}
-                  onChange={(e) => {
-                    if (e.target.checked) {
-                      setRaid2([...raid2, person.name]);
-                    } else {
-                      setRaid2(raid2.filter((name) => name !== person.name));
-                    }
-                  }}
-                />
-                Sunday
-              </label>
-            </div>
+        <div className="flex flex-col flex-wrap content-start h-2/3">
+          {persons.map(person => (
+            <PersonLayout
+              key={person.name}
+              person={person}
+              checkedWed={raid1.includes(person.name)}
+              checkedSun={raid2.includes(person.name)}
+              onChangeWed={e => {
+                if (e.target.checked) {
+                  setRaid1([...raid1, person.name]);
+                } else {
+                  setRaid1(raid1.filter(name => name !== person.name));
+                }
+              }}
+              onChangeSun={e => {
+                if (e.target.checked) {
+                  setRaid2([...raid2, person.name]);
+                } else {
+                  setRaid2(raid2.filter(name => name !== person.name));
+                }
+              }}
+            />
           ))}
         </div>
       ) : (
         <p>Loading...</p>
       )}
+    </div>
+  );
+};
+
+interface PersonProps {
+  person: Person;
+  checkedWed: boolean;
+  checkedSun: boolean;
+  onChangeWed: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeSun: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const PersonLayout = ({ person, checkedSun, checkedWed, onChangeSun, onChangeWed }: PersonProps) => {
+  const nameStyle = `capitalize p-2 w-20 ${characterColorsText[person.mainClassName]}`;
+  return (
+    <div className="border text-sm mb-2 flex w-60 mr-2 justify-around">
+      <p className={nameStyle}>{person.name}</p>
+      <label htmlFor={`raid1${person.name}`} className="mr-1 p-2 whitespace-nowrap">
+        <input
+          type="checkbox"
+          id={`raid1${person.name}`}
+          name={`raid1${person.name}`}
+          className="mr-1"
+          checked={checkedWed}
+          onChange={onChangeWed}
+        />
+        Wed
+      </label>
+
+      <label htmlFor={`raid2${person.name}`} className="mr-1 p-2 whitespace-nowrap">
+        <input
+          type="checkbox"
+          id={`raid2${person.name}`}
+          name={`raid2${person.name}`}
+          className="mr-1"
+          checked={checkedSun}
+          onChange={onChangeSun}
+        />
+        Sun
+      </label>
     </div>
   );
 };

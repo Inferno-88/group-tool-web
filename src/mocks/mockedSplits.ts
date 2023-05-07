@@ -1,26 +1,26 @@
-import { Person, Raid, Split } from "../types";
+import { CharacterClass, Person, Raid, Split } from '../types';
 
 const raid1: Raid = {
   tanks: [
     {
-      name: "davetta",
-      className: "PALADIN",
+      name: 'davetta',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "tjbaracus",
-      className: "DK",
+      name: 'tjbaracus',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: false,
@@ -29,12 +29,12 @@ const raid1: Raid = {
   ],
   healers: [
     {
-      name: "arusha",
-      className: "PRIEST",
+      name: 'arusha',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: false,
@@ -43,19 +43,19 @@ const raid1: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "palenian",
-      className: "PALADIN",
+      name: 'palenian',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -64,17 +64,17 @@ const raid1: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -82,17 +82,17 @@ const raid1: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bullette",
-      className: "DRUID",
+      name: 'bullette',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: true,
@@ -101,27 +101,27 @@ const raid1: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "kaboodles",
-      className: "PALADIN",
+      name: 'kaboodles',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -130,27 +130,27 @@ const raid1: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "arylpog",
-      className: "PALADIN",
+      name: 'arylpog',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -159,29 +159,29 @@ const raid1: Raid = {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   dps: [
     {
-      name: "deadlyfaith",
-      className: "PALADIN",
+      name: 'deadlyfaith',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: true,
@@ -192,49 +192,49 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "misto",
-      className: "SHAMAN",
+      name: 'misto',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: false,
@@ -245,45 +245,45 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "tadano",
-      className: "DK",
+      name: 'tadano',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "erm",
-      className: "DK",
+      name: 'erm',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -292,19 +292,19 @@ const raid1: Raid = {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayv",
-      className: "DK",
+      name: 'mayv',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -313,35 +313,35 @@ const raid1: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bride",
-      className: "ROGUE",
+      name: 'bride',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -352,49 +352,49 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nurgl",
-      className: "ROGUE",
+      name: 'nurgl',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: true,
@@ -405,41 +405,41 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupan",
-      className: "HUNTER",
+      name: 'ethupan',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -448,55 +448,55 @@ const raid1: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeypx",
-      className: "DRUID",
+      name: 'jeypx',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kelthal",
-      className: "WARRIOR",
+      name: 'kelthal',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -505,51 +505,51 @@ const raid1: Raid = {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "shilke",
-      className: "PRIEST",
+      name: 'shilke',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "doggle",
-      className: "DRUID",
+      name: 'doggle',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "nagosa",
-      className: "SHAMAN",
+      name: 'nagosa',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
+          type: 'Elemental',
         },
       ],
       main: true,
@@ -558,63 +558,63 @@ const raid1: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "koobo",
-      className: "MAGE",
+      name: 'koobo',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "khayo",
-      className: "WARLOCK",
+      name: 'khayo',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kondaddicted",
-      className: "WARLOCK",
+      name: 'kondaddicted',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "emipian",
-      className: "WARLOCK",
+      name: 'emipian',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -623,36 +623,36 @@ const raid1: Raid = {
   ],
   occupiedCharacters: [
     {
-      name: "davetta",
-      className: "PALADIN",
+      name: 'davetta',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "tjbaracus",
-      className: "DK",
+      name: 'tjbaracus',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "arusha",
-      className: "PRIEST",
+      name: 'arusha',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: false,
@@ -661,19 +661,19 @@ const raid1: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "palenian",
-      className: "PALADIN",
+      name: 'palenian',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -682,17 +682,17 @@ const raid1: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -700,17 +700,17 @@ const raid1: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bullette",
-      className: "DRUID",
+      name: 'bullette',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: true,
@@ -719,27 +719,27 @@ const raid1: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "kaboodles",
-      className: "PALADIN",
+      name: 'kaboodles',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -748,27 +748,27 @@ const raid1: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "arylpog",
-      className: "PALADIN",
+      name: 'arylpog',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -777,27 +777,27 @@ const raid1: Raid = {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyfaith",
-      className: "PALADIN",
+      name: 'deadlyfaith',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: true,
@@ -808,49 +808,49 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "misto",
-      className: "SHAMAN",
+      name: 'misto',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: false,
@@ -861,45 +861,45 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "tadano",
-      className: "DK",
+      name: 'tadano',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "erm",
-      className: "DK",
+      name: 'erm',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -908,19 +908,19 @@ const raid1: Raid = {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayv",
-      className: "DK",
+      name: 'mayv',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -929,35 +929,35 @@ const raid1: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bride",
-      className: "ROGUE",
+      name: 'bride',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -968,49 +968,49 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nurgl",
-      className: "ROGUE",
+      name: 'nurgl',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: true,
@@ -1021,41 +1021,41 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupan",
-      className: "HUNTER",
+      name: 'ethupan',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -1064,55 +1064,55 @@ const raid1: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeypx",
-      className: "DRUID",
+      name: 'jeypx',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kelthal",
-      className: "WARRIOR",
+      name: 'kelthal',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -1121,51 +1121,51 @@ const raid1: Raid = {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "shilke",
-      className: "PRIEST",
+      name: 'shilke',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "doggle",
-      className: "DRUID",
+      name: 'doggle',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "nagosa",
-      className: "SHAMAN",
+      name: 'nagosa',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
+          type: 'Elemental',
         },
       ],
       main: true,
@@ -1174,63 +1174,63 @@ const raid1: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "koobo",
-      className: "MAGE",
+      name: 'koobo',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "khayo",
-      className: "WARLOCK",
+      name: 'khayo',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kondaddicted",
-      className: "WARLOCK",
+      name: 'kondaddicted',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "emipian",
-      className: "WARLOCK",
+      name: 'emipian',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -1239,36 +1239,36 @@ const raid1: Raid = {
   ],
   raidAvailableChars: [
     {
-      name: "gorosm",
-      className: "DRUID",
+      name: 'gorosm',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "aandariel",
-      className: "MAGE",
+      name: 'aandariel',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "salabonobo",
-      className: "HUNTER",
+      name: 'salabonobo',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: false,
@@ -1277,31 +1277,31 @@ const raid1: Raid = {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "averonth",
-      className: "WARRIOR",
+      name: 'averonth',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "barrioustwo",
-      className: "ROGUE",
+      name: 'barrioustwo',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: false,
@@ -1312,33 +1312,33 @@ const raid1: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "dauran",
-      className: "PRIEST",
+      name: 'dauran',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: true,
@@ -1347,27 +1347,27 @@ const raid1: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nutkin",
-      className: "WARLOCK",
+      name: 'nutkin',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Demonology",
+          type: 'Demonology',
         },
       ],
       main: true,
@@ -1375,14 +1375,14 @@ const raid1: Raid = {
     },
   ],
   itemCharactersMap: {
-    "Breastplate of the Devoted": [
+    'Breastplate of the Devoted': [
       {
-        name: "arylpog",
-        className: "PALADIN",
+        name: 'arylpog',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -1391,29 +1391,29 @@ const raid1: Raid = {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Wisdom's Hold": [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -1422,17 +1422,17 @@ const raid1: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -1440,19 +1440,19 @@ const raid1: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Valanyr: [
       {
-        name: "bullette",
-        className: "DRUID",
+        name: 'bullette',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "RestorationDruid",
+            type: 'RestorationDruid',
           },
         ],
         main: true,
@@ -1461,29 +1461,29 @@ const raid1: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Voldrethar, Dark Blade of Oblivion": [
+    'Voldrethar, Dark Blade of Oblivion': [
       {
-        name: "kelthal",
-        className: "WARRIOR",
+        name: 'kelthal',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -1492,29 +1492,29 @@ const raid1: Raid = {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Dreambinder: [
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -1523,45 +1523,45 @@ const raid1: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Sabatons of Lifeless Night": [
+    'Sabatons of Lifeless Night': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -1572,51 +1572,51 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Legguards of Cunning Deception": [
+    'Legguards of Cunning Deception': [
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -1625,45 +1625,45 @@ const raid1: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Golden Saronite Dragon": [
+    'Golden Saronite Dragon': [
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -1674,35 +1674,35 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of the Fallen Wyrm": [
+    'Belt of the Fallen Wyrm': [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -1711,17 +1711,17 @@ const raid1: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -1729,17 +1729,17 @@ const raid1: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "kaboodles",
-        className: "PALADIN",
+        name: 'kaboodles',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -1748,29 +1748,29 @@ const raid1: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Drape of Mortal Downfall": [
+    'Drape of Mortal Downfall': [
       {
-        name: "nagosa",
-        className: "SHAMAN",
+        name: 'nagosa',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Elemental",
+            type: 'Elemental',
           },
         ],
         main: true,
@@ -1779,29 +1779,29 @@ const raid1: Raid = {
             item: {
               id: 6,
               url: null,
-              name: "Drape of Mortal Downfall",
+              name: 'Drape of Mortal Downfall',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Star-beaded Clutch": [
+    'Star-beaded Clutch': [
       {
-        name: "arylpog",
-        className: "PALADIN",
+        name: 'arylpog',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -1810,27 +1810,27 @@ const raid1: Raid = {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nagosa",
-        className: "SHAMAN",
+        name: 'nagosa',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Elemental",
+            type: 'Elemental',
           },
         ],
         main: true,
@@ -1839,29 +1839,29 @@ const raid1: Raid = {
             item: {
               id: 6,
               url: null,
-              name: "Drape of Mortal Downfall",
+              name: 'Drape of Mortal Downfall',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Pyrelight Circle": [
+    'Pyrelight Circle': [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -1870,17 +1870,17 @@ const raid1: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -1888,17 +1888,17 @@ const raid1: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "kaboodles",
-        className: "PALADIN",
+        name: 'kaboodles',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -1907,29 +1907,29 @@ const raid1: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of Colossal Rage": [
+    'Belt of Colossal Rage': [
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -1938,37 +1938,37 @@ const raid1: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Solar Bindings": [
+    'Solar Bindings': [
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -1979,51 +1979,51 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Seal of the Betrayed King": [
+    'Seal of the Betrayed King': [
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -2032,37 +2032,37 @@ const raid1: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Drape of Icy Intent": [
+    'Drape of Icy Intent': [
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -2073,43 +2073,43 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Skyforge Crossbow": [
+    'Skyforge Crossbow': [
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -2120,49 +2120,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -2171,45 +2171,45 @@ const raid1: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Show of Faith": [
+    'Show of Faith': [
       {
-        name: "bullette",
-        className: "DRUID",
+        name: 'bullette',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "RestorationDruid",
+            type: 'RestorationDruid',
           },
         ],
         main: true,
@@ -2218,29 +2218,29 @@ const raid1: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Boundless Gaze": [
+    'Boundless Gaze': [
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -2251,35 +2251,35 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Plated Leggings of Ruination": [
+    'Plated Leggings of Ruination': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -2290,49 +2290,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -2341,37 +2341,37 @@ const raid1: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Frigid Strength of Hodir": [
+    'Frigid Strength of Hodir': [
       {
-        name: "kelthal",
-        className: "WARRIOR",
+        name: 'kelthal',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -2380,29 +2380,29 @@ const raid1: Raid = {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Comet's Trail": [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -2413,49 +2413,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -2466,33 +2466,33 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -2503,49 +2503,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -2556,43 +2556,43 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Warhelm of the Champion": [
+    'Warhelm of the Champion': [
       {
-        name: "erm",
-        className: "DK",
+        name: 'erm',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: false,
@@ -2601,21 +2601,21 @@ const raid1: Raid = {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Embrace of the Gladiator": [
+    'Embrace of the Gladiator': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -2626,49 +2626,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -2679,49 +2679,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -2732,41 +2732,41 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -2775,45 +2775,45 @@ const raid1: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Shoulderpads of the Intruder": [
+    'Shoulderpads of the Intruder': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -2824,49 +2824,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -2877,49 +2877,49 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -2930,43 +2930,43 @@ const raid1: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Constellus: [
       {
-        name: "arusha",
-        className: "PRIEST",
+        name: 'arusha',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: false,
@@ -2975,26 +2975,26 @@ const raid1: Raid = {
             item: {
               id: 5,
               url: null,
-              name: "Constellus",
+              name: 'Constellus',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
   },
-  freeItems: []
+  freeItems: [],
 };
 
 const raid2: Raid = {
   tanks: [
     {
-      name: "pacoknight",
-      className: "DK",
+      name: 'pacoknight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: true,
@@ -3003,27 +3003,27 @@ const raid2: Raid = {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "holynut",
-      className: "PALADIN",
+      name: 'holynut',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: false,
@@ -3032,21 +3032,21 @@ const raid2: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   healers: [
     {
-      name: "khaya",
-      className: "SHAMAN",
+      name: 'khaya',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "RestorationShaman",
+          type: 'RestorationShaman',
         },
       ],
       main: true,
@@ -3055,27 +3055,27 @@ const raid2: Raid = {
           item: {
             id: 1,
             url: null,
-            name: "Bindings of Winter Gale",
+            name: 'Bindings of Winter Gale',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "aryllene",
-      className: "PALADIN",
+      name: 'aryllene',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -3084,17 +3084,17 @@ const raid2: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -3102,17 +3102,17 @@ const raid2: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeyp",
-      className: "PRIEST",
+      name: 'jeyp',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: true,
@@ -3121,39 +3121,39 @@ const raid2: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "cowran",
-      className: "DRUID",
+      name: 'cowran',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "tjholy",
-      className: "PALADIN",
+      name: 'tjholy',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -3162,33 +3162,33 @@ const raid2: Raid = {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   dps: [
     {
-      name: "mayvi",
-      className: "PALADIN",
+      name: 'mayvi',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "haumea",
-      className: "SHAMAN",
+      name: 'haumea',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: true,
@@ -3199,25 +3199,25 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "littlemist",
-      className: "DK",
+      name: 'littlemist',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
@@ -3228,41 +3228,41 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyblight",
-      className: "DK",
+      name: 'deadlyblight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -3271,31 +3271,31 @@ const raid2: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nagodk",
-      className: "DK",
+      name: 'nagodk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "frostyboy",
-      className: "DK",
+      name: 'frostyboy',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -3304,19 +3304,19 @@ const raid2: Raid = {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "barrious",
-      className: "ROGUE",
+      name: 'barrious',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -3327,33 +3327,33 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bridew",
-      className: "ROGUE",
+      name: 'bridew',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: false,
@@ -3364,33 +3364,33 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "salabenji",
-      className: "HUNTER",
+      name: 'salabenji',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -3399,35 +3399,35 @@ const raid2: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "fiachna",
-      className: "DRUID",
+      name: 'fiachna',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: true,
@@ -3436,9 +3436,9 @@ const raid2: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -3446,41 +3446,41 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "hallheim",
-      className: "WARRIOR",
+      name: 'hallheim',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -3489,17 +3489,17 @@ const raid2: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -3507,57 +3507,57 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "pariah",
-      className: "PRIEST",
+      name: 'pariah',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
@@ -3566,67 +3566,67 @@ const raid2: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "goll",
-      className: "SHAMAN",
+      name: 'goll',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "edenian",
-      className: "MAGE",
-      specs: [
-        {
-          main: true,
-          type: "Fire",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "kondoriano",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "komachi",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
+          type: 'Elemental',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "swerved",
-      className: "WARLOCK",
+      name: 'edenian',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Fire',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'kondoriano',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'komachi',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'swerved',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -3635,12 +3635,12 @@ const raid2: Raid = {
   ],
   occupiedCharacters: [
     {
-      name: "pacoknight",
-      className: "DK",
+      name: 'pacoknight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: true,
@@ -3649,27 +3649,27 @@ const raid2: Raid = {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "holynut",
-      className: "PALADIN",
+      name: 'holynut',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: false,
@@ -3678,19 +3678,19 @@ const raid2: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "khaya",
-      className: "SHAMAN",
+      name: 'khaya',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "RestorationShaman",
+          type: 'RestorationShaman',
         },
       ],
       main: true,
@@ -3699,27 +3699,27 @@ const raid2: Raid = {
           item: {
             id: 1,
             url: null,
-            name: "Bindings of Winter Gale",
+            name: 'Bindings of Winter Gale',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "aryllene",
-      className: "PALADIN",
+      name: 'aryllene',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -3728,17 +3728,17 @@ const raid2: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -3746,17 +3746,17 @@ const raid2: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeyp",
-      className: "PRIEST",
+      name: 'jeyp',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: true,
@@ -3765,39 +3765,39 @@ const raid2: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "cowran",
-      className: "DRUID",
+      name: 'cowran',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "tjholy",
-      className: "PALADIN",
+      name: 'tjholy',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -3806,31 +3806,31 @@ const raid2: Raid = {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayvi",
-      className: "PALADIN",
+      name: 'mayvi',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "haumea",
-      className: "SHAMAN",
+      name: 'haumea',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: true,
@@ -3841,25 +3841,25 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "littlemist",
-      className: "DK",
+      name: 'littlemist',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
@@ -3870,41 +3870,41 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyblight",
-      className: "DK",
+      name: 'deadlyblight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -3913,31 +3913,31 @@ const raid2: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nagodk",
-      className: "DK",
+      name: 'nagodk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "frostyboy",
-      className: "DK",
+      name: 'frostyboy',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -3946,19 +3946,19 @@ const raid2: Raid = {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "barrious",
-      className: "ROGUE",
+      name: 'barrious',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -3969,33 +3969,33 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bridew",
-      className: "ROGUE",
+      name: 'bridew',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: false,
@@ -4006,33 +4006,33 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "salabenji",
-      className: "HUNTER",
+      name: 'salabenji',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -4041,35 +4041,35 @@ const raid2: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "fiachna",
-      className: "DRUID",
+      name: 'fiachna',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: true,
@@ -4078,9 +4078,9 @@ const raid2: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -4088,41 +4088,41 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "hallheim",
-      className: "WARRIOR",
+      name: 'hallheim',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -4131,17 +4131,17 @@ const raid2: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -4149,57 +4149,57 @@ const raid2: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "pariah",
-      className: "PRIEST",
+      name: 'pariah',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
@@ -4208,67 +4208,67 @@ const raid2: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "goll",
-      className: "SHAMAN",
+      name: 'goll',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "edenian",
-      className: "MAGE",
-      specs: [
-        {
-          main: true,
-          type: "Fire",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "kondoriano",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "komachi",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
+          type: 'Elemental',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "swerved",
-      className: "WARLOCK",
+      name: 'edenian',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Fire',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'kondoriano',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'komachi',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'swerved',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -4277,12 +4277,12 @@ const raid2: Raid = {
   ],
   raidAvailableChars: [
     {
-      name: "tekala",
-      className: "HUNTER",
+      name: 'tekala',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: false,
@@ -4291,43 +4291,43 @@ const raid2: Raid = {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupanDk",
-      className: "DK",
+      name: 'ethupanDk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "zurgle",
-      className: "WARRIOR",
-      specs: [
-        {
-          main: true,
-          type: "Fury",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "cotolento",
-      className: "MAGE",
+      name: 'zurgle',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fury',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'cotolento',
+      className: 'MAGE',
+      specs: [
+        {
+          main: true,
+          type: 'Fire',
         },
       ],
       main: true,
@@ -4336,19 +4336,19 @@ const raid2: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mithrandir",
-      className: "PALADIN",
+      name: 'mithrandir',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
@@ -4356,14 +4356,14 @@ const raid2: Raid = {
     },
   ],
   itemCharactersMap: {
-    "Greaves of Swift Vengeance": [
+    'Greaves of Swift Vengeance': [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -4372,37 +4372,37 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Breastplate of the Devoted": [
+    'Breastplate of the Devoted': [
       {
-        name: "tjholy",
-        className: "PALADIN",
+        name: 'tjholy',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -4411,21 +4411,21 @@ const raid2: Raid = {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Wisdom's Hold": [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -4434,17 +4434,17 @@ const raid2: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4452,19 +4452,19 @@ const raid2: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Valanyr: [
       {
-        name: "khaya",
-        className: "SHAMAN",
+        name: 'khaya',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "RestorationShaman",
+            type: 'RestorationShaman',
           },
         ],
         main: true,
@@ -4473,29 +4473,29 @@ const raid2: Raid = {
             item: {
               id: 1,
               url: null,
-              name: "Bindings of Winter Gale",
+              name: 'Bindings of Winter Gale',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Voldrethar, Dark Blade of Oblivion": [
+    'Voldrethar, Dark Blade of Oblivion': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -4504,17 +4504,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4522,59 +4522,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Sabatons of Lifeless Night": [
+    'Sabatons of Lifeless Night': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -4583,17 +4583,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4601,59 +4601,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Dreambinder: [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -4662,37 +4662,37 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Legguards of Cunning Deception": [
+    'Legguards of Cunning Deception': [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -4701,35 +4701,35 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -4738,9 +4738,9 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4748,41 +4748,41 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -4791,17 +4791,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4809,59 +4809,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Seal of the Betrayed King": [
+    'Seal of the Betrayed King': [
       {
-        name: "pacoknight",
-        className: "DK",
+        name: 'pacoknight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Blood",
+            type: 'Blood',
           },
         ],
         main: true,
@@ -4870,29 +4870,29 @@ const raid2: Raid = {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 35,
               url: null,
-              name: "Armbands of Bedlam",
+              name: 'Armbands of Bedlam',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Belt of the Fallen Wyrm": [
+    'Belt of the Fallen Wyrm': [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -4901,17 +4901,17 @@ const raid2: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4919,19 +4919,19 @@ const raid2: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Pyrelight Circle": [
+    'Pyrelight Circle': [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -4940,17 +4940,17 @@ const raid2: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -4958,19 +4958,19 @@ const raid2: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of Colossal Rage": [
+    'Belt of Colossal Rage': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -4981,43 +4981,43 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Bindings of Winter Gale": [
+    'Bindings of Winter Gale': [
       {
-        name: "khaya",
-        className: "SHAMAN",
+        name: 'khaya',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "RestorationShaman",
+            type: 'RestorationShaman',
           },
         ],
         main: true,
@@ -5026,29 +5026,29 @@ const raid2: Raid = {
             item: {
               id: 1,
               url: null,
-              name: "Bindings of Winter Gale",
+              name: 'Bindings of Winter Gale',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Solar Bindings": [
+    'Solar Bindings': [
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -5059,33 +5059,33 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -5094,9 +5094,9 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5104,41 +5104,41 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -5147,17 +5147,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5165,59 +5165,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Heart of Iron": [
+    'Heart of Iron': [
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -5226,9 +5226,9 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5236,41 +5236,41 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -5279,17 +5279,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5297,59 +5297,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Bulwark of Algalon": [
+    'Bulwark of Algalon': [
       {
-        name: "holynut",
-        className: "PALADIN",
+        name: 'holynut',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "ProtectionPaladin",
+            type: 'ProtectionPaladin',
           },
         ],
         main: false,
@@ -5358,21 +5358,21 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Armbands of Bedlam": [
+    'Armbands of Bedlam': [
       {
-        name: "pacoknight",
-        className: "DK",
+        name: 'pacoknight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Blood",
+            type: 'Blood',
           },
         ],
         main: true,
@@ -5381,29 +5381,29 @@ const raid2: Raid = {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 35,
               url: null,
-              name: "Armbands of Bedlam",
+              name: 'Armbands of Bedlam',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Drape of Icy Intent": [
+    'Drape of Icy Intent': [
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -5414,35 +5414,35 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Show of Faith": [
+    'Show of Faith': [
       {
-        name: "jeyp",
-        className: "PRIEST",
+        name: 'jeyp',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: true,
@@ -5451,29 +5451,29 @@ const raid2: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 4,
               url: null,
-              name: "Sapphire Amulet of Renewal",
+              name: 'Sapphire Amulet of Renewal',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Boundless Gaze": [
+    'Boundless Gaze': [
       {
-        name: "haumea",
-        className: "SHAMAN",
+        name: 'haumea',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: true,
@@ -5484,27 +5484,27 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Plated Leggings of Ruination": [
+    'Plated Leggings of Ruination': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -5515,41 +5515,41 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "deadlyblight",
-        className: "DK",
+        name: 'deadlyblight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: false,
@@ -5558,21 +5558,21 @@ const raid2: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Frigid Strength of Hodir": [
+    'Frigid Strength of Hodir': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -5581,17 +5581,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5599,59 +5599,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Bladetwister: [
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -5662,35 +5662,35 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Comet's Trail": [
       {
-        name: "haumea",
-        className: "SHAMAN",
+        name: 'haumea',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: true,
@@ -5701,25 +5701,25 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -5730,41 +5730,41 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -5775,33 +5775,33 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -5812,33 +5812,33 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -5847,9 +5847,9 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5857,41 +5857,41 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -5900,17 +5900,17 @@ const raid2: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -5918,59 +5918,59 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Warhelm of the Champion": [
+    'Warhelm of the Champion': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -5981,43 +5981,43 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Embrace of the Gladiator": [
+    'Embrace of the Gladiator': [
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -6028,33 +6028,33 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -6063,9 +6063,9 @@ const raid2: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -6073,43 +6073,43 @@ const raid2: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Sapphire Amulet of Renewal": [
+    'Sapphire Amulet of Renewal': [
       {
-        name: "jeyp",
-        className: "PRIEST",
+        name: 'jeyp',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: true,
@@ -6118,29 +6118,29 @@ const raid2: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 4,
               url: null,
-              name: "Sapphire Amulet of Renewal",
+              name: 'Sapphire Amulet of Renewal',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
     Constellus: [
       {
-        name: "pariah",
-        className: "PRIEST",
+        name: 'pariah',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Shadow",
+            type: 'Shadow',
           },
         ],
         main: false,
@@ -6149,38 +6149,38 @@ const raid2: Raid = {
             item: {
               id: 5,
               url: null,
-              name: "Constellus",
+              name: 'Constellus',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
   },
-  freeItems: []
+  freeItems: [],
 };
 
 const raid3: Raid = {
   tanks: [
     {
-      name: "davetta",
-      className: "PALADIN",
+      name: 'davetta',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "tjbaracus",
-      className: "DK",
+      name: 'tjbaracus',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: false,
@@ -6189,12 +6189,12 @@ const raid3: Raid = {
   ],
   healers: [
     {
-      name: "arusha",
-      className: "PRIEST",
+      name: 'arusha',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: false,
@@ -6203,19 +6203,19 @@ const raid3: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "palenian",
-      className: "PALADIN",
+      name: 'palenian',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -6224,17 +6224,17 @@ const raid3: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -6242,17 +6242,17 @@ const raid3: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bullette",
-      className: "DRUID",
+      name: 'bullette',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: true,
@@ -6261,27 +6261,27 @@ const raid3: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "kaboodles",
-      className: "PALADIN",
+      name: 'kaboodles',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -6290,27 +6290,27 @@ const raid3: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "arylpog",
-      className: "PALADIN",
+      name: 'arylpog',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -6319,29 +6319,29 @@ const raid3: Raid = {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   dps: [
     {
-      name: "deadlyfaith",
-      className: "PALADIN",
+      name: 'deadlyfaith',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: true,
@@ -6352,49 +6352,49 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "misto",
-      className: "SHAMAN",
+      name: 'misto',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: false,
@@ -6405,45 +6405,45 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "tadano",
-      className: "DK",
+      name: 'tadano',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "erm",
-      className: "DK",
+      name: 'erm',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -6452,19 +6452,19 @@ const raid3: Raid = {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayv",
-      className: "DK",
+      name: 'mayv',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -6473,35 +6473,35 @@ const raid3: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bride",
-      className: "ROGUE",
+      name: 'bride',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -6512,49 +6512,49 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nurgl",
-      className: "ROGUE",
+      name: 'nurgl',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: true,
@@ -6565,41 +6565,41 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupan",
-      className: "HUNTER",
+      name: 'ethupan',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -6608,55 +6608,55 @@ const raid3: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeypx",
-      className: "DRUID",
+      name: 'jeypx',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kelthal",
-      className: "WARRIOR",
+      name: 'kelthal',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -6665,51 +6665,51 @@ const raid3: Raid = {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "shilke",
-      className: "PRIEST",
+      name: 'shilke',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "doggle",
-      className: "DRUID",
+      name: 'doggle',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "nagosa",
-      className: "SHAMAN",
+      name: 'nagosa',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
+          type: 'Elemental',
         },
       ],
       main: true,
@@ -6718,63 +6718,63 @@ const raid3: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "koobo",
-      className: "MAGE",
+      name: 'koobo',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "khayo",
-      className: "WARLOCK",
+      name: 'khayo',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kondaddicted",
-      className: "WARLOCK",
+      name: 'kondaddicted',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "emipian",
-      className: "WARLOCK",
+      name: 'emipian',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -6783,36 +6783,36 @@ const raid3: Raid = {
   ],
   occupiedCharacters: [
     {
-      name: "davetta",
-      className: "PALADIN",
+      name: 'davetta',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "tjbaracus",
-      className: "DK",
+      name: 'tjbaracus',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "arusha",
-      className: "PRIEST",
+      name: 'arusha',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: false,
@@ -6821,19 +6821,19 @@ const raid3: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "palenian",
-      className: "PALADIN",
+      name: 'palenian',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -6842,17 +6842,17 @@ const raid3: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -6860,17 +6860,17 @@ const raid3: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bullette",
-      className: "DRUID",
+      name: 'bullette',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: true,
@@ -6879,27 +6879,27 @@ const raid3: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "kaboodles",
-      className: "PALADIN",
+      name: 'kaboodles',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -6908,27 +6908,27 @@ const raid3: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "arylpog",
-      className: "PALADIN",
+      name: 'arylpog',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -6937,27 +6937,27 @@ const raid3: Raid = {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyfaith",
-      className: "PALADIN",
+      name: 'deadlyfaith',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: true,
@@ -6968,49 +6968,49 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "misto",
-      className: "SHAMAN",
+      name: 'misto',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: false,
@@ -7021,45 +7021,45 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "tadano",
-      className: "DK",
+      name: 'tadano',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "erm",
-      className: "DK",
+      name: 'erm',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -7068,19 +7068,19 @@ const raid3: Raid = {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayv",
-      className: "DK",
+      name: 'mayv',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -7089,35 +7089,35 @@ const raid3: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bride",
-      className: "ROGUE",
+      name: 'bride',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -7128,49 +7128,49 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nurgl",
-      className: "ROGUE",
+      name: 'nurgl',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: true,
@@ -7181,41 +7181,41 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupan",
-      className: "HUNTER",
+      name: 'ethupan',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -7224,55 +7224,55 @@ const raid3: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeypx",
-      className: "DRUID",
+      name: 'jeypx',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kelthal",
-      className: "WARRIOR",
+      name: 'kelthal',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -7281,51 +7281,51 @@ const raid3: Raid = {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "shilke",
-      className: "PRIEST",
+      name: 'shilke',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "doggle",
-      className: "DRUID",
+      name: 'doggle',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "nagosa",
-      className: "SHAMAN",
+      name: 'nagosa',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
+          type: 'Elemental',
         },
       ],
       main: true,
@@ -7334,63 +7334,63 @@ const raid3: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "koobo",
-      className: "MAGE",
+      name: 'koobo',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "khayo",
-      className: "WARLOCK",
+      name: 'khayo',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kondaddicted",
-      className: "WARLOCK",
+      name: 'kondaddicted',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "emipian",
-      className: "WARLOCK",
+      name: 'emipian',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -7399,36 +7399,36 @@ const raid3: Raid = {
   ],
   raidAvailableChars: [
     {
-      name: "gorosm",
-      className: "DRUID",
+      name: 'gorosm',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "aandariel",
-      className: "MAGE",
+      name: 'aandariel',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "salabonobo",
-      className: "HUNTER",
+      name: 'salabonobo',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: false,
@@ -7437,31 +7437,31 @@ const raid3: Raid = {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "averonth",
-      className: "WARRIOR",
+      name: 'averonth',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "barrioustwo",
-      className: "ROGUE",
+      name: 'barrioustwo',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: false,
@@ -7472,33 +7472,33 @@ const raid3: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "dauran",
-      className: "PRIEST",
+      name: 'dauran',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: true,
@@ -7507,27 +7507,27 @@ const raid3: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nutkin",
-      className: "WARLOCK",
+      name: 'nutkin',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Demonology",
+          type: 'Demonology',
         },
       ],
       main: true,
@@ -7535,14 +7535,14 @@ const raid3: Raid = {
     },
   ],
   itemCharactersMap: {
-    "Breastplate of the Devoted": [
+    'Breastplate of the Devoted': [
       {
-        name: "arylpog",
-        className: "PALADIN",
+        name: 'arylpog',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -7551,29 +7551,29 @@ const raid3: Raid = {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Wisdom's Hold": [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -7582,17 +7582,17 @@ const raid3: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -7600,19 +7600,19 @@ const raid3: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Valanyr: [
       {
-        name: "bullette",
-        className: "DRUID",
+        name: 'bullette',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "RestorationDruid",
+            type: 'RestorationDruid',
           },
         ],
         main: true,
@@ -7621,29 +7621,29 @@ const raid3: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Voldrethar, Dark Blade of Oblivion": [
+    'Voldrethar, Dark Blade of Oblivion': [
       {
-        name: "kelthal",
-        className: "WARRIOR",
+        name: 'kelthal',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -7652,29 +7652,29 @@ const raid3: Raid = {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Dreambinder: [
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -7683,45 +7683,45 @@ const raid3: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Sabatons of Lifeless Night": [
+    'Sabatons of Lifeless Night': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -7732,51 +7732,51 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Legguards of Cunning Deception": [
+    'Legguards of Cunning Deception': [
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -7785,45 +7785,45 @@ const raid3: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Golden Saronite Dragon": [
+    'Golden Saronite Dragon': [
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -7834,35 +7834,35 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of the Fallen Wyrm": [
+    'Belt of the Fallen Wyrm': [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -7871,17 +7871,17 @@ const raid3: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -7889,17 +7889,17 @@ const raid3: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "kaboodles",
-        className: "PALADIN",
+        name: 'kaboodles',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -7908,29 +7908,29 @@ const raid3: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Drape of Mortal Downfall": [
+    'Drape of Mortal Downfall': [
       {
-        name: "nagosa",
-        className: "SHAMAN",
+        name: 'nagosa',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Elemental",
+            type: 'Elemental',
           },
         ],
         main: true,
@@ -7939,29 +7939,29 @@ const raid3: Raid = {
             item: {
               id: 6,
               url: null,
-              name: "Drape of Mortal Downfall",
+              name: 'Drape of Mortal Downfall',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Star-beaded Clutch": [
+    'Star-beaded Clutch': [
       {
-        name: "arylpog",
-        className: "PALADIN",
+        name: 'arylpog',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -7970,27 +7970,27 @@ const raid3: Raid = {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nagosa",
-        className: "SHAMAN",
+        name: 'nagosa',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Elemental",
+            type: 'Elemental',
           },
         ],
         main: true,
@@ -7999,29 +7999,29 @@ const raid3: Raid = {
             item: {
               id: 6,
               url: null,
-              name: "Drape of Mortal Downfall",
+              name: 'Drape of Mortal Downfall',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Pyrelight Circle": [
+    'Pyrelight Circle': [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -8030,17 +8030,17 @@ const raid3: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -8048,17 +8048,17 @@ const raid3: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "kaboodles",
-        className: "PALADIN",
+        name: 'kaboodles',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -8067,29 +8067,29 @@ const raid3: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of Colossal Rage": [
+    'Belt of Colossal Rage': [
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -8098,37 +8098,37 @@ const raid3: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Solar Bindings": [
+    'Solar Bindings': [
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -8139,51 +8139,51 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Seal of the Betrayed King": [
+    'Seal of the Betrayed King': [
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -8192,37 +8192,37 @@ const raid3: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Drape of Icy Intent": [
+    'Drape of Icy Intent': [
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -8233,43 +8233,43 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Skyforge Crossbow": [
+    'Skyforge Crossbow': [
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -8280,49 +8280,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -8331,45 +8331,45 @@ const raid3: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Show of Faith": [
+    'Show of Faith': [
       {
-        name: "bullette",
-        className: "DRUID",
+        name: 'bullette',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "RestorationDruid",
+            type: 'RestorationDruid',
           },
         ],
         main: true,
@@ -8378,29 +8378,29 @@ const raid3: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Boundless Gaze": [
+    'Boundless Gaze': [
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -8411,35 +8411,35 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Plated Leggings of Ruination": [
+    'Plated Leggings of Ruination': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -8450,49 +8450,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -8501,37 +8501,37 @@ const raid3: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Frigid Strength of Hodir": [
+    'Frigid Strength of Hodir': [
       {
-        name: "kelthal",
-        className: "WARRIOR",
+        name: 'kelthal',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -8540,29 +8540,29 @@ const raid3: Raid = {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Comet's Trail": [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -8573,49 +8573,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -8626,33 +8626,33 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -8663,49 +8663,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -8716,43 +8716,43 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Warhelm of the Champion": [
+    'Warhelm of the Champion': [
       {
-        name: "erm",
-        className: "DK",
+        name: 'erm',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: false,
@@ -8761,21 +8761,21 @@ const raid3: Raid = {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Embrace of the Gladiator": [
+    'Embrace of the Gladiator': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -8786,49 +8786,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -8839,49 +8839,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -8892,41 +8892,41 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -8935,45 +8935,45 @@ const raid3: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Shoulderpads of the Intruder": [
+    'Shoulderpads of the Intruder': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -8984,49 +8984,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -9037,49 +9037,49 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -9090,43 +9090,43 @@ const raid3: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Constellus: [
       {
-        name: "arusha",
-        className: "PRIEST",
+        name: 'arusha',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: false,
@@ -9135,26 +9135,26 @@ const raid3: Raid = {
             item: {
               id: 5,
               url: null,
-              name: "Constellus",
+              name: 'Constellus',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
   },
-  freeItems: []
+  freeItems: [],
 };
 
 const raid4: Raid = {
   tanks: [
     {
-      name: "pacoknight",
-      className: "DK",
+      name: 'pacoknight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: true,
@@ -9163,27 +9163,27 @@ const raid4: Raid = {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "holynut",
-      className: "PALADIN",
+      name: 'holynut',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: false,
@@ -9192,21 +9192,21 @@ const raid4: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   healers: [
     {
-      name: "khaya",
-      className: "SHAMAN",
+      name: 'khaya',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "RestorationShaman",
+          type: 'RestorationShaman',
         },
       ],
       main: true,
@@ -9215,27 +9215,27 @@ const raid4: Raid = {
           item: {
             id: 1,
             url: null,
-            name: "Bindings of Winter Gale",
+            name: 'Bindings of Winter Gale',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "aryllene",
-      className: "PALADIN",
+      name: 'aryllene',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -9244,17 +9244,17 @@ const raid4: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -9262,17 +9262,17 @@ const raid4: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeyp",
-      className: "PRIEST",
+      name: 'jeyp',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: true,
@@ -9281,39 +9281,39 @@ const raid4: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "cowran",
-      className: "DRUID",
+      name: 'cowran',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "tjholy",
-      className: "PALADIN",
+      name: 'tjholy',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -9322,33 +9322,33 @@ const raid4: Raid = {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   dps: [
     {
-      name: "mayvi",
-      className: "PALADIN",
+      name: 'mayvi',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "haumea",
-      className: "SHAMAN",
+      name: 'haumea',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: true,
@@ -9359,25 +9359,25 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "littlemist",
-      className: "DK",
+      name: 'littlemist',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
@@ -9388,41 +9388,41 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyblight",
-      className: "DK",
+      name: 'deadlyblight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -9431,31 +9431,31 @@ const raid4: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nagodk",
-      className: "DK",
+      name: 'nagodk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "frostyboy",
-      className: "DK",
+      name: 'frostyboy',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -9464,19 +9464,19 @@ const raid4: Raid = {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "barrious",
-      className: "ROGUE",
+      name: 'barrious',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -9487,33 +9487,33 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bridew",
-      className: "ROGUE",
+      name: 'bridew',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: false,
@@ -9524,33 +9524,33 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "salabenji",
-      className: "HUNTER",
+      name: 'salabenji',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -9559,35 +9559,35 @@ const raid4: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "fiachna",
-      className: "DRUID",
+      name: 'fiachna',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: true,
@@ -9596,9 +9596,9 @@ const raid4: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -9606,41 +9606,41 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "hallheim",
-      className: "WARRIOR",
+      name: 'hallheim',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -9649,17 +9649,17 @@ const raid4: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -9667,57 +9667,57 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "pariah",
-      className: "PRIEST",
+      name: 'pariah',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
@@ -9726,67 +9726,67 @@ const raid4: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "goll",
-      className: "SHAMAN",
+      name: 'goll',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "edenian",
-      className: "MAGE",
-      specs: [
-        {
-          main: true,
-          type: "Fire",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "kondoriano",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "komachi",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
+          type: 'Elemental',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "swerved",
-      className: "WARLOCK",
+      name: 'edenian',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Fire',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'kondoriano',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'komachi',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'swerved',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -9795,12 +9795,12 @@ const raid4: Raid = {
   ],
   occupiedCharacters: [
     {
-      name: "pacoknight",
-      className: "DK",
+      name: 'pacoknight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: true,
@@ -9809,27 +9809,27 @@ const raid4: Raid = {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "holynut",
-      className: "PALADIN",
+      name: 'holynut',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: false,
@@ -9838,19 +9838,19 @@ const raid4: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "khaya",
-      className: "SHAMAN",
+      name: 'khaya',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "RestorationShaman",
+          type: 'RestorationShaman',
         },
       ],
       main: true,
@@ -9859,27 +9859,27 @@ const raid4: Raid = {
           item: {
             id: 1,
             url: null,
-            name: "Bindings of Winter Gale",
+            name: 'Bindings of Winter Gale',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "aryllene",
-      className: "PALADIN",
+      name: 'aryllene',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -9888,17 +9888,17 @@ const raid4: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -9906,17 +9906,17 @@ const raid4: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeyp",
-      className: "PRIEST",
+      name: 'jeyp',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: true,
@@ -9925,39 +9925,39 @@ const raid4: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "cowran",
-      className: "DRUID",
+      name: 'cowran',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "tjholy",
-      className: "PALADIN",
+      name: 'tjholy',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -9966,31 +9966,31 @@ const raid4: Raid = {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayvi",
-      className: "PALADIN",
+      name: 'mayvi',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "haumea",
-      className: "SHAMAN",
+      name: 'haumea',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: true,
@@ -10001,25 +10001,25 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "littlemist",
-      className: "DK",
+      name: 'littlemist',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
@@ -10030,41 +10030,41 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyblight",
-      className: "DK",
+      name: 'deadlyblight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -10073,31 +10073,31 @@ const raid4: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nagodk",
-      className: "DK",
+      name: 'nagodk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "frostyboy",
-      className: "DK",
+      name: 'frostyboy',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -10106,19 +10106,19 @@ const raid4: Raid = {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "barrious",
-      className: "ROGUE",
+      name: 'barrious',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -10129,33 +10129,33 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bridew",
-      className: "ROGUE",
+      name: 'bridew',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: false,
@@ -10166,33 +10166,33 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "salabenji",
-      className: "HUNTER",
+      name: 'salabenji',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -10201,35 +10201,35 @@ const raid4: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "fiachna",
-      className: "DRUID",
+      name: 'fiachna',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: true,
@@ -10238,9 +10238,9 @@ const raid4: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -10248,41 +10248,41 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "hallheim",
-      className: "WARRIOR",
+      name: 'hallheim',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -10291,17 +10291,17 @@ const raid4: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -10309,57 +10309,57 @@ const raid4: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "pariah",
-      className: "PRIEST",
+      name: 'pariah',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
@@ -10368,67 +10368,67 @@ const raid4: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "goll",
-      className: "SHAMAN",
+      name: 'goll',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "edenian",
-      className: "MAGE",
-      specs: [
-        {
-          main: true,
-          type: "Fire",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "kondoriano",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "komachi",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
+          type: 'Elemental',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "swerved",
-      className: "WARLOCK",
+      name: 'edenian',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Fire',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'kondoriano',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'komachi',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'swerved',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -10437,12 +10437,12 @@ const raid4: Raid = {
   ],
   raidAvailableChars: [
     {
-      name: "tekala",
-      className: "HUNTER",
+      name: 'tekala',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: false,
@@ -10451,43 +10451,43 @@ const raid4: Raid = {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupanDk",
-      className: "DK",
+      name: 'ethupanDk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "zurgle",
-      className: "WARRIOR",
-      specs: [
-        {
-          main: true,
-          type: "Fury",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "cotolento",
-      className: "MAGE",
+      name: 'zurgle',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fury',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'cotolento',
+      className: 'MAGE',
+      specs: [
+        {
+          main: true,
+          type: 'Fire',
         },
       ],
       main: true,
@@ -10496,19 +10496,19 @@ const raid4: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mithrandir",
-      className: "PALADIN",
+      name: 'mithrandir',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
@@ -10516,14 +10516,14 @@ const raid4: Raid = {
     },
   ],
   itemCharactersMap: {
-    "Greaves of Swift Vengeance": [
+    'Greaves of Swift Vengeance': [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -10532,37 +10532,37 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Breastplate of the Devoted": [
+    'Breastplate of the Devoted': [
       {
-        name: "tjholy",
-        className: "PALADIN",
+        name: 'tjholy',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -10571,21 +10571,21 @@ const raid4: Raid = {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Wisdom's Hold": [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -10594,17 +10594,17 @@ const raid4: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -10612,19 +10612,19 @@ const raid4: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Valanyr: [
       {
-        name: "khaya",
-        className: "SHAMAN",
+        name: 'khaya',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "RestorationShaman",
+            type: 'RestorationShaman',
           },
         ],
         main: true,
@@ -10633,29 +10633,29 @@ const raid4: Raid = {
             item: {
               id: 1,
               url: null,
-              name: "Bindings of Winter Gale",
+              name: 'Bindings of Winter Gale',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Voldrethar, Dark Blade of Oblivion": [
+    'Voldrethar, Dark Blade of Oblivion': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -10664,17 +10664,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -10682,59 +10682,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Sabatons of Lifeless Night": [
+    'Sabatons of Lifeless Night': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -10743,17 +10743,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -10761,59 +10761,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Dreambinder: [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -10822,37 +10822,37 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Legguards of Cunning Deception": [
+    'Legguards of Cunning Deception': [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -10861,35 +10861,35 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -10898,9 +10898,9 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -10908,41 +10908,41 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -10951,17 +10951,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -10969,59 +10969,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Seal of the Betrayed King": [
+    'Seal of the Betrayed King': [
       {
-        name: "pacoknight",
-        className: "DK",
+        name: 'pacoknight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Blood",
+            type: 'Blood',
           },
         ],
         main: true,
@@ -11030,29 +11030,29 @@ const raid4: Raid = {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 35,
               url: null,
-              name: "Armbands of Bedlam",
+              name: 'Armbands of Bedlam',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Belt of the Fallen Wyrm": [
+    'Belt of the Fallen Wyrm': [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -11061,17 +11061,17 @@ const raid4: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11079,19 +11079,19 @@ const raid4: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Pyrelight Circle": [
+    'Pyrelight Circle': [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -11100,17 +11100,17 @@ const raid4: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11118,19 +11118,19 @@ const raid4: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of Colossal Rage": [
+    'Belt of Colossal Rage': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -11141,43 +11141,43 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Bindings of Winter Gale": [
+    'Bindings of Winter Gale': [
       {
-        name: "khaya",
-        className: "SHAMAN",
+        name: 'khaya',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "RestorationShaman",
+            type: 'RestorationShaman',
           },
         ],
         main: true,
@@ -11186,29 +11186,29 @@ const raid4: Raid = {
             item: {
               id: 1,
               url: null,
-              name: "Bindings of Winter Gale",
+              name: 'Bindings of Winter Gale',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Solar Bindings": [
+    'Solar Bindings': [
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -11219,33 +11219,33 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -11254,9 +11254,9 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11264,41 +11264,41 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -11307,17 +11307,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11325,59 +11325,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Heart of Iron": [
+    'Heart of Iron': [
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -11386,9 +11386,9 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11396,41 +11396,41 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -11439,17 +11439,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11457,59 +11457,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Bulwark of Algalon": [
+    'Bulwark of Algalon': [
       {
-        name: "holynut",
-        className: "PALADIN",
+        name: 'holynut',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "ProtectionPaladin",
+            type: 'ProtectionPaladin',
           },
         ],
         main: false,
@@ -11518,21 +11518,21 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Armbands of Bedlam": [
+    'Armbands of Bedlam': [
       {
-        name: "pacoknight",
-        className: "DK",
+        name: 'pacoknight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Blood",
+            type: 'Blood',
           },
         ],
         main: true,
@@ -11541,29 +11541,29 @@ const raid4: Raid = {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 35,
               url: null,
-              name: "Armbands of Bedlam",
+              name: 'Armbands of Bedlam',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Drape of Icy Intent": [
+    'Drape of Icy Intent': [
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -11574,35 +11574,35 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Show of Faith": [
+    'Show of Faith': [
       {
-        name: "jeyp",
-        className: "PRIEST",
+        name: 'jeyp',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: true,
@@ -11611,29 +11611,29 @@ const raid4: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 4,
               url: null,
-              name: "Sapphire Amulet of Renewal",
+              name: 'Sapphire Amulet of Renewal',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Boundless Gaze": [
+    'Boundless Gaze': [
       {
-        name: "haumea",
-        className: "SHAMAN",
+        name: 'haumea',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: true,
@@ -11644,27 +11644,27 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Plated Leggings of Ruination": [
+    'Plated Leggings of Ruination': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -11675,41 +11675,41 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "deadlyblight",
-        className: "DK",
+        name: 'deadlyblight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: false,
@@ -11718,21 +11718,21 @@ const raid4: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Frigid Strength of Hodir": [
+    'Frigid Strength of Hodir': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -11741,17 +11741,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -11759,59 +11759,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Bladetwister: [
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -11822,35 +11822,35 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Comet's Trail": [
       {
-        name: "haumea",
-        className: "SHAMAN",
+        name: 'haumea',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: true,
@@ -11861,25 +11861,25 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -11890,41 +11890,41 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -11935,33 +11935,33 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -11972,33 +11972,33 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -12007,9 +12007,9 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -12017,41 +12017,41 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -12060,17 +12060,17 @@ const raid4: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -12078,59 +12078,59 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Warhelm of the Champion": [
+    'Warhelm of the Champion': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -12141,43 +12141,43 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Embrace of the Gladiator": [
+    'Embrace of the Gladiator': [
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -12188,33 +12188,33 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -12223,9 +12223,9 @@ const raid4: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -12233,43 +12233,43 @@ const raid4: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Sapphire Amulet of Renewal": [
+    'Sapphire Amulet of Renewal': [
       {
-        name: "jeyp",
-        className: "PRIEST",
+        name: 'jeyp',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: true,
@@ -12278,29 +12278,29 @@ const raid4: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 4,
               url: null,
-              name: "Sapphire Amulet of Renewal",
+              name: 'Sapphire Amulet of Renewal',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
     Constellus: [
       {
-        name: "pariah",
-        className: "PRIEST",
+        name: 'pariah',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Shadow",
+            type: 'Shadow',
           },
         ],
         main: false,
@@ -12309,38 +12309,38 @@ const raid4: Raid = {
             item: {
               id: 5,
               url: null,
-              name: "Constellus",
+              name: 'Constellus',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
   },
-  freeItems: []
+  freeItems: [],
 };
 
 const raid5: Raid = {
   tanks: [
     {
-      name: "davetta",
-      className: "PALADIN",
+      name: 'davetta',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "tjbaracus",
-      className: "DK",
+      name: 'tjbaracus',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: false,
@@ -12349,12 +12349,12 @@ const raid5: Raid = {
   ],
   healers: [
     {
-      name: "arusha",
-      className: "PRIEST",
+      name: 'arusha',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: false,
@@ -12363,19 +12363,19 @@ const raid5: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "palenian",
-      className: "PALADIN",
+      name: 'palenian',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -12384,17 +12384,17 @@ const raid5: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -12402,17 +12402,17 @@ const raid5: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bullette",
-      className: "DRUID",
+      name: 'bullette',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: true,
@@ -12421,27 +12421,27 @@ const raid5: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "kaboodles",
-      className: "PALADIN",
+      name: 'kaboodles',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -12450,27 +12450,27 @@ const raid5: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "arylpog",
-      className: "PALADIN",
+      name: 'arylpog',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -12479,29 +12479,29 @@ const raid5: Raid = {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   dps: [
     {
-      name: "deadlyfaith",
-      className: "PALADIN",
+      name: 'deadlyfaith',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: true,
@@ -12512,49 +12512,49 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "misto",
-      className: "SHAMAN",
+      name: 'misto',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: false,
@@ -12565,45 +12565,45 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "tadano",
-      className: "DK",
+      name: 'tadano',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "erm",
-      className: "DK",
+      name: 'erm',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -12612,19 +12612,19 @@ const raid5: Raid = {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayv",
-      className: "DK",
+      name: 'mayv',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -12633,35 +12633,35 @@ const raid5: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bride",
-      className: "ROGUE",
+      name: 'bride',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -12672,49 +12672,49 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nurgl",
-      className: "ROGUE",
+      name: 'nurgl',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: true,
@@ -12725,41 +12725,41 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupan",
-      className: "HUNTER",
+      name: 'ethupan',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -12768,55 +12768,55 @@ const raid5: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeypx",
-      className: "DRUID",
+      name: 'jeypx',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kelthal",
-      className: "WARRIOR",
+      name: 'kelthal',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -12825,51 +12825,51 @@ const raid5: Raid = {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "shilke",
-      className: "PRIEST",
+      name: 'shilke',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "doggle",
-      className: "DRUID",
+      name: 'doggle',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "nagosa",
-      className: "SHAMAN",
+      name: 'nagosa',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
+          type: 'Elemental',
         },
       ],
       main: true,
@@ -12878,63 +12878,63 @@ const raid5: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "koobo",
-      className: "MAGE",
+      name: 'koobo',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "khayo",
-      className: "WARLOCK",
+      name: 'khayo',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kondaddicted",
-      className: "WARLOCK",
+      name: 'kondaddicted',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "emipian",
-      className: "WARLOCK",
+      name: 'emipian',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -12943,36 +12943,36 @@ const raid5: Raid = {
   ],
   occupiedCharacters: [
     {
-      name: "davetta",
-      className: "PALADIN",
+      name: 'davetta',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "tjbaracus",
-      className: "DK",
+      name: 'tjbaracus',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "arusha",
-      className: "PRIEST",
+      name: 'arusha',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: false,
@@ -12981,19 +12981,19 @@ const raid5: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "palenian",
-      className: "PALADIN",
+      name: 'palenian',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -13002,17 +13002,17 @@ const raid5: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -13020,17 +13020,17 @@ const raid5: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bullette",
-      className: "DRUID",
+      name: 'bullette',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: true,
@@ -13039,27 +13039,27 @@ const raid5: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "kaboodles",
-      className: "PALADIN",
+      name: 'kaboodles',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -13068,27 +13068,27 @@ const raid5: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "arylpog",
-      className: "PALADIN",
+      name: 'arylpog',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -13097,27 +13097,27 @@ const raid5: Raid = {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyfaith",
-      className: "PALADIN",
+      name: 'deadlyfaith',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: true,
@@ -13128,49 +13128,49 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "misto",
-      className: "SHAMAN",
+      name: 'misto',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: false,
@@ -13181,45 +13181,45 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "tadano",
-      className: "DK",
+      name: 'tadano',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "erm",
-      className: "DK",
+      name: 'erm',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -13228,19 +13228,19 @@ const raid5: Raid = {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayv",
-      className: "DK",
+      name: 'mayv',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -13249,35 +13249,35 @@ const raid5: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bride",
-      className: "ROGUE",
+      name: 'bride',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -13288,49 +13288,49 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nurgl",
-      className: "ROGUE",
+      name: 'nurgl',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: true,
@@ -13341,41 +13341,41 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 32,
             url: null,
-            name: "Shoulderpads of the Intruder",
+            name: 'Shoulderpads of the Intruder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupan",
-      className: "HUNTER",
+      name: 'ethupan',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -13384,55 +13384,55 @@ const raid5: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 34,
             url: null,
-            name: "Skyforge Crossbow",
+            name: 'Skyforge Crossbow',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeypx",
-      className: "DRUID",
+      name: 'jeypx',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kelthal",
-      className: "WARRIOR",
+      name: 'kelthal',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -13441,51 +13441,51 @@ const raid5: Raid = {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "shilke",
-      className: "PRIEST",
+      name: 'shilke',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "doggle",
-      className: "DRUID",
+      name: 'doggle',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "nagosa",
-      className: "SHAMAN",
+      name: 'nagosa',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
+          type: 'Elemental',
         },
       ],
       main: true,
@@ -13494,63 +13494,63 @@ const raid5: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 7,
             url: null,
-            name: "Star-beaded Clutch",
+            name: 'Star-beaded Clutch',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "koobo",
-      className: "MAGE",
+      name: 'koobo',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: true,
       items: [],
     },
     {
-      name: "khayo",
-      className: "WARLOCK",
+      name: 'khayo',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "kondaddicted",
-      className: "WARLOCK",
+      name: 'kondaddicted',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "emipian",
-      className: "WARLOCK",
+      name: 'emipian',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -13559,36 +13559,36 @@ const raid5: Raid = {
   ],
   raidAvailableChars: [
     {
-      name: "gorosm",
-      className: "DRUID",
+      name: 'gorosm',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "Balance",
+          type: 'Balance',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "aandariel",
-      className: "MAGE",
+      name: 'aandariel',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fire',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "salabonobo",
-      className: "HUNTER",
+      name: 'salabonobo',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: false,
@@ -13597,31 +13597,31 @@ const raid5: Raid = {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "averonth",
-      className: "WARRIOR",
+      name: 'averonth',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "barrioustwo",
-      className: "ROGUE",
+      name: 'barrioustwo',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Combat",
+          type: 'Combat',
         },
       ],
       main: false,
@@ -13632,33 +13632,33 @@ const raid5: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 25,
             url: null,
-            name: "Golden Saronite Dragon",
+            name: 'Golden Saronite Dragon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "dauran",
-      className: "PRIEST",
+      name: 'dauran',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: true,
@@ -13667,27 +13667,27 @@ const raid5: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nutkin",
-      className: "WARLOCK",
+      name: 'nutkin',
+      className: 'WARLOCK',
       specs: [
         {
           main: true,
-          type: "Demonology",
+          type: 'Demonology',
         },
       ],
       main: true,
@@ -13695,14 +13695,14 @@ const raid5: Raid = {
     },
   ],
   itemCharactersMap: {
-    "Breastplate of the Devoted": [
+    'Breastplate of the Devoted': [
       {
-        name: "arylpog",
-        className: "PALADIN",
+        name: 'arylpog',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -13711,29 +13711,29 @@ const raid5: Raid = {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Wisdom's Hold": [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -13742,17 +13742,17 @@ const raid5: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -13760,19 +13760,19 @@ const raid5: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Valanyr: [
       {
-        name: "bullette",
-        className: "DRUID",
+        name: 'bullette',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "RestorationDruid",
+            type: 'RestorationDruid',
           },
         ],
         main: true,
@@ -13781,29 +13781,29 @@ const raid5: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Voldrethar, Dark Blade of Oblivion": [
+    'Voldrethar, Dark Blade of Oblivion': [
       {
-        name: "kelthal",
-        className: "WARRIOR",
+        name: 'kelthal',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -13812,29 +13812,29 @@ const raid5: Raid = {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Dreambinder: [
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -13843,45 +13843,45 @@ const raid5: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Sabatons of Lifeless Night": [
+    'Sabatons of Lifeless Night': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -13892,51 +13892,51 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Legguards of Cunning Deception": [
+    'Legguards of Cunning Deception': [
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -13945,45 +13945,45 @@ const raid5: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Golden Saronite Dragon": [
+    'Golden Saronite Dragon': [
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -13994,35 +13994,35 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of the Fallen Wyrm": [
+    'Belt of the Fallen Wyrm': [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -14031,17 +14031,17 @@ const raid5: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -14049,17 +14049,17 @@ const raid5: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "kaboodles",
-        className: "PALADIN",
+        name: 'kaboodles',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -14068,29 +14068,29 @@ const raid5: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Drape of Mortal Downfall": [
+    'Drape of Mortal Downfall': [
       {
-        name: "nagosa",
-        className: "SHAMAN",
+        name: 'nagosa',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Elemental",
+            type: 'Elemental',
           },
         ],
         main: true,
@@ -14099,29 +14099,29 @@ const raid5: Raid = {
             item: {
               id: 6,
               url: null,
-              name: "Drape of Mortal Downfall",
+              name: 'Drape of Mortal Downfall',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Star-beaded Clutch": [
+    'Star-beaded Clutch': [
       {
-        name: "arylpog",
-        className: "PALADIN",
+        name: 'arylpog',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -14130,27 +14130,27 @@ const raid5: Raid = {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nagosa",
-        className: "SHAMAN",
+        name: 'nagosa',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Elemental",
+            type: 'Elemental',
           },
         ],
         main: true,
@@ -14159,29 +14159,29 @@ const raid5: Raid = {
             item: {
               id: 6,
               url: null,
-              name: "Drape of Mortal Downfall",
+              name: 'Drape of Mortal Downfall',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 7,
               url: null,
-              name: "Star-beaded Clutch",
+              name: 'Star-beaded Clutch',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Pyrelight Circle": [
+    'Pyrelight Circle': [
       {
-        name: "palenian",
-        className: "PALADIN",
+        name: 'palenian',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -14190,17 +14190,17 @@ const raid5: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -14208,17 +14208,17 @@ const raid5: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "kaboodles",
-        className: "PALADIN",
+        name: 'kaboodles',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -14227,29 +14227,29 @@ const raid5: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of Colossal Rage": [
+    'Belt of Colossal Rage': [
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -14258,37 +14258,37 @@ const raid5: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Solar Bindings": [
+    'Solar Bindings': [
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -14299,51 +14299,51 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Seal of the Betrayed King": [
+    'Seal of the Betrayed King': [
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -14352,37 +14352,37 @@ const raid5: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Drape of Icy Intent": [
+    'Drape of Icy Intent': [
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -14393,43 +14393,43 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Skyforge Crossbow": [
+    'Skyforge Crossbow': [
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -14440,49 +14440,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -14491,45 +14491,45 @@ const raid5: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Show of Faith": [
+    'Show of Faith': [
       {
-        name: "bullette",
-        className: "DRUID",
+        name: 'bullette',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "RestorationDruid",
+            type: 'RestorationDruid',
           },
         ],
         main: true,
@@ -14538,29 +14538,29 @@ const raid5: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Boundless Gaze": [
+    'Boundless Gaze': [
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -14571,35 +14571,35 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Plated Leggings of Ruination": [
+    'Plated Leggings of Ruination': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -14610,49 +14610,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "mayv",
-        className: "DK",
+        name: 'mayv',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "FrostDk",
+            type: 'FrostDk',
           },
         ],
         main: true,
@@ -14661,37 +14661,37 @@ const raid5: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Frigid Strength of Hodir": [
+    'Frigid Strength of Hodir': [
       {
-        name: "kelthal",
-        className: "WARRIOR",
+        name: 'kelthal',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -14700,29 +14700,29 @@ const raid5: Raid = {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Comet's Trail": [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -14733,49 +14733,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "misto",
-        className: "SHAMAN",
+        name: 'misto',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: false,
@@ -14786,33 +14786,33 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 25,
               url: null,
-              name: "Golden Saronite Dragon",
+              name: 'Golden Saronite Dragon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -14823,49 +14823,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -14876,43 +14876,43 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Warhelm of the Champion": [
+    'Warhelm of the Champion': [
       {
-        name: "erm",
-        className: "DK",
+        name: 'erm',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: false,
@@ -14921,21 +14921,21 @@ const raid5: Raid = {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Embrace of the Gladiator": [
+    'Embrace of the Gladiator': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -14946,49 +14946,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -14999,49 +14999,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -15052,41 +15052,41 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "ethupan",
-        className: "HUNTER",
+        name: 'ethupan',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -15095,45 +15095,45 @@ const raid5: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Shoulderpads of the Intruder": [
+    'Shoulderpads of the Intruder': [
       {
-        name: "deadlyfaith",
-        className: "PALADIN",
+        name: 'deadlyfaith',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "Retribution",
+            type: 'Retribution',
           },
         ],
         main: true,
@@ -15144,49 +15144,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bride",
-        className: "ROGUE",
+        name: 'bride',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -15197,49 +15197,49 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 34,
               url: null,
-              name: "Skyforge Crossbow",
+              name: 'Skyforge Crossbow',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "nurgl",
-        className: "ROGUE",
+        name: 'nurgl',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Combat",
+            type: 'Combat',
           },
         ],
         main: true,
@@ -15250,43 +15250,43 @@ const raid5: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 32,
               url: null,
-              name: "Shoulderpads of the Intruder",
+              name: 'Shoulderpads of the Intruder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Constellus: [
       {
-        name: "arusha",
-        className: "PRIEST",
+        name: 'arusha',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: false,
@@ -15295,26 +15295,26 @@ const raid5: Raid = {
             item: {
               id: 5,
               url: null,
-              name: "Constellus",
+              name: 'Constellus',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
   },
-  freeItems: []
+  freeItems: [],
 };
 
 const raid6: Raid = {
   tanks: [
     {
-      name: "pacoknight",
-      className: "DK",
+      name: 'pacoknight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: true,
@@ -15323,27 +15323,27 @@ const raid6: Raid = {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "holynut",
-      className: "PALADIN",
+      name: 'holynut',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: false,
@@ -15352,21 +15352,21 @@ const raid6: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   healers: [
     {
-      name: "khaya",
-      className: "SHAMAN",
+      name: 'khaya',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "RestorationShaman",
+          type: 'RestorationShaman',
         },
       ],
       main: true,
@@ -15375,27 +15375,27 @@ const raid6: Raid = {
           item: {
             id: 1,
             url: null,
-            name: "Bindings of Winter Gale",
+            name: 'Bindings of Winter Gale',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "aryllene",
-      className: "PALADIN",
+      name: 'aryllene',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -15404,17 +15404,17 @@ const raid6: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -15422,17 +15422,17 @@ const raid6: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeyp",
-      className: "PRIEST",
+      name: 'jeyp',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: true,
@@ -15441,39 +15441,39 @@ const raid6: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "cowran",
-      className: "DRUID",
+      name: 'cowran',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "tjholy",
-      className: "PALADIN",
+      name: 'tjholy',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -15482,33 +15482,33 @@ const raid6: Raid = {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
   ],
   dps: [
     {
-      name: "mayvi",
-      className: "PALADIN",
+      name: 'mayvi',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "haumea",
-      className: "SHAMAN",
+      name: 'haumea',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: true,
@@ -15519,25 +15519,25 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "littlemist",
-      className: "DK",
+      name: 'littlemist',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
@@ -15548,41 +15548,41 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyblight",
-      className: "DK",
+      name: 'deadlyblight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -15591,19 +15591,19 @@ const raid6: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "frostyboy",
-      className: "DK",
+      name: 'frostyboy',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -15612,31 +15612,31 @@ const raid6: Raid = {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nambaruan",
-      className: "DK",
+      name: 'nambaruan',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "barrious",
-      className: "ROGUE",
+      name: 'barrious',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -15647,33 +15647,33 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bridew",
-      className: "ROGUE",
+      name: 'bridew',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: false,
@@ -15684,33 +15684,33 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "salabenji",
-      className: "HUNTER",
+      name: 'salabenji',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -15719,35 +15719,35 @@ const raid6: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "fiachna",
-      className: "DRUID",
+      name: 'fiachna',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: true,
@@ -15756,9 +15756,9 @@ const raid6: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -15766,41 +15766,41 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "hallheim",
-      className: "WARRIOR",
+      name: 'hallheim',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -15809,17 +15809,17 @@ const raid6: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -15827,57 +15827,57 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "pariah",
-      className: "PRIEST",
+      name: 'pariah',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
@@ -15886,67 +15886,67 @@ const raid6: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "goll",
-      className: "SHAMAN",
+      name: 'goll',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "edenian",
-      className: "MAGE",
-      specs: [
-        {
-          main: true,
-          type: "Fire",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "kondoriano",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "komachi",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
+          type: 'Elemental',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "swerved",
-      className: "WARLOCK",
+      name: 'edenian',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Fire',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'kondoriano',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'komachi',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'swerved',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -15955,12 +15955,12 @@ const raid6: Raid = {
   ],
   occupiedCharacters: [
     {
-      name: "pacoknight",
-      className: "DK",
+      name: 'pacoknight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Blood",
+          type: 'Blood',
         },
       ],
       main: true,
@@ -15969,27 +15969,27 @@ const raid6: Raid = {
           item: {
             id: 38,
             url: null,
-            name: "Seal of the Betrayed King",
+            name: 'Seal of the Betrayed King',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "holynut",
-      className: "PALADIN",
+      name: 'holynut',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "ProtectionPaladin",
+          type: 'ProtectionPaladin',
         },
       ],
       main: false,
@@ -15998,19 +15998,19 @@ const raid6: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "khaya",
-      className: "SHAMAN",
+      name: 'khaya',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "RestorationShaman",
+          type: 'RestorationShaman',
         },
       ],
       main: true,
@@ -16019,27 +16019,27 @@ const raid6: Raid = {
           item: {
             id: 1,
             url: null,
-            name: "Bindings of Winter Gale",
+            name: 'Bindings of Winter Gale',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 2,
             url: null,
-            name: "Valanyr",
+            name: 'Valanyr',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "aryllene",
-      className: "PALADIN",
+      name: 'aryllene',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: false,
@@ -16048,17 +16048,17 @@ const raid6: Raid = {
           item: {
             id: 11,
             url: null,
-            name: "Belt of the Fallen Wyrm",
+            name: 'Belt of the Fallen Wyrm',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 10,
             url: null,
-            name: "Pyrelight Circle",
+            name: 'Pyrelight Circle',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -16066,17 +16066,17 @@ const raid6: Raid = {
             url: null,
             name: "Wisdom's Hold",
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "jeyp",
-      className: "PRIEST",
+      name: 'jeyp',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Discipline",
+          type: 'Discipline',
         },
       ],
       main: true,
@@ -16085,39 +16085,39 @@ const raid6: Raid = {
           item: {
             id: 3,
             url: null,
-            name: "Show of Faith",
+            name: 'Show of Faith',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 4,
             url: null,
-            name: "Sapphire Amulet of Renewal",
+            name: 'Sapphire Amulet of Renewal',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "cowran",
-      className: "DRUID",
+      name: 'cowran',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "RestorationDruid",
+          type: 'RestorationDruid',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "tjholy",
-      className: "PALADIN",
+      name: 'tjholy',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "HolyPaladin",
+          type: 'HolyPaladin',
         },
       ],
       main: true,
@@ -16126,31 +16126,31 @@ const raid6: Raid = {
           item: {
             id: 8,
             url: null,
-            name: "Breastplate of the Devoted",
+            name: 'Breastplate of the Devoted',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mayvi",
-      className: "PALADIN",
+      name: 'mayvi',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "haumea",
-      className: "SHAMAN",
+      name: 'haumea',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Enhancement",
+          type: 'Enhancement',
         },
       ],
       main: true,
@@ -16161,25 +16161,25 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 40,
             url: null,
-            name: "Boundless Gaze",
+            name: 'Boundless Gaze',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "littlemist",
-      className: "DK",
+      name: 'littlemist',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: true,
@@ -16190,41 +16190,41 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 27,
             url: null,
-            name: "Warhelm of the Champion",
+            name: 'Warhelm of the Champion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 28,
             url: null,
-            name: "Belt of Colossal Rage",
+            name: 'Belt of Colossal Rage',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "deadlyblight",
-      className: "DK",
+      name: 'deadlyblight',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "Unholy",
+          type: 'Unholy',
         },
       ],
       main: false,
@@ -16233,19 +16233,19 @@ const raid6: Raid = {
           item: {
             id: 31,
             url: null,
-            name: "Plated Leggings of Ruination",
+            name: 'Plated Leggings of Ruination',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "frostyboy",
-      className: "DK",
+      name: 'frostyboy',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: true,
@@ -16254,31 +16254,31 @@ const raid6: Raid = {
           item: {
             id: 35,
             url: null,
-            name: "Armbands of Bedlam",
+            name: 'Armbands of Bedlam',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "nambaruan",
-      className: "DK",
+      name: 'nambaruan',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "barrious",
-      className: "ROGUE",
+      name: 'barrious',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: true,
@@ -16289,33 +16289,33 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "bridew",
-      className: "ROGUE",
+      name: 'bridew',
+      className: 'ROGUE',
       specs: [
         {
           main: true,
-          type: "Assassination",
+          type: 'Assassination',
         },
       ],
       main: false,
@@ -16326,33 +16326,33 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 22,
             url: null,
-            name: "Drape of Icy Intent",
+            name: 'Drape of Icy Intent',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 24,
             url: null,
-            name: "Bladetwister",
+            name: 'Bladetwister',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "salabenji",
-      className: "HUNTER",
+      name: 'salabenji',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: true,
@@ -16361,35 +16361,35 @@ const raid6: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 19,
             url: null,
-            name: "Dreambinder",
+            name: 'Dreambinder',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "fiachna",
-      className: "DRUID",
+      name: 'fiachna',
+      className: 'DRUID',
       specs: [
         {
           main: true,
-          type: "FeralDps",
+          type: 'FeralDps',
         },
       ],
       main: true,
@@ -16398,9 +16398,9 @@ const raid6: Raid = {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -16408,41 +16408,41 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 33,
             url: null,
-            name: "Embrace of the Gladiator",
+            name: 'Embrace of the Gladiator',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
       ],
     },
     {
-      name: "hallheim",
-      className: "WARRIOR",
+      name: 'hallheim',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fury",
+          type: 'Fury',
         },
       ],
       main: true,
@@ -16451,17 +16451,17 @@ const raid6: Raid = {
           item: {
             id: 13,
             url: null,
-            name: "Bulwark of Algalon",
+            name: 'Bulwark of Algalon',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 37,
             url: null,
-            name: "Legguards of Cunning Deception",
+            name: 'Legguards of Cunning Deception',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
@@ -16469,57 +16469,57 @@ const raid6: Raid = {
             url: null,
             name: "Comet's Trail",
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 42,
             url: null,
-            name: "Frigid Strength of Hodir",
+            name: 'Frigid Strength of Hodir',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 39,
             url: null,
-            name: "Solar Bindings",
+            name: 'Solar Bindings',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 12,
             url: null,
-            name: "Heart of Iron",
+            name: 'Heart of Iron',
           },
-          status: "OS",
+          status: 'OS',
         },
         {
           item: {
             id: 36,
             url: null,
-            name: "Voldrethar, Dark Blade of Oblivion",
+            name: 'Voldrethar, Dark Blade of Oblivion',
           },
-          status: "BIS",
+          status: 'BIS',
         },
         {
           item: {
             id: 41,
             url: null,
-            name: "Sabatons of Lifeless Night",
+            name: 'Sabatons of Lifeless Night',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "pariah",
-      className: "PRIEST",
+      name: 'pariah',
+      className: 'PRIEST',
       specs: [
         {
           main: true,
-          type: "Shadow",
+          type: 'Shadow',
         },
       ],
       main: false,
@@ -16528,67 +16528,67 @@ const raid6: Raid = {
           item: {
             id: 5,
             url: null,
-            name: "Constellus",
+            name: 'Constellus',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "goll",
-      className: "SHAMAN",
+      name: 'goll',
+      className: 'SHAMAN',
       specs: [
         {
           main: true,
-          type: "Elemental",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "edenian",
-      className: "MAGE",
-      specs: [
-        {
-          main: true,
-          type: "Fire",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "kondoriano",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
-        },
-      ],
-      main: true,
-      items: [],
-    },
-    {
-      name: "komachi",
-      className: "WARLOCK",
-      specs: [
-        {
-          main: true,
-          type: "Affliction",
+          type: 'Elemental',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "swerved",
-      className: "WARLOCK",
+      name: 'edenian',
+      className: 'MAGE',
       specs: [
         {
           main: true,
-          type: "Affliction",
+          type: 'Fire',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'kondoriano',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: true,
+      items: [],
+    },
+    {
+      name: 'komachi',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'swerved',
+      className: 'WARLOCK',
+      specs: [
+        {
+          main: true,
+          type: 'Affliction',
         },
       ],
       main: true,
@@ -16597,12 +16597,12 @@ const raid6: Raid = {
   ],
   raidAvailableChars: [
     {
-      name: "tekala",
-      className: "HUNTER",
+      name: 'tekala',
+      className: 'HUNTER',
       specs: [
         {
           main: true,
-          type: "Survival",
+          type: 'Survival',
         },
       ],
       main: false,
@@ -16611,43 +16611,43 @@ const raid6: Raid = {
           item: {
             id: 43,
             url: null,
-            name: "Greaves of Swift Vengeance",
+            name: 'Greaves of Swift Vengeance',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "ethupanDk",
-      className: "DK",
+      name: 'ethupanDk',
+      className: 'DK',
       specs: [
         {
           main: true,
-          type: "FrostDk",
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: "zurgle",
-      className: "WARRIOR",
-      specs: [
-        {
-          main: true,
-          type: "Fury",
+          type: 'FrostDk',
         },
       ],
       main: false,
       items: [],
     },
     {
-      name: "cotolento",
-      className: "MAGE",
+      name: 'zurgle',
+      className: 'WARRIOR',
       specs: [
         {
           main: true,
-          type: "Fire",
+          type: 'Fury',
+        },
+      ],
+      main: false,
+      items: [],
+    },
+    {
+      name: 'cotolento',
+      className: 'MAGE',
+      specs: [
+        {
+          main: true,
+          type: 'Fire',
         },
       ],
       main: true,
@@ -16656,19 +16656,19 @@ const raid6: Raid = {
           item: {
             id: 6,
             url: null,
-            name: "Drape of Mortal Downfall",
+            name: 'Drape of Mortal Downfall',
           },
-          status: "BIS",
+          status: 'BIS',
         },
       ],
     },
     {
-      name: "mithrandir",
-      className: "PALADIN",
+      name: 'mithrandir',
+      className: 'PALADIN',
       specs: [
         {
           main: true,
-          type: "Retribution",
+          type: 'Retribution',
         },
       ],
       main: false,
@@ -16676,14 +16676,14 @@ const raid6: Raid = {
     },
   ],
   itemCharactersMap: {
-    "Greaves of Swift Vengeance": [
+    'Greaves of Swift Vengeance': [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -16692,37 +16692,37 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Breastplate of the Devoted": [
+    'Breastplate of the Devoted': [
       {
-        name: "tjholy",
-        className: "PALADIN",
+        name: 'tjholy',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: true,
@@ -16731,21 +16731,21 @@ const raid6: Raid = {
             item: {
               id: 8,
               url: null,
-              name: "Breastplate of the Devoted",
+              name: 'Breastplate of the Devoted',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Wisdom's Hold": [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -16754,17 +16754,17 @@ const raid6: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -16772,19 +16772,19 @@ const raid6: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Valanyr: [
       {
-        name: "khaya",
-        className: "SHAMAN",
+        name: 'khaya',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "RestorationShaman",
+            type: 'RestorationShaman',
           },
         ],
         main: true,
@@ -16793,29 +16793,29 @@ const raid6: Raid = {
             item: {
               id: 1,
               url: null,
-              name: "Bindings of Winter Gale",
+              name: 'Bindings of Winter Gale',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Voldrethar, Dark Blade of Oblivion": [
+    'Voldrethar, Dark Blade of Oblivion': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -16824,17 +16824,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -16842,59 +16842,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Sabatons of Lifeless Night": [
+    'Sabatons of Lifeless Night': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -16903,17 +16903,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -16921,59 +16921,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Dreambinder: [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -16982,37 +16982,37 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Legguards of Cunning Deception": [
+    'Legguards of Cunning Deception': [
       {
-        name: "salabenji",
-        className: "HUNTER",
+        name: 'salabenji',
+        className: 'HUNTER',
         specs: [
           {
             main: true,
-            type: "Survival",
+            type: 'Survival',
           },
         ],
         main: true,
@@ -17021,35 +17021,35 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 43,
               url: null,
-              name: "Greaves of Swift Vengeance",
+              name: 'Greaves of Swift Vengeance',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 19,
               url: null,
-              name: "Dreambinder",
+              name: 'Dreambinder',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -17058,9 +17058,9 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17068,41 +17068,41 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -17111,17 +17111,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17129,59 +17129,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Seal of the Betrayed King": [
+    'Seal of the Betrayed King': [
       {
-        name: "pacoknight",
-        className: "DK",
+        name: 'pacoknight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Blood",
+            type: 'Blood',
           },
         ],
         main: true,
@@ -17190,29 +17190,29 @@ const raid6: Raid = {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 35,
               url: null,
-              name: "Armbands of Bedlam",
+              name: 'Armbands of Bedlam',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Belt of the Fallen Wyrm": [
+    'Belt of the Fallen Wyrm': [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -17221,17 +17221,17 @@ const raid6: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17239,19 +17239,19 @@ const raid6: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Pyrelight Circle": [
+    'Pyrelight Circle': [
       {
-        name: "aryllene",
-        className: "PALADIN",
+        name: 'aryllene',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "HolyPaladin",
+            type: 'HolyPaladin',
           },
         ],
         main: false,
@@ -17260,17 +17260,17 @@ const raid6: Raid = {
             item: {
               id: 11,
               url: null,
-              name: "Belt of the Fallen Wyrm",
+              name: 'Belt of the Fallen Wyrm',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 10,
               url: null,
-              name: "Pyrelight Circle",
+              name: 'Pyrelight Circle',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17278,19 +17278,19 @@ const raid6: Raid = {
               url: null,
               name: "Wisdom's Hold",
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Belt of Colossal Rage": [
+    'Belt of Colossal Rage': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -17301,43 +17301,43 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Bindings of Winter Gale": [
+    'Bindings of Winter Gale': [
       {
-        name: "khaya",
-        className: "SHAMAN",
+        name: 'khaya',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "RestorationShaman",
+            type: 'RestorationShaman',
           },
         ],
         main: true,
@@ -17346,29 +17346,29 @@ const raid6: Raid = {
             item: {
               id: 1,
               url: null,
-              name: "Bindings of Winter Gale",
+              name: 'Bindings of Winter Gale',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 2,
               url: null,
-              name: "Valanyr",
+              name: 'Valanyr',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Solar Bindings": [
+    'Solar Bindings': [
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -17379,33 +17379,33 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -17414,9 +17414,9 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17424,41 +17424,41 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -17467,17 +17467,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17485,59 +17485,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Heart of Iron": [
+    'Heart of Iron': [
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -17546,9 +17546,9 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17556,41 +17556,41 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -17599,17 +17599,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17617,59 +17617,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Bulwark of Algalon": [
+    'Bulwark of Algalon': [
       {
-        name: "holynut",
-        className: "PALADIN",
+        name: 'holynut',
+        className: 'PALADIN',
         specs: [
           {
             main: true,
-            type: "ProtectionPaladin",
+            type: 'ProtectionPaladin',
           },
         ],
         main: false,
@@ -17678,21 +17678,21 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Armbands of Bedlam": [
+    'Armbands of Bedlam': [
       {
-        name: "pacoknight",
-        className: "DK",
+        name: 'pacoknight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Blood",
+            type: 'Blood',
           },
         ],
         main: true,
@@ -17701,29 +17701,29 @@ const raid6: Raid = {
             item: {
               id: 38,
               url: null,
-              name: "Seal of the Betrayed King",
+              name: 'Seal of the Betrayed King',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 35,
               url: null,
-              name: "Armbands of Bedlam",
+              name: 'Armbands of Bedlam',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Drape of Icy Intent": [
+    'Drape of Icy Intent': [
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -17734,35 +17734,35 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Show of Faith": [
+    'Show of Faith': [
       {
-        name: "jeyp",
-        className: "PRIEST",
+        name: 'jeyp',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: true,
@@ -17771,29 +17771,29 @@ const raid6: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 4,
               url: null,
-              name: "Sapphire Amulet of Renewal",
+              name: 'Sapphire Amulet of Renewal',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Boundless Gaze": [
+    'Boundless Gaze': [
       {
-        name: "haumea",
-        className: "SHAMAN",
+        name: 'haumea',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: true,
@@ -17804,27 +17804,27 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Plated Leggings of Ruination": [
+    'Plated Leggings of Ruination': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -17835,41 +17835,41 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "deadlyblight",
-        className: "DK",
+        name: 'deadlyblight',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: false,
@@ -17878,21 +17878,21 @@ const raid6: Raid = {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Frigid Strength of Hodir": [
+    'Frigid Strength of Hodir': [
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -17901,17 +17901,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -17919,59 +17919,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     Bladetwister: [
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -17982,35 +17982,35 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
     "Comet's Trail": [
       {
-        name: "haumea",
-        className: "SHAMAN",
+        name: 'haumea',
+        className: 'SHAMAN',
         specs: [
           {
             main: true,
-            type: "Enhancement",
+            type: 'Enhancement',
           },
         ],
         main: true,
@@ -18021,25 +18021,25 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 40,
               url: null,
-              name: "Boundless Gaze",
+              name: 'Boundless Gaze',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -18050,41 +18050,41 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -18095,33 +18095,33 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "bridew",
-        className: "ROGUE",
+        name: 'bridew',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: false,
@@ -18132,33 +18132,33 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 22,
               url: null,
-              name: "Drape of Icy Intent",
+              name: 'Drape of Icy Intent',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 24,
               url: null,
-              name: "Bladetwister",
+              name: 'Bladetwister',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -18167,9 +18167,9 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -18177,41 +18177,41 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
       {
-        name: "hallheim",
-        className: "WARRIOR",
+        name: 'hallheim',
+        className: 'WARRIOR',
         specs: [
           {
             main: true,
-            type: "Fury",
+            type: 'Fury',
           },
         ],
         main: true,
@@ -18220,17 +18220,17 @@ const raid6: Raid = {
             item: {
               id: 13,
               url: null,
-              name: "Bulwark of Algalon",
+              name: 'Bulwark of Algalon',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -18238,59 +18238,59 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 42,
               url: null,
-              name: "Frigid Strength of Hodir",
+              name: 'Frigid Strength of Hodir',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
           {
             item: {
               id: 36,
               url: null,
-              name: "Voldrethar, Dark Blade of Oblivion",
+              name: 'Voldrethar, Dark Blade of Oblivion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 41,
               url: null,
-              name: "Sabatons of Lifeless Night",
+              name: 'Sabatons of Lifeless Night',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Warhelm of the Champion": [
+    'Warhelm of the Champion': [
       {
-        name: "littlemist",
-        className: "DK",
+        name: 'littlemist',
+        className: 'DK',
         specs: [
           {
             main: true,
-            type: "Unholy",
+            type: 'Unholy',
           },
         ],
         main: true,
@@ -18301,43 +18301,43 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 27,
               url: null,
-              name: "Warhelm of the Champion",
+              name: 'Warhelm of the Champion',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 31,
               url: null,
-              name: "Plated Leggings of Ruination",
+              name: 'Plated Leggings of Ruination',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 28,
               url: null,
-              name: "Belt of Colossal Rage",
+              name: 'Belt of Colossal Rage',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
-    "Embrace of the Gladiator": [
+    'Embrace of the Gladiator': [
       {
-        name: "barrious",
-        className: "ROGUE",
+        name: 'barrious',
+        className: 'ROGUE',
         specs: [
           {
             main: true,
-            type: "Assassination",
+            type: 'Assassination',
           },
         ],
         main: true,
@@ -18348,33 +18348,33 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
       {
-        name: "fiachna",
-        className: "DRUID",
+        name: 'fiachna',
+        className: 'DRUID',
         specs: [
           {
             main: true,
-            type: "FeralDps",
+            type: 'FeralDps',
           },
         ],
         main: true,
@@ -18383,9 +18383,9 @@ const raid6: Raid = {
             item: {
               id: 37,
               url: null,
-              name: "Legguards of Cunning Deception",
+              name: 'Legguards of Cunning Deception',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
@@ -18393,43 +18393,43 @@ const raid6: Raid = {
               url: null,
               name: "Comet's Trail",
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 33,
               url: null,
-              name: "Embrace of the Gladiator",
+              name: 'Embrace of the Gladiator',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 39,
               url: null,
-              name: "Solar Bindings",
+              name: 'Solar Bindings',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 12,
               url: null,
-              name: "Heart of Iron",
+              name: 'Heart of Iron',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
-    "Sapphire Amulet of Renewal": [
+    'Sapphire Amulet of Renewal': [
       {
-        name: "jeyp",
-        className: "PRIEST",
+        name: 'jeyp',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Discipline",
+            type: 'Discipline',
           },
         ],
         main: true,
@@ -18438,29 +18438,29 @@ const raid6: Raid = {
             item: {
               id: 3,
               url: null,
-              name: "Show of Faith",
+              name: 'Show of Faith',
             },
-            status: "BIS",
+            status: 'BIS',
           },
           {
             item: {
               id: 4,
               url: null,
-              name: "Sapphire Amulet of Renewal",
+              name: 'Sapphire Amulet of Renewal',
             },
-            status: "OS",
+            status: 'OS',
           },
         ],
       },
     ],
     Constellus: [
       {
-        name: "pariah",
-        className: "PRIEST",
+        name: 'pariah',
+        className: 'PRIEST',
         specs: [
           {
             main: true,
-            type: "Shadow",
+            type: 'Shadow',
           },
         ],
         main: false,
@@ -18469,15 +18469,15 @@ const raid6: Raid = {
             item: {
               id: 5,
               url: null,
-              name: "Constellus",
+              name: 'Constellus',
             },
-            status: "BIS",
+            status: 'BIS',
           },
         ],
       },
     ],
   },
-  freeItems: []
+  freeItems: [],
 };
 
 export const mockedSplits: Split[] = [
@@ -18496,35 +18496,35 @@ export const mockedSplits: Split[] = [
 ];
 
 export const mockedPersons: Person[] = [
-  { name: "dave" },
-  { name: "paco" },
-  { name: "bullette" },
-  { name: "aryl" },
-  { name: "tj" },
-  { name: "jeyp" },
-  { name: "khaya" },
-  { name: "mist" },
-  { name: "zul" },
-  { name: "frostyboy" },
-  { name: "mayv" },
-  { name: "ethupan" },
-  { name: "sala" },
-  { name: "hallheim" },
-  { name: "deadly" },
-  { name: "fiachna" },
-  { name: "nurgl" },
-  { name: "bride" },
-  { name: "barrious" },
-  { name: "haumea" },
-  { name: "doggle" },
-  { name: "nagosa" },
-  { name: "cotolento" },
-  { name: "koobo" },
-  { name: "edenian" },
-  { name: "dauran" },
-  { name: "emipian" },
-  { name: "kondo" },
-  { name: "jj" },
-  { name: "swerved" },
-  { name: "kelthal" },
+  { name: 'aryl', mainClassName: 'PALADIN' as CharacterClass },
+  { name: 'barrious', mainClassName: 'ROGUE' as CharacterClass },
+  { name: 'bride', mainClassName: 'ROGUE' as CharacterClass },
+  { name: 'bullette', mainClassName: 'DRUID' as CharacterClass },
+  { name: 'cotolento', mainClassName: 'MAGE' as CharacterClass },
+  { name: 'dauran', mainClassName: 'PRIEST' as CharacterClass },
+  { name: 'dave', mainClassName: 'PALADIN' as CharacterClass },
+  { name: 'deadly', mainClassName: 'PALADIN' as CharacterClass },
+  { name: 'doggle', mainClassName: 'DRUID' as CharacterClass },
+  { name: 'edenian', mainClassName: 'MAGE' as CharacterClass },
+  { name: 'emipian', mainClassName: 'WARLOCK' as CharacterClass },
+  { name: 'ethupan', mainClassName: 'HUNTER' as CharacterClass },
+  { name: 'fiachna', mainClassName: 'DRUID' as CharacterClass },
+  { name: 'frostyboy', mainClassName: 'DK' as CharacterClass },
+  { name: 'hallheim', mainClassName: 'WARRIOR' as CharacterClass },
+  { name: 'haumea', mainClassName: 'SHAMAN' as CharacterClass },
+  { name: 'jeyp', mainClassName: 'PRIEST' as CharacterClass },
+  { name: 'jj', mainClassName: 'WARLOCK' as CharacterClass },
+  { name: 'kelthal', mainClassName: 'WARRIOR' as CharacterClass },
+  { name: 'khaya', mainClassName: 'SHAMAN' as CharacterClass },
+  { name: 'kondo', mainClassName: 'WARLOCK' as CharacterClass },
+  { name: 'koobo', mainClassName: 'MAGE' as CharacterClass },
+  { name: 'mayv', mainClassName: 'DK' as CharacterClass },
+  { name: 'mist', mainClassName: 'DK' as CharacterClass },
+  { name: 'nagosa', mainClassName: 'SHAMAN' as CharacterClass },
+  { name: 'nurgl', mainClassName: 'ROGUE' as CharacterClass },
+  { name: 'paco', mainClassName: 'DK' as CharacterClass },
+  { name: 'sala', mainClassName: 'HUNTER' as CharacterClass },
+  { name: 'swerved', mainClassName: 'WARLOCK' as CharacterClass },
+  { name: 'tj', mainClassName: 'PALADIN' as CharacterClass },
+  { name: 'zul', mainClassName: 'DK' as CharacterClass },
 ];
