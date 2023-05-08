@@ -112,15 +112,28 @@ const ItemCaracterSplitLayout = () => {
   const [characterLeft, setCharacterLeft] = useState<string>('');
   const [characterRight, setCharacterRight] = useState<string>('');
 
-  const currentICS = localStorage.getItem(localStorageICSKey);
-  let currentICSparse = [];
-  if (currentICS) {
-    try {
-      currentICSparse = JSON.parse(currentICS);
-    } catch (e) {
-      localStorage.removeItem(localStorageICSKey);
+  const [currentICS, setCurrentICS] = useState<itemCharacterSplit[]>([]);
+
+  useEffect(() => {
+    const current = localStorage.getItem(localStorageICSKey);
+    if (current) {
+      try {
+        const currentJson = JSON.parse(current) as itemCharacterSplit[];
+        setCurrentICS(currentJson);
+      } catch (e) {
+        localStorage.removeItem(localStorageICSKey);
+      }
     }
-  }
+  }, []);
+
+  const onDelete = (index: number) => {
+    if (!currentICS.length) return;
+
+    const newICS = currentICS.filter((ic: itemCharacterSplit, i: number) => i !== index);
+
+    localStorage.setItem(localStorageICSKey, JSON.stringify(newICS));
+    setCurrentICS(newICS);
+  };
 
   const onSave = () => {
     setIsAdd(false);
@@ -128,20 +141,9 @@ const ItemCaracterSplitLayout = () => {
     setCharacterLeft('');
     setCharacterRight('');
 
-    const current = localStorage.getItem(localStorageICSKey);
-    if (current) {
-      try {
-        const currentJson = JSON.parse(current) as itemCharacterSplit[];
-        localStorage.setItem(
-          localStorageICSKey,
-          JSON.stringify([...currentJson, { item: item, characterLeft, characterRight }]),
-        );
-      } catch (e) {
-        localStorage.setItem(localStorageICSKey, JSON.stringify([{ item: item, characterLeft, characterRight }]));
-      }
-    } else {
-      localStorage.setItem(localStorageICSKey, JSON.stringify([{ item: item, characterLeft, characterRight }]));
-    }
+    const newICS = [...currentICS, { item: item, characterLeft, characterRight }];
+    localStorage.setItem(localStorageICSKey, JSON.stringify(newICS));
+    setCurrentICS(newICS);
   };
 
   return (
@@ -175,11 +177,17 @@ const ItemCaracterSplitLayout = () => {
         </div>
       ) : (
         <div>
-          {currentICSparse.map((ics: itemCharacterSplit) => (
-            <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
+          {currentICS.map((ics: itemCharacterSplit, index: number) => (
+            <div className="border text-sm mb-2 flex w-60 mr-2 justify-around relative" key={ics.item}>
               <p className="capitalize p-2 w-20">{ics.item}</p>
               <p className="capitalize p-2 w-20">{ics.characterLeft}</p>
               <p className="capitalize p-2 w-20">{ics.characterRight}</p>
+              <div
+                onClick={() => onDelete(index)}
+                className="bg-zinc-600 text-red-100 border border-black rounded-sm absolute top-0.5 right-1 cursor-pointer h-3 w-3 leading-[8px]"
+              >
+                x
+              </div>
             </div>
           ))}
           <button
