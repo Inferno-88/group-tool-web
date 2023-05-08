@@ -21,15 +21,15 @@ const getICS = () => {
   }
   return localICSparsesd.map((ic: itemCharacterSplit) => {
       const newCharLeft = ic.characterLeft
-        .toLocaleLowerCase()
+        .toLowerCase()
         .split(',')
         .map((c: string) => c.trim());
       const newCharRight = ic.characterRight
-        .toLocaleLowerCase()
+        .toLowerCase()
         .split(',')
         .map((c: string) => c.trim());
       return {
-        item: ic.item.toLocaleLowerCase(),
+        item: ic.item.toLowerCase(),
         characterLeft: newCharLeft,
         characterRight: newCharRight,
       };
