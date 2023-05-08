@@ -155,6 +155,7 @@ const ItemCaracterSplitLayout = () => {
     setItem('');
     setCharacterLeft('');
     setCharacterRight('');
+    setEditedNumber(null);
   };
 
   const onEdit = (index: number) => {
