@@ -1,8 +1,8 @@
-import { SplitsPage } from "./pages/SplitsPage/SplitsPage";
-import { useState } from "react";
-import { Character, Split, localStorageICSKey } from 'src/types';
-import { mockedSplits } from 'src/mocks/mockedSplits';
-import { PersonsPage } from './pages/PersonsPage/PersonsPage';
+import {SplitsPage} from "./pages/SplitsPage/SplitsPage";
+import {useState} from "react";
+import {Character, itemCharacterSplit, localStorageICSKey, Split} from 'src/types';
+import {mockedSplits} from 'src/mocks/mockedSplits';
+import {PersonsPage} from './pages/PersonsPage/PersonsPage';
 
 interface AvailablePersons {
   raid1: string[];
@@ -19,7 +19,13 @@ const getICS = () => {
       localStorage.removeItem(localStorageICSKey);
     }
   }
-  return localICSparsesd;
+  return localICSparsesd.map((ic: itemCharacterSplit) => {
+      const newCharLeft = ic.characterLeft.split(",").map((c: string) => c.trim());
+      const newCharRight = ic.characterRight.split(",").map((c: string) => c.trim());
+      return {
+          item: ic.item, characterLeft: newCharLeft, characterRight: newCharRight
+      }
+  });
 };
 
 function App() {
