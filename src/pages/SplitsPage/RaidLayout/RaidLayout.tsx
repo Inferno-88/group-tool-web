@@ -54,6 +54,7 @@ export const RaidLayout = ({
           className={styles.available}
           action={'add'}
           onAction={onAddorRemove}
+          columns
         />
         <div className={styles.items}>
           <ItemsLayout items={raid.itemCharactersMap} />
@@ -70,19 +71,23 @@ const GroupLayout = ({
   className,
   action,
   onAction,
+  columns,
 }: {
   group: Character[];
   name: string;
   className?: string;
   action?: 'add' | 'remove' | 'none';
   onAction?: (character: Character, action: 'add' | 'remove') => void;
+  columns?: boolean;
 }) => {
   return (
     <div className={`border border-slate-200 ${className}`}>
       <p className="font-sm font-semibold">{name}</p>
-      {group.map(character => (
-        <CharacterLayout key={character.name} character={character} action={action} onAction={onAction} />
-      ))}
+      <div className={columns ? 'columns-2' : ''}>
+        {group.map(character => (
+          <CharacterLayout key={character.name} character={character} action={action} onAction={onAction} />
+        ))}
+      </div>
     </div>
   );
 };
@@ -128,7 +133,7 @@ const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
       {sortedItemsNames.map(item => (
         <div className="text-left mb-1 text-sm" key={item}>
           <div>
-            {item} ({items[item].length}):{' '}
+            <span className="capitalize">{item}</span> ({items[item].length}):{' '}
             {items[item].map(character => (
               <CharacterLayout key={character.name} character={character} className="inline-block mr-1" />
             ))}
@@ -143,12 +148,15 @@ const FreeItems = ({ freeItems }: { freeItems: FreeItem[] }) => {
   return (
     <div className={`border border-slate-200 p-2 overflow-auto ${styles.freeItems}`}>
       <p className="font-semibold">Free Items</p>
-      <div className="grid grid-cols-2 gap-x-0.5">
-        {freeItems.map(item => (
-          <div className="text-left mb-1 text-sm" key={item.item.name}>
-            {item.item.name}
-          </div>
-        ))}
+      <div className="columns-2">
+        {freeItems
+          .map(item => item.item.name)
+          .sort()
+          .map(item => (
+            <div className="text-left mb-1 text-sm capitalize" key={item}>
+              {item}
+            </div>
+          ))}
       </div>
     </div>
   );
