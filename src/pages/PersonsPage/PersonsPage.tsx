@@ -108,6 +108,7 @@ export const PersonsPage = ({ generate, loading }: Props) => {
 
 const ItemCaracterSplitLayout = () => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
+  const [editedNumber, setEditedNumber] = useState<number | null>(null);
   const [item, setItem] = useState<string>('');
   const [characterLeft, setCharacterLeft] = useState<string>('');
   const [characterRight, setCharacterRight] = useState<string>('');
@@ -137,13 +138,32 @@ const ItemCaracterSplitLayout = () => {
 
   const onSave = () => {
     setIsAdd(false);
+
+    const newICS =
+      editedNumber === null
+        ? [...currentICS, { item: item, characterLeft, characterRight }]
+        : currentICS.map((ic: itemCharacterSplit, i: number) => {
+            if (i === editedNumber) {
+              return { item: item, characterLeft, characterRight };
+            }
+            return ic;
+          });
+
+    localStorage.setItem(localStorageICSKey, JSON.stringify(newICS));
+    setCurrentICS(newICS);
+
     setItem('');
     setCharacterLeft('');
     setCharacterRight('');
+  };
 
-    const newICS = [...currentICS, { item: item, characterLeft, characterRight }];
-    localStorage.setItem(localStorageICSKey, JSON.stringify(newICS));
-    setCurrentICS(newICS);
+  const onEdit = (index: number) => {
+    const ics = currentICS[index];
+    setItem(ics.item);
+    setCharacterLeft(ics.characterLeft);
+    setCharacterRight(ics.characterRight);
+    setIsAdd(true);
+    setEditedNumber(index);
   };
 
   return (
@@ -178,15 +198,21 @@ const ItemCaracterSplitLayout = () => {
       ) : (
         <div>
           {currentICS.map((ics: itemCharacterSplit, index: number) => (
-            <div className="border text-sm mb-2 flex w-60 mr-2 justify-around relative" key={ics.item}>
+            <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
               <p className="capitalize p-2 w-20">{ics.item}</p>
               <p className="capitalize p-2 w-20">{ics.characterLeft}</p>
               <p className="capitalize p-2 w-20">{ics.characterRight}</p>
               <div
                 onClick={() => onDelete(index)}
-                className="bg-zinc-600 text-red-100 border border-black rounded-sm absolute top-0.5 right-1 cursor-pointer h-3 w-3 leading-[8px]"
+                className="bg-zinc-600 text-red-100 border border-black rounded-sm cursor-pointer "
               >
                 x
+              </div>
+              <div
+                onClick={() => onEdit(index)}
+                className="bg-zinc-600 text-red-100 border border-black rounded-sm  cursor-pointer "
+              >
+                edit
               </div>
             </div>
           ))}
