@@ -58,6 +58,11 @@ function App() {
         .then(data => {
           setLoading(false);
           setSplits(data);
+        })
+        .catch(err => {
+          console.log(err);
+          alert('Something went wrong! Please try again');
+          setLoading(false);
         });
     } else {
       // MOCKS

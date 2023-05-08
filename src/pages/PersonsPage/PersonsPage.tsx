@@ -65,15 +65,15 @@ export const PersonsPage = ({ generate, loading }: Props) => {
         <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid2.join(', ')}</div>
         <button
           disabled={loading}
-          className="bg-blue-500 hover:bg-blue-700 disabled:hover:bg-blue-500 text-white font-bold py-2 px-4 rounded h-10"
+          className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10"
           onClick={() => generate({ raid1, raid2 })}
         >
           {loading ? 'Loading...' : 'Generate!'}
         </button>
       </div>
-      <div className="flex overflow-auto">
+      <div className="flex overflow-auto justify-around">
         {persons.length > 0 ? (
-          <div className="flex flex-col flex-wrap content-start w-2/3">
+          <div className="flex flex-col flex-wrap content-start">
             {persons.map(person => (
               <PersonLayout
                 key={person.name}
@@ -167,64 +167,85 @@ const ItemCaracterSplitLayout = () => {
     setEditedNumber(index);
   };
 
+  const onCancel = () => {
+    setIsAdd(false);
+    setItem('');
+    setCharacterLeft('');
+    setCharacterRight('');
+    setEditedNumber(null);
+  };
+
   return (
-    <div className="w-1/3 bg-red-100">
-      {isAdd ? (
-        <div>
-          <input
-            type="text"
-            placeholder="Item name"
-            className="border p-2 w-60 mr-2"
-            value={item}
-            onChange={e => setItem(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Characters left"
-            className="border p-2 w-60 mr-2"
-            value={characterLeft}
-            onChange={e => setCharacterLeft(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="Characters right"
-            className="border p-2 w-60 mr-2"
-            value={characterRight}
-            onChange={e => setCharacterRight(e.target.value)}
-          />
-          <button className="block border font-bold py-2 px-4 rounded h-10" onClick={onSave}>
-            Save
-          </button>
-        </div>
-      ) : (
-        <div>
-          {currentICS.map((ics: itemCharacterSplit, index: number) => (
-            <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
-              <p className="capitalize p-2 w-20">{ics.item}</p>
-              <p className="capitalize p-2 w-20">{ics.characterLeft}</p>
-              <p className="capitalize p-2 w-20">{ics.characterRight}</p>
-              <div
-                onClick={() => onDelete(index)}
-                className="bg-zinc-600 text-red-100 border border-black rounded-sm cursor-pointer "
-              >
-                x
-              </div>
-              <div
-                onClick={() => onEdit(index)}
-                className="bg-zinc-600 text-red-100 border border-black rounded-sm  cursor-pointer "
-              >
-                edit
-              </div>
+    <div className="w-1/3 rounded border text-center relative">
+      <h3 className="mb-2 font-semibold">Items characters splits</h3>
+      <div className="text-center">
+        {currentICS.map((ics: itemCharacterSplit, index: number) => (
+          <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
+            <p className="capitalize p-2 w-20">{ics.item}</p>
+            <p className="capitalize p-2 w-20">{ics.characterLeft}</p>
+            <p className="capitalize p-2 w-20">{ics.characterRight}</p>
+            <div
+              onClick={() => onDelete(index)}
+              className="bg-zinc-600 text-red-100 border border-black rounded-sm cursor-pointer "
+            >
+              x
             </div>
-          ))}
-          <button
-            className="block border font-bold py-2 px-4 rounded h-10"
-            onClick={() => {
-              setIsAdd(true);
-            }}
-          >
-            Add another item
-          </button>
+            <div
+              onClick={() => onEdit(index)}
+              className="bg-zinc-600 text-red-100 border border-black rounded-sm  cursor-pointer "
+            >
+              edit
+            </div>
+          </div>
+        ))}
+        <button
+          className="block border font-bold py-2 px-4 rounded h-10 m-auto"
+          onClick={() => {
+            setIsAdd(true);
+          }}
+        >
+          Add item
+        </button>
+      </div>
+
+      {isAdd && (
+        <div className="absolute top-0 bottom-0 right-0 left-0 bg-slate-50/40">
+          <div className="text-center mt-7 rounded border top-32 absolute p-2 bg-gray-50 w-full">
+            <input
+              type="text"
+              placeholder="Item name"
+              className="border p-2 w-60 mr-2"
+              value={item}
+              onChange={e => setItem(e.target.value)}
+            />
+            <div className="flex gap-2 m-3">
+              <textarea
+                placeholder="Characters left"
+                className="border p-2 w-60"
+                value={characterLeft}
+                onChange={e => setCharacterLeft(e.target.value)}
+              />
+              <textarea
+                placeholder="Characters right"
+                className="border p-2 w-60"
+                value={characterRight}
+                onChange={e => setCharacterRight(e.target.value)}
+              />
+            </div>
+            <div className="flex justify-center gap-2">
+              <button className="block border font-bold py-2 px-4 rounded h-10 bg-white" onClick={onCancel}>
+                Cancel
+              </button>
+
+              <button
+                className="block border font-bold py-2 px-4 rounded h-10 bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100"
+                onClick={onSave}
+                disabled={!item || !characterLeft || !characterRight}
+              >
+                Save
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </div>
