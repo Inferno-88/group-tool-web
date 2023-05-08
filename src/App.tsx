@@ -37,7 +37,7 @@ function App() {
         body: JSON.stringify({
           raid1: available.raid1,
           raid2: available.raid2,
-          itemCharecterSplit: getICS(),
+          itemCharacterSplit: getICS(),
         }),
       })
         .then(data => data.json())

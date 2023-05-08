@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
-import { ItemCharecterSplit, Person, characterColorsText, localStorageICSKey } from 'src/types';
+import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey } from 'src/types';
 
 interface Props {
   generate: (available: AvailablePersons) => void;
@@ -131,7 +131,7 @@ const ItemCaracterSplitLayout = () => {
     const current = localStorage.getItem(localStorageICSKey);
     if (current) {
       try {
-        const currentJson = JSON.parse(current) as ItemCharecterSplit[];
+        const currentJson = JSON.parse(current) as itemCharacterSplit[];
         localStorage.setItem(
           localStorageICSKey,
           JSON.stringify([...currentJson, { item: item, characterLeft, characterRight }]),
@@ -175,7 +175,7 @@ const ItemCaracterSplitLayout = () => {
         </div>
       ) : (
         <div>
-          {currentICSparse.map((ics: ItemCharecterSplit) => (
+          {currentICSparse.map((ics: itemCharacterSplit) => (
             <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
               <p className="capitalize p-2 w-20">{ics.item}</p>
               <p className="capitalize p-2 w-20">{ics.characterLeft}</p>

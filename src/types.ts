@@ -95,7 +95,7 @@ export interface Person {
   mainClassName: CharacterClass;
 }
 
-export interface ItemCharecterSplit {
+export interface itemCharacterSplit {
   item: string;
   characterLeft: string;
   characterRight: string;
