@@ -20,11 +20,19 @@ const getICS = () => {
     }
   }
   return localICSparsesd.map((ic: itemCharacterSplit) => {
-      const newCharLeft = ic.characterLeft.split(",").map((c: string) => c.trim());
-      const newCharRight = ic.characterRight.split(",").map((c: string) => c.trim());
+      const newCharLeft = ic.characterLeft
+        .toLocaleLowerCase()
+        .split(',')
+        .map((c: string) => c.trim());
+      const newCharRight = ic.characterRight
+        .toLocaleLowerCase()
+        .split(',')
+        .map((c: string) => c.trim());
       return {
-          item: ic.item, characterLeft: newCharLeft, characterRight: newCharRight
-      }
+        item: ic.item.toLocaleLowerCase(),
+        characterLeft: newCharLeft,
+        characterRight: newCharRight,
+      };
   });
 };
 
