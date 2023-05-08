@@ -164,7 +164,7 @@ const ItemCaracterSplitLayout = () => {
           />
           <input
             type="text"
-            placeholder="Characters left"
+            placeholder="Characters right"
             className="border p-2 w-60 mr-2"
             value={characterRight}
             onChange={e => setCharacterRight(e.target.value)}
