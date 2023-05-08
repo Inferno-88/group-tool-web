@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
 import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey } from 'src/types';
+import { ReactComponent as DeleteIcon } from './delete.svg';
+import { ReactComponent as EditIcon } from './edit.svg';
 
 interface Props {
   generate: (available: AvailablePersons) => void;
@@ -73,7 +75,7 @@ export const PersonsPage = ({ generate, loading }: Props) => {
       </div>
       <div className="flex overflow-auto justify-around">
         {persons.length > 0 ? (
-          <div className="flex flex-col flex-wrap content-start">
+          <div className="w-2/3 flex flex-col flex-wrap content-start overflow-auto">
             {persons.map(person => (
               <PersonLayout
                 key={person.name}
@@ -98,7 +100,7 @@ export const PersonsPage = ({ generate, loading }: Props) => {
             ))}
           </div>
         ) : (
-          <p>Loading...</p>
+          <p className="w-2/3">Loading...</p>
         )}
         <ItemCaracterSplitLayout />
       </div>
@@ -176,30 +178,11 @@ const ItemCaracterSplitLayout = () => {
   };
 
   return (
-    <div className="w-1/3 rounded border text-center relative">
-      <h3 className="mb-2 font-semibold">Items characters splits</h3>
-      <div className="text-center">
-        {currentICS.map((ics: itemCharacterSplit, index: number) => (
-          <div className="border text-sm mb-2 flex w-60 mr-2 justify-around" key={ics.item}>
-            <p className="capitalize p-2 w-20">{ics.item}</p>
-            <p className="capitalize p-2 w-20">{ics.characterLeft}</p>
-            <p className="capitalize p-2 w-20">{ics.characterRight}</p>
-            <div
-              onClick={() => onDelete(index)}
-              className="bg-zinc-600 text-red-100 border border-black rounded-sm cursor-pointer "
-            >
-              x
-            </div>
-            <div
-              onClick={() => onEdit(index)}
-              className="bg-zinc-600 text-red-100 border border-black rounded-sm  cursor-pointer "
-            >
-              edit
-            </div>
-          </div>
-        ))}
+    <div className="w-1/3 rounded border text-center relative overflow-auto">
+      <div className="flex justify-around m-1">
+        <h3 className="mx-auto font-semibold mt-2">Items characters splits</h3>
         <button
-          className="block border font-bold py-2 px-4 rounded h-10 m-auto"
+          className="border font-semibold py-1 px-2 rounded h-10 m-auto"
           onClick={() => {
             setIsAdd(true);
           }}
@@ -207,10 +190,33 @@ const ItemCaracterSplitLayout = () => {
           Add item
         </button>
       </div>
+      <div className="text-center">
+        {currentICS.map((ics: itemCharacterSplit, index: number) => (
+          <div className="border text-sm mb-2 flex justify-around" key={ics.item}>
+            <p className="p-2 w-[21%] break-words">{ics.item}</p>
+            <p className="p-2 w-[37%] break-words">{ics.characterLeft}</p>
+            <p className="p-2 w-[37%] break-words">{ics.characterRight}</p>
+            <div className="w-[5%]">
+              <div
+                onClick={() => onDelete(index)}
+                className="w-5 h-5 mt-2 border border-black rounded-sm cursor-pointer "
+              >
+                <DeleteIcon className="w-4 h-4" />
+              </div>
+              <div
+                onClick={() => onEdit(index)}
+                className=" w-5 h-5 mt-2 border border-black rounded-sm  cursor-pointer "
+              >
+                <EditIcon className="w-4 h-4" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
       {isAdd && (
         <div className="absolute top-0 bottom-0 right-0 left-0 bg-slate-50/40">
-          <div className="text-center mt-7 rounded border top-32 absolute p-2 bg-gray-50 w-full">
+          <div className="text-center mt-7 rounded border-2 border-slate-300 top-32 absolute p-2 bg-gray-50 w-full">
             <input
               type="text"
               placeholder="Item name"
@@ -263,7 +269,7 @@ interface PersonProps {
 const PersonLayout = ({ person, checkedSun, checkedWed, onChangeSun, onChangeWed }: PersonProps) => {
   const nameStyle = `capitalize p-2 w-20 ${characterColorsText[person.mainClassName]}`;
   return (
-    <div className="border text-sm mb-2 flex w-60 mr-2 justify-around">
+    <div className="border text-sm mb-2 flex w-60 mr-2 justify-aroundz">
       <p className={nameStyle}>{person.name}</p>
       <label htmlFor={`raid1${person.name}`} className="mr-1 p-2 whitespace-nowrap">
         <input
