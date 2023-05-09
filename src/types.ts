@@ -10,7 +10,7 @@ export interface Raid {
   occupiedCharacters: Character[];
   raidAvailableChars: Character[];
   itemCharactersMap: ItemCharactersMap;
-  freeItems: FreeItem[];
+  freeItems: string[];
 }
 
 export type ItemCharactersMap = Record<string, Character[]>;
