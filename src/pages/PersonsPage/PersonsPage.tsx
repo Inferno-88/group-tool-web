@@ -180,7 +180,7 @@ const ItemCaracterSplitLayout = () => {
   return (
     <div className="w-1/3 rounded border text-center relative overflow-auto">
       <div className="flex justify-around m-1">
-        <h3 className="mx-auto font-semibold mt-2">Items characters splits</h3>
+        <h3 className="mx-auto font-semibold mt-2">Item character splits</h3>
         <button
           className="border font-semibold py-1 px-2 rounded h-10 m-auto"
           onClick={() => {
