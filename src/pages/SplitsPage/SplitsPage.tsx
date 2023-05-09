@@ -11,20 +11,12 @@ interface Props {
 }
 
 export const SplitsPage = ({ splits, onAddorRemove }: Props) => {
-  console.log(splits);
   return (
     <div className="text-center p-5">
       <h1 className="text-md font-bold mb-1">Generated splits</h1>
       <div className="">
         {splits?.map((split, index) => {
-          return (
-            <SplitLayout
-              key={index}
-              split={split}
-              index={index}
-              onAddorRemove={onAddorRemove(index)}
-            />
-          );
+          return <SplitLayout key={index} split={split} index={index} onAddorRemove={onAddorRemove(index)} />;
         })}
       </div>
     </div>

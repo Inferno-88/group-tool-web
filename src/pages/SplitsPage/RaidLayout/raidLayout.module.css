@@ -1,9 +1,9 @@
 .container {
-    height: 100vh;
+    height: calc(100vh - 20px);
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-areas:
         "title     title       title       title       title"
         "tanks      dps         items       items       items"
@@ -12,6 +12,9 @@
             "available  available   items       items       items";
 }
 
+.wrapper {
+    height: calc(100vh - 20px);
+}
 .title {
     grid-area: title;
 }

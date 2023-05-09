@@ -28,9 +28,9 @@ export const RaidLayout = ({
   });
 
   return (
-    <div className="border border-slate-200 rounded shadow-lg shadow-slate-100 w-full h-screen">
+    <div className={'border border-slate-200 rounded shadow-lg shadow-slate-100 w-full' + styles.wrapper}>
       <div className={`${styles.container}`}>
-        <h3 className={`text-md font-semibold ${styles.title}`}>
+        <h3 className={`font-semibold ${styles.title}`}>
           {name} (main: {mainCount} alts: {altCount} total: {raid.occupiedCharacters.length})
         </h3>
         <GroupLayout
@@ -133,7 +133,7 @@ const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
       {sortedItemsNames.map(item => (
         <div className="text-left mb-1 text-sm" key={item}>
           <div>
-            <span className="capitalize">{item}</span> ({items[item].length}):{' '}
+            {item} ({items[item].length}):{' '}
             {items[item].map(character => (
               <CharacterLayout key={character.name} character={character} className="inline-block mr-1" />
             ))}
@@ -153,7 +153,7 @@ const FreeItems = ({ freeItems }: { freeItems: FreeItem[] }) => {
           .map(item => item.item.name)
           .sort()
           .map(item => (
-            <div className="text-left mb-1 text-sm capitalize" key={item}>
+            <div className="text-left mb-1 text-sm" key={item}>
               {item}
             </div>
           ))}
