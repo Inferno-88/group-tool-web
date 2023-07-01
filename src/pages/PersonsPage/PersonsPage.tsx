@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
-import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey } from 'src/types';
+import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey, RaidName } from 'src/types';
 import { ReactComponent as DeleteIcon } from './delete.svg';
 import { ReactComponent as EditIcon } from './edit.svg';
 
 interface Props {
-  generate: (available: AvailablePersons) => void;
+  generate: (available: AvailablePersons, raidName: RaidName) => void;
   loading: boolean;
 }
 
@@ -18,6 +18,7 @@ export const PersonsPage = ({ generate, loading }: Props) => {
   const [persons, setPersons] = useState<Person[]>([]);
   const [raid1, setRaid1] = useState<string[]>([]);
   const [raid2, setRaid2] = useState<string[]>([]);
+  const [raidName, setRaidName] = useState<RaidName>(RaidName.TOGC);
 
   useEffect(() => {
     if (process.env.REACT_APP_USE_MOCKS !== 'true') {
@@ -57,18 +58,22 @@ export const PersonsPage = ({ generate, loading }: Props) => {
           </button>
           <button
             disabled={loading}
-            className="block border font-bold py-2 px-4 rounded h-10 w-full"
+            className="block border font-bold py-2 px-4 rounded h-10 w-full mb-6"
             onClick={() => clearAll()}
           >
             Clear All
           </button>
+
+          <select onChange={(e) => { setRaidName(e.target.value as RaidName) }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            {Object.values(RaidName).map((raidNameOption) => (
+              <option value={raidNameOption} key={raidNameOption} selected={raidNameOption===raidName}>{raidNameOption}</option>
+            ))}
+          </select>
         </div>
-        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid1.join(', ')}</div>
-        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid2.join(', ')}</div>
         <button
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10"
-          onClick={() => generate({ raid1, raid2 })}
+          onClick={() => generate({ raid1, raid2 }, raidName)}
         >
           {loading ? 'Loading...' : 'Generate!'}
         </button>

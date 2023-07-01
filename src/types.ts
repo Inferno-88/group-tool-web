@@ -102,3 +102,9 @@ export interface itemCharacterSplit {
 }
 
 export const localStorageICSKey = 'itemCaracterSplits';  
+
+export enum RaidName {
+   ULDUAR = "ULDUAR",
+   TOGC = "TOGC",
+   ICC = "ICC",
+}

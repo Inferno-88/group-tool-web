@@ -1,6 +1,6 @@
 import {SplitsPage} from "./pages/SplitsPage/SplitsPage";
 import {useState} from "react";
-import {Character, itemCharacterSplit, localStorageICSKey, Split} from 'src/types';
+import {Character, itemCharacterSplit, localStorageICSKey, Split, RaidName} from 'src/types';
 import {mockedSplits} from 'src/mocks/mockedSplits';
 import {PersonsPage} from './pages/PersonsPage/PersonsPage';
 
@@ -40,10 +40,10 @@ function App() {
   const [splits, setSplits] = useState<Split[]>([]);
   const [loading, setLoading] = useState(false);
 
-  const generate = (available: AvailablePersons) => {
+  const generate = (available: AvailablePersons, raidName: RaidName) => {
     if (process.env.REACT_APP_USE_MOCKS !== 'true') {
       setLoading(true);
-      fetch(`${process.env.REACT_APP_URL}/splits/generate`, {
+      fetch(`${process.env.REACT_APP_URL}/splits`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -52,6 +52,7 @@ function App() {
           raid1: available.raid1,
           raid2: available.raid2,
           itemCharacterSplit: getICS(),
+          raidName,
         }),
       })
         .then(data => data.json())
