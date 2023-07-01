@@ -1,6 +1,7 @@
 export interface Split {
   raid1: Raid;
   raid2: Raid;
+  raidName: RaidName;
 }
 
 export interface Raid {
@@ -107,4 +108,11 @@ export enum RaidName {
    ULDUAR = "ULDUAR",
    TOGC = "TOGC",
    ICC = "ICC",
+}
+
+export interface SplitsResponce {
+    id: number;
+    statusMessage: string; // "Done!"
+    percent: number;
+    splits: Split[];
 }
