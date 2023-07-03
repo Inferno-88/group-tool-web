@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
-import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey } from 'src/types';
+import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey, RaidName } from 'src/types';
 import { ReactComponent as DeleteIcon } from './delete.svg';
 import { ReactComponent as EditIcon } from './edit.svg';
+import {
+  Link,
+  useLoaderData,
+  useNavigate,
+} from "react-router-dom";
+import { generate } from "./generate";
 
 interface Props {
-  generate: (available: AvailablePersons) => void;
+  generate: (available: AvailablePersons, raidName: RaidName) => void;
   loading: boolean;
 }
 
@@ -14,24 +20,28 @@ interface AvailablePersons {
   raid2: string[];
 }
 
-export const PersonsPage = ({ generate, loading }: Props) => {
-  const [persons, setPersons] = useState<Person[]>([]);
+export async function loaderOfPersons (): Promise<{ persons: Person[] }> {
+  // MOCKS
+  if (process.env.REACT_APP_USE_MOCKS === 'true') {
+    return {persons: mockedPersons};
+  }
+
+  const url = `${process.env.REACT_APP_URL}/persons`;
+  const listOfPersons = await fetch(url);
+  const result = await listOfPersons.json();
+  return { persons: result };
+}
+
+
+export const PersonsPage = () => {
+  const { persons } = useLoaderData() as { persons: Person[] };
+
+  const [loading, setLoading] = useState(false);
   const [raid1, setRaid1] = useState<string[]>([]);
   const [raid2, setRaid2] = useState<string[]>([]);
+  const [raidName, setRaidName] = useState<RaidName>(RaidName.TOGC);
 
-  useEffect(() => {
-    if (process.env.REACT_APP_USE_MOCKS !== 'true') {
-      const url = `${process.env.REACT_APP_URL}/persons`;
-      fetch(url)
-        .then(data => data.json())
-        .then(data => {
-          setPersons(data);
-        });
-    } else {
-      // MOCKS
-      setPersons(mockedPersons);
-    }
-  }, []);
+  const navigate = useNavigate();
 
   const selectAll = () => {
     setRaid1(persons.map(person => person.name));
@@ -57,18 +67,28 @@ export const PersonsPage = ({ generate, loading }: Props) => {
           </button>
           <button
             disabled={loading}
-            className="block border font-bold py-2 px-4 rounded h-10 w-full"
+            className="block border font-bold py-2 px-4 rounded h-10 w-full mb-6"
             onClick={() => clearAll()}
           >
             Clear All
           </button>
+
+          <select value={raidName} onChange={(e) => { setRaidName(e.target.value as RaidName) }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+            {Object.values(RaidName).map((raidNameOption) => (
+              <option value={raidNameOption} key={raidNameOption}>{raidNameOption}</option>
+            ))}
+          </select>
         </div>
-        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid1.join(', ')}</div>
-        <div className="border w-1/3 p-3 mr-6 text-sm capitalize ">{raid2.join(', ')}</div>
         <button
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10"
-          onClick={() => generate({ raid1, raid2 })}
+          onClick={async () => {
+              setLoading(true);
+              const splitID = await generate({ raid1, raid2 }, raidName);
+              setLoading(false);
+              console.log(splitID);
+              navigate(`/split/${splitID}`);
+            }}
         >
           {loading ? 'Loading...' : 'Generate!'}
         </button>

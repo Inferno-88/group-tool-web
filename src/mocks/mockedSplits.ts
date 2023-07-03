@@ -1,4 +1,4 @@
-import { CharacterClass, Person, Raid, Split } from '../types';
+import { CharacterClass, Person, Raid, RaidName, Split } from '../types';
 
 const raid1: Raid = {
   tanks: [
@@ -18484,14 +18484,17 @@ export const mockedSplits: Split[] = [
   {
     raid1,
     raid2,
+    raidName: RaidName.ULDUAR,
   },
   {
     raid1: raid3,
     raid2: raid4,
+    raidName: RaidName.ULDUAR,
   },
   {
     raid1: raid5,
     raid2: raid6,
+    raidName: RaidName.ULDUAR,
   },
 ];
 
