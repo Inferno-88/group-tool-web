@@ -1,17 +1,8 @@
 import { Character, Split, SplitsResponce } from "src/types";
 import { RaidLayout } from "src/pages/SplitsPage/RaidLayout/RaidLayout";
-import { LoaderFunctionArgs, useLoaderData } from "react-router-dom";
+import { Link, LoaderFunctionArgs, useLoaderData } from "react-router-dom";
 import {mockedSplits} from 'src/mocks/mockedSplits';
 import { useEffect, useState } from "react";
-
-interface Props {
-  splits: Split[];
-  onAddorRemove: (
-    splitIndex: number
-  ) => (
-    raidName: "raid1" | "raid2"
-  ) => (character: Character, action: "add" | "remove") => void;
-}
 
 export async function loaderOfSplits({ params }: LoaderFunctionArgs) {
   return await getSplits(params.id);
@@ -70,10 +61,10 @@ export const SplitsPage = () => {
     }
   }
   useEffect(() => {
-    console.log("askAgain effect");
     if (!isReady({ statusMessage, percent, splits })) {
       askAgain()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
  const onAddorRemove =
@@ -129,8 +120,17 @@ export const SplitsPage = () => {
 
   return (
     <div className="text-center p-5">
-      <h1 className="text-md font-bold mb-1">Generated splits</h1>
-      <div className="">
+      <div className="relative">
+        <Link
+          className="block border font-bold py-1.5 px-2 text-sm rounded w-auto absolute top-0 left-0"
+          to={".."}
+        >
+          {`< To Setup Screen`}
+        </Link>
+        <h1 className="text-md font-bold mb-1 py-2 w-full">Generated splits</h1>
+
+      </div>
+      <div>
         {splits?.map((split, index) => {
           return <SplitLayout key={index} split={split} index={index} onAddorRemove={onAddorRemove(index)} />;
         })}

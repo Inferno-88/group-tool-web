@@ -1,4 +1,4 @@
-import {Character, itemCharacterSplit, localStorageICSKey, Split, RaidName} from 'src/types';
+import { itemCharacterSplit, localStorageICSKey, RaidName} from 'src/types';
 
 interface AvailablePersons {
   raid1: string[];

@@ -4,7 +4,6 @@ import {
   CharacterClass,
   characterColorsText,
   ItemCharactersMap,
-  FreeItem,
 } from "src/types";
 import styles from "./raidLayout.module.css";
 

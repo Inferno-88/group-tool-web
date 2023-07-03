@@ -4,21 +4,10 @@ import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey, Ra
 import { ReactComponent as DeleteIcon } from './delete.svg';
 import { ReactComponent as EditIcon } from './edit.svg';
 import {
-  Link,
   useLoaderData,
   useNavigate,
 } from "react-router-dom";
 import { generate } from "./generate";
-
-interface Props {
-  generate: (available: AvailablePersons, raidName: RaidName) => void;
-  loading: boolean;
-}
-
-interface AvailablePersons {
-  raid1: string[];
-  raid2: string[];
-}
 
 export async function loaderOfPersons (): Promise<{ persons: Person[] }> {
   // MOCKS
@@ -56,32 +45,36 @@ export const PersonsPage = () => {
   return (
     <div className="text-center p-3 h-screen flex flex-col">
       <h1 className="mb-4 text-2xl font-bold">Choose available persons</h1>
-      <div className="flex mb-7 justify-center h-36">
-        <div className="mr-4">
+      <div className="flex mb-7 justify-center">
+       
           <button
             disabled={loading}
-            className="block border font-bold py-2 px-4 rounded h-10 mb-6 w-full"
+            className="block border font-bold py-2 px-4 rounded h-10 mr-4"
             onClick={() => selectAll()}
           >
             Select All
           </button>
           <button
             disabled={loading}
-            className="block border font-bold py-2 px-4 rounded h-10 w-full mb-6"
+            className="block border font-bold py-2 px-4 rounded h-10 mr-4"
             onClick={() => clearAll()}
           >
             Clear All
           </button>
 
-          <select value={raidName} onChange={(e) => { setRaidName(e.target.value as RaidName) }} className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+          <select 
+            value={raidName} 
+            onChange={(e) => { setRaidName(e.target.value as RaidName) }} 
+            className="bg-gray-50 border border-gray-300 text-gray-900 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2 mr-80"
+          >
             {Object.values(RaidName).map((raidNameOption) => (
               <option value={raidNameOption} key={raidNameOption}>{raidNameOption}</option>
             ))}
           </select>
-        </div>
+ 
         <button
           disabled={loading}
-          className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10"
+          className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10 w-44"
           onClick={async () => {
               setLoading(true);
               const splitID = await generate({ raid1, raid2 }, raidName);
