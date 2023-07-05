@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
 import { mockedPersons } from "src/mocks/mockedSplits";
 import { itemCharacterSplit, Person, characterColorsText, localStorageICSKey, RaidName } from 'src/types';
-import { ReactComponent as DeleteIcon } from './delete.svg';
-import { ReactComponent as EditIcon } from './edit.svg';
-import {
-  useLoaderData,
-  useNavigate,
-} from "react-router-dom";
-import { generate } from "./generate";
+import { ReactComponent as DeleteIcon } from 'src/icons/delete.svg';
+import { ReactComponent as EditIcon } from 'src/icons/edit.svg';
+import { useLoaderData, useNavigate } from 'react-router-dom';
+import { generate } from './generate';
 
-export async function loaderOfPersons (): Promise<{ persons: Person[] }> {
+export async function loaderOfPersons(): Promise<{ persons: Person[] }> {
   // MOCKS
   if (process.env.REACT_APP_USE_MOCKS === 'true') {
-    return {persons: mockedPersons};
+    return { persons: mockedPersons };
   }
 
   const url = `${process.env.REACT_APP_URL}/persons`;
@@ -20,7 +17,6 @@ export async function loaderOfPersons (): Promise<{ persons: Person[] }> {
   const result = await listOfPersons.json();
   return { persons: result };
 }
-
 
 export const PersonsPage = () => {
   const { persons } = useLoaderData() as { persons: Person[] };
@@ -46,42 +42,45 @@ export const PersonsPage = () => {
     <div className="text-center p-3 h-screen flex flex-col">
       <h1 className="mb-4 text-2xl font-bold">Choose available persons</h1>
       <div className="flex mb-7 justify-center">
-       
-          <button
-            disabled={loading}
-            className="block border font-bold py-2 px-4 rounded h-10 mr-4"
-            onClick={() => selectAll()}
-          >
-            Select All
-          </button>
-          <button
-            disabled={loading}
-            className="block border font-bold py-2 px-4 rounded h-10 mr-4"
-            onClick={() => clearAll()}
-          >
-            Clear All
-          </button>
+        <button
+          disabled={loading}
+          className="block border font-bold py-2 px-4 rounded h-10 mr-4"
+          onClick={() => selectAll()}
+        >
+          Select All
+        </button>
+        <button
+          disabled={loading}
+          className="block border font-bold py-2 px-4 rounded h-10 mr-4"
+          onClick={() => clearAll()}
+        >
+          Clear All
+        </button>
 
-          <select 
-            value={raidName} 
-            onChange={(e) => { setRaidName(e.target.value as RaidName) }} 
-            className="bg-gray-50 border border-gray-300 text-gray-900 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2 mr-80"
-          >
-            {Object.values(RaidName).map((raidNameOption) => (
-              <option value={raidNameOption} key={raidNameOption}>{raidNameOption}</option>
-            ))}
-          </select>
- 
+        <select
+          value={raidName}
+          onChange={e => {
+            setRaidName(e.target.value as RaidName);
+          }}
+          className="bg-gray-50 border border-gray-300 text-gray-900 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2 mr-80"
+        >
+          {Object.values(RaidName).map(raidNameOption => (
+            <option value={raidNameOption} key={raidNameOption}>
+              {raidNameOption}
+            </option>
+          ))}
+        </select>
+
         <button
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10 w-44"
           onClick={async () => {
-              setLoading(true);
-              const splitID = await generate({ raid1, raid2 }, raidName);
-              setLoading(false);
-              console.log(splitID);
-              navigate(`/split/${splitID}`);
-            }}
+            setLoading(true);
+            const splitID = await generate({ raid1, raid2 }, raidName);
+            setLoading(false);
+            console.log(splitID);
+            navigate(`/split/${splitID}`);
+          }}
         >
           {loading ? 'Loading...' : 'Generate!'}
         </button>
@@ -214,13 +213,13 @@ const ItemCaracterSplitLayout = () => {
                 onClick={() => onDelete(index)}
                 className="w-5 h-5 mt-2 border border-black rounded-sm cursor-pointer "
               >
-                <DeleteIcon className="w-4 h-4" />
+                <DeleteIcon className="w-4 h-4 m-auto" />
               </div>
               <div
                 onClick={() => onEdit(index)}
                 className=" w-5 h-5 mt-2 border border-black rounded-sm  cursor-pointer "
               >
-                <EditIcon className="w-4 h-4" />
+                <EditIcon className="w-4 h-4 m-auto" />
               </div>
             </div>
           </div>

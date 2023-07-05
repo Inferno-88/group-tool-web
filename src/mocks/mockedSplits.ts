@@ -2914,6 +2914,112 @@ const raid1: Raid = {
         ],
       },
       {
+        name: 'bridelollol',
+        className: 'ROGUE',
+        specs: [
+          {
+            main: true,
+            type: 'Assassination',
+          },
+        ],
+        main: true,
+        items: [
+          {
+            item: {
+              id: 26,
+              url: null,
+              name: "Comet's Trail",
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 34,
+              url: null,
+              name: 'Skyforge Crossbow',
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 33,
+              url: null,
+              name: 'Embrace of the Gladiator',
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 32,
+              url: null,
+              name: 'Shoulderpads of the Intruder',
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 39,
+              url: null,
+              name: 'Solar Bindings',
+            },
+            status: 'BIS',
+          },
+        ],
+      },
+      {
+        name: 'bride',
+        className: 'ROGUE',
+        specs: [
+          {
+            main: true,
+            type: 'Assassination',
+          },
+        ],
+        main: true,
+        items: [
+          {
+            item: {
+              id: 26,
+              url: null,
+              name: "Comet's Trail",
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 34,
+              url: null,
+              name: 'Skyforge Crossbow',
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 33,
+              url: null,
+              name: 'Embrace of the Gladiator',
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 32,
+              url: null,
+              name: 'Shoulderpads of the Intruder',
+            },
+            status: 'BIS',
+          },
+          {
+            item: {
+              id: 39,
+              url: null,
+              name: 'Solar Bindings',
+            },
+            status: 'BIS',
+          },
+        ],
+      },
+      {
         name: 'nurgl',
         className: 'ROGUE',
         specs: [

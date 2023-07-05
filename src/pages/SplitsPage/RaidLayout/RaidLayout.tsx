@@ -6,6 +6,9 @@ import {
   ItemCharactersMap,
 } from "src/types";
 import styles from "./raidLayout.module.css";
+import { useState } from 'react';
+
+import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
 
 export const RaidLayout = ({
   raid,
@@ -132,14 +135,44 @@ const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
       {sortedItemsNames.map(item => (
         <div className="text-left mb-1 text-sm" key={item}>
           <div>
-            {item} ({items[item].length}):{' '}
-            {items[item].map(character => (
-              <CharacterLayout key={character.name} character={character} className="inline-block mr-1" />
-            ))}
+            {item} ({items[item].length}): <CharsForItem characters={items[item]} />
           </div>
         </div>
       ))}
     </div>
+  );
+};
+
+const CharsForItem = ({ characters }: { characters: Character[] }) => {
+  const [openChars, setOpenChars] = useState(false);
+
+  return (
+    <>
+      {characters.map((character, index) =>
+        index < 3 ? <CharacterLayout key={character.name} character={character} className="inline-block mr-1" /> : null,
+      )}
+      {characters.length > 3 && (
+        <>
+          {!openChars && (
+            <button className="inline-flex align-middle" onClick={() => setOpenChars(true)}>
+              <BiChevronRight className="w-4 h-4 m-auto" />
+            </button>
+          )}
+          {openChars && (
+            <div>
+              {characters.map((character, index) =>
+                index >= 3 ? (
+                  <CharacterLayout key={character.name} character={character} className="inline-block mr-1" />
+                ) : null,
+              )}
+              <button onClick={() => setOpenChars(false)} className="inline-flex align-middle">
+                <BiChevronLeft className="w-4 h-4 m-auto" />
+              </button>
+            </div>
+          )}
+        </>
+      )}
+    </>
   );
 };
 

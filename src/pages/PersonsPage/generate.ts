@@ -6,25 +6,30 @@ interface AvailablePersons {
 }
 
 export async function generate (available: AvailablePersons, raidName: RaidName) {
-    try {
-        const splitID = await fetch(`${process.env.REACT_APP_URL}/splits`, {
-            method: 'POST',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-            raid1: available.raid1,
-            raid2: available.raid2,
-            itemCharacterSplit: getICS(),
-            raidName,
-            }),
-        });
-        return await splitID.json() as number;
-    } catch (e) {
-        console.log(e);
-        alert('Something went wrong! Please try again');
-        return await undefined;
-}
+  // MOCKS
+  if (process.env.REACT_APP_USE_MOCKS === 'true') {
+    return await 1;
+  }
+
+  try {
+    const splitID = await fetch(`${process.env.REACT_APP_URL}/splits`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        raid1: available.raid1,
+        raid2: available.raid2,
+        itemCharacterSplit: getICS(),
+        raidName,
+      }),
+    });
+    return (await splitID.json()) as number;
+  } catch (e) {
+    console.log(e);
+    alert('Something went wrong! Please try again');
+    return await undefined;
+  }
 };
 
 const getICS = () => {
