@@ -40,10 +40,10 @@ export const PersonsPage = () => {
   };
 
   return (
-    <div className="relative">
-      <div className={`h-full w-1/3 absolute top-0 left-0 -z-10 bg-[#003366] ${styles.lich}`} />
+    <div className="relative bg-[#003366]">
+      <div className={`h-full w-1/3 absolute top-0 left-0 bg-[#003366] ${styles.lich}`} />
       <div className="text-center h-screen flex justify-end min-w-[875px] max-w-[1600px] mx-auto">
-        <div className={`w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col ${styles.darkCover}`}>
+        <div className={`w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col z-10 ${styles.darkCover}`}>
           <div className="flex">
             <div className="">
               <h1 className="mb-4 text-xl font-bold text-left ml-10 text-blue-50">1. Choose available persons</h1>
@@ -111,7 +111,7 @@ export const PersonsPage = () => {
           )}
         </div>
 
-        <div className="min-w-[20rem] p-3 pr-1 lg:pr-[3%] max-w-3xl flex flex-col">
+        <div className="min-w-[20rem] p-3 pr-1 lg:pr-[3%] max-w-3xl flex flex-col bg-[#fffbf7]">
           <h2 className="mb-4 text-xl font-bold text-[#003366]">3. Add split characters for items</h2>
           <ItemCharacterSplitLayout />
           <div className="mt-auto ml-auto p-8 pr-0">
