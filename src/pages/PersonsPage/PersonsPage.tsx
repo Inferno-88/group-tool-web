@@ -112,7 +112,7 @@ export const PersonsPage = () => {
         </div>
 
         <div className="min-w-[20rem] p-3 pr-1 lg:pr-[3%] max-w-3xl flex flex-col bg-[#fffbf7]">
-          <h2 className="mb-4 text-xl font-bold text-[#003366]">3. Add split characters for items</h2>
+          <h2 className="mb-4 text-xl font-bold text-[#003366]">3. Split characters by items</h2>
           <ItemCharacterSplitLayout />
           <div className="mt-auto ml-auto p-8 pr-0">
             <button
