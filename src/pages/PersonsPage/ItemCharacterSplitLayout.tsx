@@ -73,7 +73,7 @@ export const ItemCharacterSplitLayout = () => {
   };
 
   return (
-    <div className="w-1/3 rounded border text-center relative overflow-auto">
+    <div className="h-full text-center relative overflow-auto">
       <div className="flex justify-around m-1">
         <h3 className="mx-auto font-semibold mt-2">Item character splits</h3>
         <button

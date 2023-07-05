@@ -39,82 +39,96 @@ export const PersonsPage = () => {
   };
 
   return (
-    <div className="text-center p-3 h-screen flex flex-col">
-      <h1 className="mb-4 text-2xl font-bold">Choose available persons</h1>
-      <div className="flex mb-7 justify-center">
-        <button
-          disabled={loading}
-          className="block border font-bold py-2 px-4 rounded h-10 mr-4"
-          onClick={() => selectAll()}
-        >
-          Select All
-        </button>
-        <button
-          disabled={loading}
-          className="block border font-bold py-2 px-4 rounded h-10 mr-4"
-          onClick={() => clearAll()}
-        >
-          Clear All
-        </button>
-
-        <select
-          value={raidName}
-          onChange={e => {
-            setRaidName(e.target.value as RaidName);
-          }}
-          className="bg-gray-50 border border-gray-300 text-gray-900 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2 mr-80"
-        >
-          {Object.values(RaidName).map(raidNameOption => (
-            <option value={raidNameOption} key={raidNameOption}>
-              {raidNameOption}
-            </option>
-          ))}
-        </select>
-
-        <button
-          disabled={loading}
-          className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-10 w-44"
-          onClick={async () => {
-            setLoading(true);
-            const splitID = await generate({ raid1, raid2 }, raidName);
-            setLoading(false);
-            console.log(splitID);
-            navigate(`/split/${splitID}`);
-          }}
-        >
-          {loading ? 'Loading...' : 'Generate!'}
-        </button>
-      </div>
-      <div className="flex overflow-auto justify-around">
-        {persons.length > 0 ? (
-          <div className="w-2/3 flex flex-col flex-wrap content-start overflow-auto">
-            {persons.map(person => (
-              <PersonLayout
-                key={person.name}
-                person={person}
-                checkedWed={raid1.includes(person.name)}
-                checkedSun={raid2.includes(person.name)}
-                onChangeWed={e => {
-                  if (e.target.checked) {
-                    setRaid1([...raid1, person.name]);
-                  } else {
-                    setRaid1(raid1.filter(name => name !== person.name));
-                  }
+    <div className="relative">
+      <div className="h-full w-1/3 absolute top-0 left-0 -z-10" />
+      <div className="text-center h-screen flex justify-end min-w-[875px] max-w-[1600px] mx-auto">
+        <div className="w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col">
+          <div className="flex">
+            <div className="">
+              <h1 className="mb-4 text-xl font-bold text-left ml-10">1. Choose available persons</h1>
+              <div className="flex mb-4 ml-8">
+                <button
+                  disabled={loading}
+                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-white"
+                  onClick={() => selectAll()}
+                >
+                  Select All
+                </button>
+                <button
+                  disabled={loading}
+                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-white"
+                  onClick={() => clearAll()}
+                >
+                  Clear All
+                </button>
+              </div>
+            </div>
+            <div className="text-left ml-auto w-44">
+              <h2 className="mb-4 text-xl font-bold">2. Choose raid</h2>
+              <select
+                value={raidName}
+                onChange={e => {
+                  setRaidName(e.target.value as RaidName);
                 }}
-                onChangeSun={e => {
-                  if (e.target.checked) {
-                    setRaid2([...raid2, person.name]);
-                  } else {
-                    setRaid2(raid2.filter(name => name !== person.name));
-                  }
-                }}
-              />
-            ))}
+                className="bg-gray-50 border border-gray-300 text-gray-900 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 mr-80"
+              >
+                {Object.values(RaidName).map(raidNameOption => (
+                  <option value={raidNameOption} key={raidNameOption}>
+                    {raidNameOption}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
-        ) : (
-          <p className="w-2/3">Loading...</p>
-        )}
-        <ItemCharacterSplitLayout />
+          {persons.length > 0 ? (
+            <div className="flex flex-col flex-wrap overflow-auto h-full">
+              {persons.map(person => (
+                <PersonLayout
+                  key={person.name}
+                  person={person}
+                  checkedWed={raid1.includes(person.name)}
+                  checkedSun={raid2.includes(person.name)}
+                  onChangeWed={e => {
+                    if (e.target.checked) {
+                      setRaid1([...raid1, person.name]);
+                    } else {
+                      setRaid1(raid1.filter(name => name !== person.name));
+                    }
+                  }}
+                  onChangeSun={e => {
+                    if (e.target.checked) {
+                      setRaid2([...raid2, person.name]);
+                    } else {
+                      setRaid2(raid2.filter(name => name !== person.name));
+                    }
+                  }}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="text-l font-bold">Loading...</div>
+          )}
+        </div>
+
+        <div className="min-w-[20rem] p-3 pr-1 lg:pr-[3%] max-w-3xl flex flex-col">
+          <h2 className="mb-4 text-xl font-bold">3. Add split characters for items</h2>
+          <ItemCharacterSplitLayout />
+          <div className="mt-auto ml-auto p-8 pr-0">
+            <button
+              disabled={loading}
+              className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-14 w-52"
+              onClick={async () => {
+                setLoading(true);
+                const splitID = await generate({ raid1, raid2 }, raidName);
+                setLoading(false);
+                console.log(splitID);
+                navigate(`/split/${splitID}`);
+              }}
+            >
+              {loading ? 'Loading...' : '4. Generate!'}
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

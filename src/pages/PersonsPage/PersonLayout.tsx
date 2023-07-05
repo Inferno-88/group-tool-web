@@ -9,11 +9,11 @@ interface PersonProps {
 }
 
 export const PersonLayout = ({ person, checkedSun, checkedWed, onChangeSun, onChangeWed }: PersonProps) => {
-  const nameStyle = `capitalize p-2 w-20 ${characterColorsText[person.mainClassName]}`;
+  const nameStyle = `capitalize p-2.5 w-1/3 ${characterColorsText[person.mainClassName]}`;
   return (
-    <div className="border text-sm mb-2 flex w-60 mr-2 justify-aroundz">
+    <div className="border text-sm mb-2 max-w-sm flex mr-2 ">
       <p className={nameStyle}>{person.name}</p>
-      <label htmlFor={`raid1${person.name}`} className="mr-1 p-2 whitespace-nowrap">
+      <label htmlFor={`raid1${person.name}`} className="w-1/3 mr-1 p-2 whitespace-nowrap">
         <input
           type="checkbox"
           id={`raid1${person.name}`}
@@ -25,7 +25,7 @@ export const PersonLayout = ({ person, checkedSun, checkedWed, onChangeSun, onCh
         Wed
       </label>
 
-      <label htmlFor={`raid2${person.name}`} className="mr-1 p-2 whitespace-nowrap">
+      <label htmlFor={`raid2${person.name}`} className="w-1/3 mr-1 p-2 whitespace-nowrap">
         <input
           type="checkbox"
           id={`raid2${person.name}`}
