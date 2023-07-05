@@ -5,6 +5,7 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 import { generate } from './generate';
 import { ItemCharacterSplitLayout } from './ItemCharacterSplitLayout';
 import { PersonLayout } from './PersonLayout';
+import styles from './pp.module.css';
 
 export async function loaderOfPersons(): Promise<{ persons: Person[] }> {
   // MOCKS
@@ -40,23 +41,23 @@ export const PersonsPage = () => {
 
   return (
     <div className="relative">
-      <div className="h-full w-1/3 absolute top-0 left-0 -z-10" />
+      <div className={`h-full w-1/3 absolute top-0 left-0 -z-10 bg-[#003366] ${styles.lich}`} />
       <div className="text-center h-screen flex justify-end min-w-[875px] max-w-[1600px] mx-auto">
-        <div className="w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col">
+        <div className={`w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col ${styles.darkCover}`}>
           <div className="flex">
             <div className="">
-              <h1 className="mb-4 text-xl font-bold text-left ml-10">1. Choose available persons</h1>
+              <h1 className="mb-4 text-xl font-bold text-left ml-10 text-blue-50">1. Choose available persons</h1>
               <div className="flex mb-4 ml-8">
                 <button
                   disabled={loading}
-                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-white"
+                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-blue-50 hover:bg-blue-100 text-blue-950 "
                   onClick={() => selectAll()}
                 >
                   Select All
                 </button>
                 <button
                   disabled={loading}
-                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-white"
+                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-blue-50  hover:bg-blue-100 text-blue-950 "
                   onClick={() => clearAll()}
                 >
                   Clear All
@@ -64,13 +65,13 @@ export const PersonsPage = () => {
               </div>
             </div>
             <div className="text-left ml-auto w-44">
-              <h2 className="mb-4 text-xl font-bold">2. Choose raid</h2>
+              <h2 className="mb-4 text-xl font-bold text-blue-50">2. Choose raid</h2>
               <select
                 value={raidName}
                 onChange={e => {
                   setRaidName(e.target.value as RaidName);
                 }}
-                className="bg-gray-50 border border-gray-300 text-gray-900 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 mr-80"
+                className="bg-blue-50 border border-gray-300 text-blue-950 w-44 text-sm rounded focus:ring-blue-500 focus:border-blue-500 block p-2.5 mr-80"
               >
                 {Object.values(RaidName).map(raidNameOption => (
                   <option value={raidNameOption} key={raidNameOption}>
@@ -111,12 +112,12 @@ export const PersonsPage = () => {
         </div>
 
         <div className="min-w-[20rem] p-3 pr-1 lg:pr-[3%] max-w-3xl flex flex-col">
-          <h2 className="mb-4 text-xl font-bold">3. Add split characters for items</h2>
+          <h2 className="mb-4 text-xl font-bold text-[#003366]">3. Add split characters for items</h2>
           <ItemCharacterSplitLayout />
           <div className="mt-auto ml-auto p-8 pr-0">
             <button
               disabled={loading}
-              className="bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100 text-white font-bold py-2 px-4 rounded h-14 w-52"
+              className="bg-[#003366] hover:bg-blue-900 disabled:bg-blue-100 text-blue-50 font-bold py-2 px-4 rounded h-14 w-52"
               onClick={async () => {
                 setLoading(true);
                 const splitID = await generate({ raid1, raid2 }, raidName);

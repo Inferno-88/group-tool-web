@@ -13,7 +13,7 @@ export const PersonLayout = ({ person, checkedSun, checkedWed, onChangeSun, onCh
   return (
     <div className="border text-sm mb-2 max-w-sm flex mr-2 ">
       <p className={nameStyle}>{person.name}</p>
-      <label htmlFor={`raid1${person.name}`} className="w-1/3 mr-1 p-2 whitespace-nowrap">
+      <label htmlFor={`raid1${person.name}`} className="w-1/3 mr-1 p-2 whitespace-nowrap text-green-50">
         <input
           type="checkbox"
           id={`raid1${person.name}`}
@@ -25,7 +25,7 @@ export const PersonLayout = ({ person, checkedSun, checkedWed, onChangeSun, onCh
         Wed
       </label>
 
-      <label htmlFor={`raid2${person.name}`} className="w-1/3 mr-1 p-2 whitespace-nowrap">
+      <label htmlFor={`raid2${person.name}`} className="w-1/3 mr-1 p-2 whitespace-nowrap text-green-50">
         <input
           type="checkbox"
           id={`raid2${person.name}`}
