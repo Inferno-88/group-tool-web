@@ -1,9 +1,9 @@
-import { Character, Split, SplitsResponce } from "src/types";
-import { RaidLayout } from "src/pages/SplitsPage/RaidLayout/RaidLayout";
-import { Link, LoaderFunctionArgs, useLoaderData } from "react-router-dom";
-import {mockedSplits} from 'src/mocks/mockedSplits';
-import { useEffect, useState } from "react";
+import { Character, Split, SplitsResponce } from 'src/types';
+import { Link, LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
+import { mockedSplits } from 'src/mocks/mockedSplits';
+import { useEffect, useState } from 'react';
 import { BiChevronLeft } from 'react-icons/bi';
+import { SplitLayout } from './SplitLayout';
 
 export async function loaderOfSplits({ params }: LoaderFunctionArgs) {
   return await getSplits(params.id);
@@ -134,36 +134,6 @@ export const SplitsPage = () => {
         {splits?.map((split, index) => {
           return <SplitLayout key={index} split={split} index={index} onAddorRemove={onAddorRemove(index)} />;
         })}
-      </div>
-    </div>
-  );
-};
-
-const SplitLayout = ({
-  split,
-  index,
-  onAddorRemove,
-}: {
-  split: Split;
-  index: number;
-  onAddorRemove: (
-    raidName: "raid1" | "raid2"
-  ) => (character: Character, action: "add" | "remove") => void;
-}) => {
-  return (
-    <div className="mb-10">
-      <h2 className="text-sm font-bold">Split {index + 1}</h2>
-      <div className="flex gap-x-2">
-        <RaidLayout
-          raid={split.raid1}
-          name={"Wed"}
-          onAddorRemove={onAddorRemove("raid1")}
-        />
-        <RaidLayout
-          raid={split.raid2}
-          name={"Sun"}
-          onAddorRemove={onAddorRemove("raid2")}
-        />
       </div>
     </div>
   );
