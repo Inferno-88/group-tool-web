@@ -115,20 +115,20 @@ export const ItemCharacterSplitLayout = () => {
             <input
               type="text"
               placeholder="Item name"
-              className="border p-2 w-60 mr-2"
+              className="border p-2 mr-2"
               value={item}
               onChange={e => setItem(e.target.value)}
             />
             <div className="flex gap-2 m-3">
               <textarea
                 placeholder="Characters left"
-                className="border p-2 w-60"
+                className="border p-2 w-full"
                 value={characterLeft}
                 onChange={e => setCharacterLeft(e.target.value)}
               />
               <textarea
                 placeholder="Characters right"
-                className="border p-2 w-60"
+                className="border p-2 w-full"
                 value={characterRight}
                 onChange={e => setCharacterRight(e.target.value)}
               />
