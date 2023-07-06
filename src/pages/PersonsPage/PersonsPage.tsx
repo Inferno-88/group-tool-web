@@ -40,9 +40,8 @@ export const PersonsPage = () => {
   };
 
   return (
-    <div className="relative bg-[#003366]">
-      <div className={`h-full w-1/3 absolute top-0 left-0 bg-[#003366] ${styles.lich}`} />
-      <div className="text-center h-screen flex justify-end min-w-[875px] max-w-[1600px] mx-auto">
+    <div className={`relative bg-[#003366] ${styles.lich}`}>
+      <div className="text-center h-screen flex justify-end lg:justify-center min-w-[875px] max-w-[1600px] mx-auto">
         <div className={`w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col z-10 ${styles.darkCover}`}>
           <div className="flex">
             <div className="">
