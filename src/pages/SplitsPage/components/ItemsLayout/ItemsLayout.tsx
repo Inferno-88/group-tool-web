@@ -13,7 +13,9 @@ export const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
 
       {sortedItemsNames.map(item => (
         <div className="text-left mb-px text-sm" key={item}>
-            {getItemName(item, items[item])}<span className='text-[12px] align-super'>{items[item].length}</span>: <CharactersList characters={items[item]} />
+            {getItemName(item, items[item])}
+            <span className='text-[12px] align-super'>{items[item].length}</span>: 
+            <CharactersList characters={items[item]} />
         </div>
       ))}
     </div>
@@ -21,12 +23,12 @@ export const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
 };
 
 function getItemName(name: string, characters: Character[]) {
-  return isTooLong(name, characters) ?  <ShortName name={name} />: name;
+  return isTooLong(name, characters) ? <ShortName name={name} />: name;
 }
 
 function isTooLong(name: string, characters: Character[]) {
   const length = name.length + characters.reduce((acc, curr, currIndex) => currIndex < 3 ? acc + curr.name.length : acc, 0);
-  return length > 54;
+  return length > 53;
 }
 
 function getShortItem (name:string) {
