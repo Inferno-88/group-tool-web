@@ -28,7 +28,7 @@ function getItemName(name: string, characters: Character[]) {
 
 function isTooLong(name: string, characters: Character[]) {
   const length = name.length + characters.reduce((acc, curr, currIndex) => currIndex < 3 ? acc + curr.name.length : acc, 0);
-  return length > 53;
+  return length > 55;
 }
 
 function getShortItem (name:string) {
