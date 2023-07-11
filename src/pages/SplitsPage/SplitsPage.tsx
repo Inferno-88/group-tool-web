@@ -122,7 +122,7 @@ export const SplitsPage = () => {
   }
 
   return (
-    <div className="text-center p-5 pt-2">
+    <div className="text-center px-5 py-2">
       <div className="relative">
         <Link className="block border font-bold py-1.5 px-2 text-sm rounded w-auto absolute top-0 left-0" to={'..'}>
           <BiChevronLeft className="inline-block w-5 h-5" />
