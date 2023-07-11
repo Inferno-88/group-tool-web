@@ -122,18 +122,16 @@ export const SplitsPage = () => {
   }
 
   return (
-    <div className="text-center p-5">
+    <div className="text-center p-5 pt-2">
       <div className="relative">
         <Link className="block border font-bold py-1.5 px-2 text-sm rounded w-auto absolute top-0 left-0" to={'..'}>
           <BiChevronLeft className="inline-block w-5 h-5" />
           To Setup Screen
         </Link>
-        <h1 className="text-md font-bold mb-1 py-2 w-full">Generated splits</h1>
+        <h1 className="text-md font-bold py-2 w-full">Generated splits</h1>
       </div>
       <div>
-        {splits?.map((split, index) => {
-          return <SplitLayout key={index} split={split} index={index} onAddorRemove={onAddorRemove(index)} />;
-        })}
+        <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove(0)} />
       </div>
     </div>
   );

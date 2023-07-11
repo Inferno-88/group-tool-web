@@ -24,8 +24,20 @@ export const RaidLayout = ({
     }
   });
 
+  const { m, a } = raid.occupiedCharacters.reduce(
+    (acc, character) => {
+      if (character.main) {
+        acc.m++;
+      } else {
+        acc.a++;
+      }
+      return acc;
+    },
+    { m: 0, a: 0 },
+  );
+
   return (
-    <div className={'border border-slate-200 rounded shadow-lg shadow-slate-100 w-full' + styles.wrapper}>
+    <div className={'w-full border border-slate-200 rounded shadow-lg shadow-slate-100' + styles.wrapper}>
       <div className={`${styles.container}`}>
         <h3 className={`font-semibold ${styles.title}`}>
           {name} (main: {mainCount} alts: {altCount} total: {raid.occupiedCharacters.length})
