@@ -13,9 +13,9 @@ export const ItemsLayout = ({ items }: { items: ItemCharactersMap }) => {
 
       {sortedItemsNames.map(item => (
         <div className="text-left mb-px text-sm" key={item}>
-            {getItemName(item, items[item])}
-            <span className='text-[12px] align-super'>{items[item].length}</span>: 
-            <CharactersList characters={items[item]} />
+          {getItemName(item, items[item])}
+          <span className='text-[12px] align-super'>{items[item].length}</span>: 
+          <CharactersList characters={items[item]} />
         </div>
       ))}
     </div>
@@ -48,6 +48,8 @@ const ShortName = ({ name }: { name: string }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <span className='cursor-pointer' onClick={() => setIsOpen(prevState => !prevState)}>{isOpen ? name : getShortItem(name)}</span>
+    <span className='cursor-pointer border-dashed border-b border-slate-400' onClick={() => setIsOpen(prevState => !prevState)}>
+      {isOpen ? name : getShortItem(name)}
+    </span>
   );
 }
