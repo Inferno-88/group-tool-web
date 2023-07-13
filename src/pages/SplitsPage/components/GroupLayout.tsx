@@ -18,7 +18,7 @@ export const GroupLayout = ({
 }) => {
   return (
     <div className={`border border-slate-200 ${className}`}>
-      <p className="font-sm font-semibold">{name}</p>
+      <p className="font-sm font-semibold border border-slate-200 border-b-0">{name}</p>
       <div className={columns ? 'columns-2' : ''}>
         {group.map(character => (
           <CharacterLayout key={character.name} character={character} action={action} onAction={onAction} />

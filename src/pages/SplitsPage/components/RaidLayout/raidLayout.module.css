@@ -21,14 +21,17 @@
 
 .tanks {
     grid-area: tanks;
+    border: 0;
 }
 
 .dps {
     grid-area: dps;
+    border: 0;
 }
 
 .healers {
     grid-area: healers;
+    border: 0;
 }
 
 .available {
