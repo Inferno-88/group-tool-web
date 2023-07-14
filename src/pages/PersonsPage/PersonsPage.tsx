@@ -6,6 +6,7 @@ import { generate } from './generate';
 import { ItemCharacterSplitLayout } from './ItemCharacterSplitLayout';
 import { PersonLayout } from './PersonLayout';
 import styles from './pp.module.css';
+import { Button } from 'src/components/Button';
 
 export async function loaderOfPersons(): Promise<{ persons: Person[] }> {
   // MOCKS
@@ -45,26 +46,25 @@ export const PersonsPage = () => {
         <div className={`w-[50rem] py-3 pl-1 lg:pl-[3%] pr-4 lg:pr-11 xl:pr-20 flex flex-col z-10 ${styles.darkCover}`}>
           <div className="flex">
             <div className="">
-              <h1 className="mb-4 text-xl font-bold text-left ml-10 text-blue-50">1. Choose available persons</h1>
-              <div className="flex mb-4 ml-8">
-                <button
+              <h1 className="mb-3 text-xl font-bold text-left ml-10 text-blue-50">1. Choose available persons</h1>
+              <div className="flex mb-3 ml-8">
+                <Button
                   disabled={loading}
-                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-blue-50 hover:bg-blue-100 text-blue-950 "
+                  className="mr-4"
                   onClick={() => selectAll()}
                 >
                   Select All
-                </button>
-                <button
+                </Button>
+                <Button
                   disabled={loading}
-                  className="block border font-bold py-2 px-4 rounded h-10 mr-4 bg-blue-50  hover:bg-blue-100 text-blue-950 "
                   onClick={() => clearAll()}
                 >
                   Clear All
-                </button>
+                </Button>
               </div>
             </div>
             <div className="text-left ml-auto w-44">
-              <h2 className="mb-4 text-xl font-bold text-blue-50">2. Choose raid</h2>
+              <h2 className="mb-3 text-xl font-bold text-blue-50">2. Choose raid</h2>
               <select
                 value={raidName}
                 onChange={e => {
@@ -110,13 +110,15 @@ export const PersonsPage = () => {
           )}
         </div>
 
-        <div className="min-w-[26rem] p-3 max-w-3xl flex flex-col bg-[#fffbf7]">
-          <h2 className="mb-4 text-xl font-bold text-[#003366]">3. Split characters by items</h2>
+        <div className="w-[30rem] p-3 flex flex-col bg-blue-50">
+          <h2 className="mb-3 text-xl font-bold text-[#003366]">3. Split characters by items</h2>
           <ItemCharacterSplitLayout />
           <div className="mt-auto ml-auto p-8 pr-0">
-            <button
+            <Button
+              primary
               disabled={loading}
-              className="bg-[#003366] hover:bg-blue-900 disabled:bg-blue-100 text-blue-50 font-bold py-2 px-4 rounded h-14 w-52"
+              loading={loading}
+              className="h-14 w-52"
               onClick={async () => {
                 setLoading(true);
                 const splitID = await generate({ raid1, raid2 }, raidName);
@@ -125,8 +127,8 @@ export const PersonsPage = () => {
                 navigate(`/split/${splitID}`);
               }}
             >
-              {loading ? 'Loading...' : '4. Generate!'}
-            </button>
+              4. Generate!
+            </Button>
           </div>
         </div>
       </div>
