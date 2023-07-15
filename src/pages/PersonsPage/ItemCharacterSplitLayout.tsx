@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { itemCharacterSplit, localStorageICSKey } from 'src/types';
-import { ReactComponent as DeleteIcon } from 'src/icons/delete.svg';
-import { ReactComponent as EditIcon } from 'src/icons/edit.svg';
+import { MdEdit } from 'react-icons/md';
+import { MdDelete } from 'react-icons/md';
+import { Button } from 'src/components/Button';
 
 export const ItemCharacterSplitLayout = () => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
@@ -74,35 +75,34 @@ export const ItemCharacterSplitLayout = () => {
 
   return (
     <div className="h-full text-center relative overflow-auto">
-      <div className="flex justify-around m-1">
-        <h3 className="mx-auto font-semibold mt-2">Item character splits</h3>
-        <button
-          className="border font-semibold py-1 px-2 rounded h-10 m-auto"
-          onClick={() => {
-            setIsAdd(true);
-          }}
-        >
-          Add item
-        </button>
-      </div>
+      <Button
+        className="m-auto px-6 mb-3"
+        onClick={() => {
+          setIsAdd(true);
+        }}
+      >
+        Add item
+      </Button>
       <div className="text-center">
         {currentICS.map((ics: itemCharacterSplit, index: number) => (
-          <div className="border text-sm mb-2 flex justify-around" key={ics.item}>
-            <p className="p-2 w-[21%] break-words">{ics.item}</p>
-            <p className="p-2 w-[37%] break-words">{ics.characterLeft}</p>
-            <p className="p-2 w-[37%] break-words">{ics.characterRight}</p>
-            <div className="w-[5%]">
+          <div className="border border-blue-300 text-sm mb-2 relative" key={ics.item+ics.characterLeft+ics.characterRight+index}>
+            <p className="p-2 break-words font-medium">{ics.item}</p>
+            <div className="flex justify-around gap-1">
+              <p className="p-2 w-1/2 break-all">{ics.characterLeft}</p>
+              <p className="p-2 w-1/2 break-all">{ics.characterRight}</p>
+            </div>
+            <div className="absolute top-0 right-0">
               <div
                 onClick={() => onDelete(index)}
-                className="w-5 h-5 mt-2 border border-black rounded-sm cursor-pointer "
+                className="w-5 h-5 mt-2  border border-transparent hover:border hover:border-[#003366] rounded-sm cursor-pointer inline-block"
               >
-                <DeleteIcon className="w-4 h-4 m-auto" />
+                <MdDelete className="w-4 h-4 m-auto text-[#003366]" />
               </div>
               <div
                 onClick={() => onEdit(index)}
-                className=" w-5 h-5 mt-2 border border-black rounded-sm  cursor-pointer "
+                className="w-5 h-5 mt-2 border border-transparent hover:border-[#003366] rounded-sm cursor-pointer inline-block mr-1"
               >
-                <EditIcon className="w-4 h-4 m-auto" />
+                <MdEdit className="w-4 h-4 m-auto text-[#003366]" />
               </div>
             </div>
           </div>
@@ -110,41 +110,42 @@ export const ItemCharacterSplitLayout = () => {
       </div>
 
       {isAdd && (
-        <div className="absolute top-0 bottom-0 right-0 left-0 bg-slate-50/40">
-          <div className="text-center mt-7 rounded border-2 border-slate-300 top-32 absolute p-2 bg-gray-50 w-full">
+        <div className="absolute top-0 bottom-0 right-0 left-0 bg-slate-50/60">
+          <div className="text-center mt-7 rounded border-2 border-blue-200 top-32 absolute p-2 bg-blue-50 w-full">
             <input
               type="text"
               placeholder="Item name"
-              className="border p-2 mr-2"
+              className="p-2 w-4/5"
               value={item}
               onChange={e => setItem(e.target.value)}
             />
             <div className="flex gap-2 m-3">
               <textarea
                 placeholder="Characters left"
-                className="border p-2 w-full"
+                className="p-2 w-full"
                 value={characterLeft}
                 onChange={e => setCharacterLeft(e.target.value)}
               />
               <textarea
                 placeholder="Characters right"
-                className="border p-2 w-full"
+                className="p-2 w-full"
                 value={characterRight}
                 onChange={e => setCharacterRight(e.target.value)}
               />
             </div>
             <div className="flex justify-center gap-2">
-              <button className="block border font-bold py-2 px-4 rounded h-10 bg-white" onClick={onCancel}>
+              <Button className="w-24" onClick={onCancel}>
                 Cancel
-              </button>
+              </Button>
 
-              <button
-                className="block border font-bold py-2 px-4 rounded h-10 bg-blue-500 hover:bg-blue-700 disabled:bg-blue-100"
+              <Button
+                className="w-24"
+                primary
                 onClick={onSave}
                 disabled={!item || !characterLeft || !characterRight}
               >
                 Save
-              </button>
+              </Button>
             </div>
           </div>
         </div>
