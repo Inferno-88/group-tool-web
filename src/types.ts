@@ -118,6 +118,13 @@ export interface SplitsResponce {
   itemCharacterSplits?: itemCharacterSplitResponce[];
 }
 
+export interface UpdateSplits {
+  modified: boolean;
+  reset: boolean;
+  split: Split;
+  itemCharacterSplit: itemCharacterSplitResponce[];
+}
+
 export interface itemCharacterSplitResponce {
   item: string;
   characterLeft: string[];

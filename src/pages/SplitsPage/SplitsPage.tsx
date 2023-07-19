@@ -1,4 +1,4 @@
-import { Character, Split, SplitsResponce } from 'src/types';
+import { Character, Split, SplitsResponce, itemCharacterSplitResponce, UpdateSplits } from 'src/types';
 import { Link, LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
 import { mockedSplits } from 'src/mocks/mockedSplits';
 import { useEffect, useState } from 'react';
@@ -52,6 +52,7 @@ const isReady = (data: Omit<SplitsResponce, 'id'>) => {
 
 export const SplitsPage = () => {
   const [splits, setSplits] = useState<Split[]>([]);
+  const [itemCharacterSplits, setItemCharacterSplits] = useState<itemCharacterSplitResponce[]>([]);
   const [statusMessage, setStatusMessage] = useState('loading');
   const [percent, setPercent] = useState(0);
 
@@ -60,7 +61,7 @@ export const SplitsPage = () => {
     percent: firstLoadedPercent,
     statusMessage: firstLoadedStatus,
     splits: firstLoadedSplits,
-    itemCharacterSplits,
+    itemCharacterSplits: firstLoadedItemCharacterSplits,
   } = useLoaderData() as SplitsResponce;
 
   useEffect(() => {
@@ -69,7 +70,8 @@ export const SplitsPage = () => {
     setSplits(firstLoadedSplits);
     setStatusMessage(firstLoadedStatus);
     setPercent(firstLoadedPercent);
-  }, [firstLoadedStatus, firstLoadedPercent, firstLoadedSplits]);
+    setItemCharacterSplits(firstLoadedItemCharacterSplits || []);
+  }, [firstLoadedStatus, firstLoadedPercent, firstLoadedSplits, firstLoadedItemCharacterSplits]);
 
   const askAgain = async () => {
     const res = await getSplits(id);
@@ -80,6 +82,7 @@ export const SplitsPage = () => {
       setSplits(res.splits);
       setStatusMessage(res.statusMessage);
       setPercent(res.percent);
+      setItemCharacterSplits(res.itemCharacterSplits || []);
     }
   };
   useEffect(() => {
@@ -89,49 +92,52 @@ export const SplitsPage = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onAddorRemove =
-    (splitIndex: number) => (raidName: 'raid1' | 'raid2') => (character: Character, action: 'add' | 'remove') => {
-      if (process.env.REACT_APP_USE_MOCKS === 'true') {
-        // MOCKS
-        return;
-      }
-      const currentSplit = splits[splitIndex];
+  const onAddorRemove = (raidName: 'raid1' | 'raid2') => (character: Character, action: 'add' | 'remove') => {
+    if (process.env.REACT_APP_USE_MOCKS === 'true') {
+      // MOCKS
+      return;
+    }
+    const currentSplit = splits[0];
 
-      let newOccupied: Character[];
-      if (action === 'add') {
-        newOccupied = [...currentSplit[raidName].occupiedCharacters, character];
-      } else {
-        newOccupied = currentSplit[raidName].occupiedCharacters.filter(c => c.name !== character.name);
-      }
+    let newOccupied: Character[];
+    if (action === 'add') {
+      newOccupied = [...currentSplit[raidName].occupiedCharacters, character];
+    } else {
+      newOccupied = currentSplit[raidName].occupiedCharacters.filter(c => c.name !== character.name);
+    }
 
-      const newSplit: Split = {
-        ...currentSplit,
-        [raidName]: {
-          ...currentSplit[raidName],
-          occupiedCharacters: newOccupied,
-        },
-      };
-
-      fetch(`${process.env.REACT_APP_URL}/splits`, {
-        method: 'PUT',
-        body: JSON.stringify(newSplit),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-        .then(data => data.json())
-        .then(data => {
-          setSplits(oldSplits => {
-            const newSplits = [...oldSplits];
-            newSplits[splitIndex] = data;
-            return newSplits;
-          });
-        })
-        .catch(err => {
-          console.log(err);
-          alert('Something went wrong!');
-        });
+    const newSplit: Split = {
+      ...currentSplit,
+      [raidName]: {
+        ...currentSplit[raidName],
+        occupiedCharacters: newOccupied,
+      },
     };
+
+    const body: UpdateSplits = {
+      modified: true,
+      reset: false,
+      split: newSplit,
+      itemCharacterSplit: itemCharacterSplits,
+    };
+
+    fetch(`${process.env.REACT_APP_URL}/splits/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(data => data.json() as Promise<UpdateSplits>)
+      .then(data => {
+        setSplits([data.split]);
+        setItemCharacterSplits(data.itemCharacterSplit);
+      })
+      .catch(err => {
+        console.log(err);
+        alert('Something went wrong!');
+      });
+  };
 
   if (!isReady({ statusMessage, percent, splits })) {
     return <div>Loading... {percent}</div>;
@@ -148,10 +154,10 @@ export const SplitsPage = () => {
           <h1 className="text-md font-bold py-2 w-full">Generated splits</h1>
         </div>
 
-        <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove(0)} />
+        <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove} />
       </div>
 
-      <ItemCharactersSplits itemCharacterSplits={itemCharacterSplits} />
+      <ItemCharactersSplits itemCharacterSplits={itemCharacterSplits} setItemCharacterSplits={setItemCharacterSplits} />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { itemCharacterSplitResponce } from 'src/types';
 
 interface Props {
   itemCharacterSplits?: itemCharacterSplitResponce[];
+  setItemCharacterSplits?: (ics: itemCharacterSplitResponce[]) => void;
 }
 
 export const ItemCharactersSplits = ({ itemCharacterSplits }: Props) => {
