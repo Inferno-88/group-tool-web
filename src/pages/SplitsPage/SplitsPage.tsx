@@ -4,12 +4,13 @@ import { mockedSplits } from 'src/mocks/mockedSplits';
 import { useEffect, useState } from 'react';
 import { BiChevronLeft } from 'react-icons/bi';
 import { SplitLayout } from './SplitLayout';
+import { ItemCharactersSplits } from './components/ItemCharactersSplits';
 
 export async function loaderOfSplits({ params }: LoaderFunctionArgs) {
   return await getSplits(params.id);
 }
 
-const getSplits = async (id?: string | number) => {
+const getSplits = async (id?: string | number): Promise<SplitsResponce> => {
   if (!id) {
     throw new Response('Not Found', { status: 404 });
   }
@@ -20,6 +21,20 @@ const getSplits = async (id?: string | number) => {
       statusMessage: 'Done!',
       percent: 100,
       splits: mockedSplits,
+      itemCharacterSplits: [
+        {
+          characterLeft: ['koobonobo'],
+          characterRight: ['arylpog'],
+          item: 'star-beaded clutch',
+          ok: true,
+        },
+        {
+          characterLeft: ['koobonobo'],
+          characterRight: ['arylpog'],
+          item: 'star-beaded clutch',
+          ok: true,
+        },
+      ],
     };
   }
   const res = await fetch(`${process.env.REACT_APP_URL}/splits/${id}`);
@@ -45,6 +60,7 @@ export const SplitsPage = () => {
     percent: firstLoadedPercent,
     statusMessage: firstLoadedStatus,
     splits: firstLoadedSplits,
+    itemCharacterSplits,
   } = useLoaderData() as SplitsResponce;
 
   useEffect(() => {
@@ -122,17 +138,20 @@ export const SplitsPage = () => {
   }
 
   return (
-    <div className="text-center px-5 py-2">
-      <div className="relative">
-        <Link className="block border font-bold py-1.5 px-2 text-sm rounded w-auto absolute top-0 left-0" to={'..'}>
-          <BiChevronLeft className="inline-block w-5 h-5" />
-          To Setup Screen
-        </Link>
-        <h1 className="text-md font-bold py-2 w-full">Generated splits</h1>
-      </div>
-      <div>
+    <div className="flex">
+      <div className="text-center px-5 py-2 w-full">
+        <div className="relative">
+          <Link className="block border font-bold py-1.5 px-2 text-sm rounded w-auto absolute top-0 left-0" to={'..'}>
+            <BiChevronLeft className="inline-block w-5 h-5" />
+            To Setup Screen
+          </Link>
+          <h1 className="text-md font-bold py-2 w-full">Generated splits</h1>
+        </div>
+
         <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove(0)} />
       </div>
+
+      <ItemCharactersSplits itemCharacterSplits={itemCharacterSplits} />
     </div>
   );
 };

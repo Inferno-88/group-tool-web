@@ -111,8 +111,16 @@ export enum RaidName {
 }
 
 export interface SplitsResponce {
-    id: number;
-    statusMessage: string; // "Done!"
-    percent: number;
-    splits: Split[];
+  id: number;
+  statusMessage: string; // "Done!"
+  percent: number;
+  splits: Split[];
+  itemCharacterSplits?: itemCharacterSplitResponce[];
+}
+
+export interface itemCharacterSplitResponce {
+  item: string;
+  characterLeft: string[];
+  characterRight: string[];
+  ok: boolean;
 }
