@@ -96,12 +96,6 @@ export interface Person {
   mainClassName: CharacterClass;
 }
 
-export interface itemCharacterSplit {
-  item: string;
-  characterLeft: string;
-  characterRight: string;
-}
-
 export const localStorageICSKey = 'itemCaracterSplits';  
 
 export enum RaidName {
@@ -111,8 +105,29 @@ export enum RaidName {
 }
 
 export interface SplitsResponce {
-    id: number;
-    statusMessage: string; // "Done!"
-    percent: number;
-    splits: Split[];
+  id: number;
+  statusMessage: string; // "Done!"
+  percent: number;
+  splits: Split[];
+  itemCharacterSplits?: itemCharacterSplitResponce[];
+}
+
+export interface UpdateSplits {
+  modified: boolean;
+  reset: boolean;
+  split: Split;
+  itemCharacterSplit: itemCharacterSplitResponce[];
+}
+
+export interface itemCharacterSplitResponce {
+  item: string;
+  characterLeft: string[];
+  characterRight: string[];
+  ok?: boolean;
+}
+
+export interface itemCharacterSplit {
+  item: string;
+  characterLeft: string;
+  characterRight: string;
 }
