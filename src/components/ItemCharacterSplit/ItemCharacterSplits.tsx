@@ -93,7 +93,8 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, showHint
       </div>
       {!!showHint && (
         <div className="text-xs text-slate-500 text-center mt-2">
-          Changing of this items will not be saved for the Persons setup page. They are valid only for this split.
+          Changing these item characters splits will not be saved for the Setup page. They are valid only for this
+          split.
         </div>
       )}
 
