@@ -50,11 +50,35 @@ const isReady = (data: Omit<SplitsResponce, 'id'>) => {
   return data.statusMessage === 'Done!' && data.percent === 100 && data.splits;
 };
 
+const sendUpdate = (id: number, body: UpdateSplits, onReceiveData: (s: UpdateSplits) => void) => {
+  if (process.env.REACT_APP_USE_MOCKS === 'true') {
+    // MOCKS
+    return;
+  }
+
+  fetch(`${process.env.REACT_APP_URL}/splits/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify(body),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then(data => data.json() as Promise<UpdateSplits>)
+    .then(data => {
+      onReceiveData(data);
+    })
+    .catch(err => {
+      console.log(err);
+      alert('Something went wrong!');
+    });
+};
+
 export const SplitsPage = () => {
   const [splits, setSplits] = useState<Split[]>([]);
   const [itemCharacterSplits, setItemCharacterSplits] = useState<itemCharacterSplitResponce[]>([]);
   const [statusMessage, setStatusMessage] = useState('loading');
   const [percent, setPercent] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   const {
     id,
@@ -91,10 +115,6 @@ export const SplitsPage = () => {
   }, []);
 
   const onAddorRemove = (raidName: 'raid1' | 'raid2') => (character: Character, action: 'add' | 'remove') => {
-    if (process.env.REACT_APP_USE_MOCKS === 'true') {
-      // MOCKS
-      return;
-    }
     const currentSplit = splits[0];
 
     let newOccupied: Character[];
@@ -118,54 +138,29 @@ export const SplitsPage = () => {
       split: newSplit,
       itemCharacterSplit: itemCharacterSplits,
     };
+    setLoading(true);
 
-    fetch(`${process.env.REACT_APP_URL}/splits/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(body),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(data => data.json() as Promise<UpdateSplits>)
-      .then(data => {
-        setSplits([data.split]);
-        setItemCharacterSplits(data.itemCharacterSplit);
-      })
-      .catch(err => {
-        console.log(err);
-        alert('Something went wrong!');
-      });
+    sendUpdate(id, body, data => {
+      setSplits([data.split]);
+      setItemCharacterSplits(data.itemCharacterSplit);
+      setLoading(false);
+    });
   };
 
   const onIcsChange = (newIcs: itemCharacterSplitResponce[]) => {
-    if (process.env.REACT_APP_USE_MOCKS === 'true') {
-      // MOCKS
-      return;
-    }
-
     const body: UpdateSplits = {
       modified: true,
       reset: false,
       split: splits[0],
       itemCharacterSplit: newIcs,
     };
+    setLoading(true);
 
-    fetch(`${process.env.REACT_APP_URL}/splits/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(body),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then(data => data.json() as Promise<UpdateSplits>)
-      .then(data => {
-        setSplits([data.split]);
-        setItemCharacterSplits(data.itemCharacterSplit);
-      })
-      .catch(err => {
-        console.log(err);
-        alert('Something went wrong!');
-      });
+    sendUpdate(id, body, data => {
+      setSplits([data.split]);
+      setItemCharacterSplits(data.itemCharacterSplit);
+      setLoading(false);
+    });
   };
 
   if (!isReady({ statusMessage, percent, splits })) {
@@ -186,7 +181,11 @@ export const SplitsPage = () => {
         <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove} />
       </div>
 
-      <ItemCharactersSplitsDrawer itemCharacterSplits={itemCharacterSplits} onIcsChange={onIcsChange} />
+      <ItemCharactersSplitsDrawer
+        itemCharacterSplits={itemCharacterSplits}
+        onIcsChange={onIcsChange}
+        loading={loading}
+      />
     </div>
   );
 };

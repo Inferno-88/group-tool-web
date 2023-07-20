@@ -1,6 +1,7 @@
 import { MdDelete, MdEdit } from 'react-icons/md';
 import { GoCheckCircleFill } from 'react-icons/go';
 import { ImCross } from 'react-icons/im';
+import { ImSpinner11 } from 'react-icons/im';
 
 interface Props {
   ics: {
@@ -11,9 +12,10 @@ interface Props {
   };
   onDelete?: () => void;
   onEdit?: () => void;
+  loading?: boolean;
 }
 
-export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit }: Props) => {
+export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit, loading }: Props) => {
   const characterLeft = Array.isArray(ics.characterLeft) ? ics.characterLeft.join(', ') : ics.characterLeft;
   const characterRight = Array.isArray(ics.characterRight) ? ics.characterRight.join(', ') : ics.characterRight;
 
@@ -22,7 +24,9 @@ export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit }: Props) => {
       <div className="pl-2 py-1 break-words font-medium flex">
         {ics.ok !== undefined && (
           <>
-            {ics.ok ? (
+            {loading ? (
+              <ImSpinner11 className="w-4 h-4 text-slate-500 animate-spin" />
+            ) : ics.ok ? (
               <GoCheckCircleFill className="w-5 h-5 text-green-500" />
             ) : (
               <ImCross className="w-5 h-5 text-red-600" />

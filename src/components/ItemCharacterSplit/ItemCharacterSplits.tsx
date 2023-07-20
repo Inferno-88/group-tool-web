@@ -7,9 +7,11 @@ import { ItemCharacterSplitItem } from './ItemCharacterSplitItem';
 interface Props {
   itemCharacterSplits?: itemCharacterSplitResponce[];
   onIcsChange: (ics: itemCharacterSplitResponce[]) => void;
+  showHint?: boolean;
+  loading?: boolean;
 }
 
-export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange }: Props) => {
+export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, showHint, loading }: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [editedNumber, setEditedNumber] = useState<number | null>(null);
   const [currentICS, setCurrentICS] = useState<itemCharacterSplitResponce[]>(itemCharacterSplits || []);
@@ -81,9 +83,19 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange }: Props)
       </Button>
       <div className="text-center">
         {currentICS.map((ics, index) => (
-          <ItemCharacterSplitItem ics={ics} onDelete={() => onDelete(index)} onEdit={() => onEdit(index)} />
+          <ItemCharacterSplitItem
+            ics={ics}
+            onDelete={() => onDelete(index)}
+            onEdit={() => onEdit(index)}
+            loading={loading}
+          />
         ))}
       </div>
+      {!!showHint && (
+        <div className="text-xs text-slate-500 text-center mt-2">
+          Changing of this items will not be saved for the Persons setup page. They are valid only for this split.
+        </div>
+      )}
 
       {isAdd && (
         <ItemCharacterSplitModal
