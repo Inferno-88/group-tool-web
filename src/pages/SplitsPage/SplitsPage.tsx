@@ -4,7 +4,7 @@ import { mockedSplits } from 'src/mocks/mockedSplits';
 import { useEffect, useState } from 'react';
 import { BiChevronLeft } from 'react-icons/bi';
 import { SplitLayout } from './SplitLayout';
-import { ItemCharactersSplits } from './components/ItemCharactersSplits';
+import { ItemCharactersSplitsDrawer } from './components/ItemCharactersSplitsDrawer';
 
 export async function loaderOfSplits({ params }: LoaderFunctionArgs) {
   return await getSplits(params.id);
@@ -65,8 +65,6 @@ export const SplitsPage = () => {
   } = useLoaderData() as SplitsResponce;
 
   useEffect(() => {
-    console.log('firstLoadedData effect');
-
     setSplits(firstLoadedSplits);
     setStatusMessage(firstLoadedStatus);
     setPercent(firstLoadedPercent);
@@ -139,6 +137,37 @@ export const SplitsPage = () => {
       });
   };
 
+  const onIcsChange = (newIcs: itemCharacterSplitResponce[]) => {
+    if (process.env.REACT_APP_USE_MOCKS === 'true') {
+      // MOCKS
+      return;
+    }
+
+    const body: UpdateSplits = {
+      modified: true,
+      reset: false,
+      split: splits[0],
+      itemCharacterSplit: newIcs,
+    };
+
+    fetch(`${process.env.REACT_APP_URL}/splits/${id}`, {
+      method: 'PUT',
+      body: JSON.stringify(body),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then(data => data.json() as Promise<UpdateSplits>)
+      .then(data => {
+        setSplits([data.split]);
+        setItemCharacterSplits(data.itemCharacterSplit);
+      })
+      .catch(err => {
+        console.log(err);
+        alert('Something went wrong!');
+      });
+  };
+
   if (!isReady({ statusMessage, percent, splits })) {
     return <div>Loading... {percent}</div>;
   }
@@ -157,7 +186,7 @@ export const SplitsPage = () => {
         <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove} />
       </div>
 
-      <ItemCharactersSplits itemCharacterSplits={itemCharacterSplits} setItemCharacterSplits={setItemCharacterSplits} />
+      <ItemCharactersSplitsDrawer itemCharacterSplits={itemCharacterSplits} onIcsChange={onIcsChange} />
     </div>
   );
 };

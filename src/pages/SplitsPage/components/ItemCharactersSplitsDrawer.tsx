@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
-import { ItemCharacterSplitItem } from 'src/components/ItemCharacterSplitItem';
+import { ItemCharacterSplits } from 'src/components/ItemCharacterSplit/ItemCharacterSplits';
 import { itemCharacterSplitResponce } from 'src/types';
 
 interface Props {
   itemCharacterSplits?: itemCharacterSplitResponce[];
-  setItemCharacterSplits?: (ics: itemCharacterSplitResponce[]) => void;
+  onIcsChange: (ics: itemCharacterSplitResponce[]) => void;
 }
 
-export const ItemCharactersSplits = ({ itemCharacterSplits }: Props) => {
+export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange }: Props) => {
   const [open, setOpen] = useState(false);
   const widthClass = open ? 'w-3/12' : 'w-2';
 
@@ -22,7 +22,9 @@ export const ItemCharactersSplits = ({ itemCharacterSplits }: Props) => {
       </div>
 
       {open && (
-        <div className="pt-12 px-3">{itemCharacterSplits?.map(ics => <ItemCharacterSplitItem ics={ics} />)}</div>
+        <div className="pt-12 px-3 h-full">
+          <ItemCharacterSplits itemCharacterSplits={itemCharacterSplits} onIcsChange={onIcsChange} />
+        </div>
       )}
     </div>
   );
