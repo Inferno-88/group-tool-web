@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { BiChevronLeft } from 'react-icons/bi';
 import { SplitLayout } from './SplitLayout';
 import { ItemCharactersSplitsDrawer } from './components/ItemCharactersSplitsDrawer';
+import { Button } from 'src/components/Button';
 
 export async function loaderOfSplits({ params }: LoaderFunctionArgs) {
   return await getSplits(params.id);
@@ -79,6 +80,7 @@ export const SplitsPage = () => {
   const [statusMessage, setStatusMessage] = useState('loading');
   const [percent, setPercent] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [modified, setModified] = useState(false);
 
   const {
     id,
@@ -139,6 +141,7 @@ export const SplitsPage = () => {
       itemCharacterSplit: itemCharacterSplits,
     };
     setLoading(true);
+    setModified(true);
 
     sendUpdate(id, body, data => {
       setSplits([data.split]);
@@ -155,12 +158,30 @@ export const SplitsPage = () => {
       itemCharacterSplit: newIcs,
     };
     setLoading(true);
+    setModified(true);
 
     sendUpdate(id, body, data => {
       setSplits([data.split]);
       setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
     });
+  };
+
+  const onReset = () => {
+    const body: UpdateSplits = {
+      modified: true,
+      reset: true,
+      split: splits[0],
+      itemCharacterSplit: itemCharacterSplits,
+    };
+    setLoading(true);
+
+    sendUpdate(id, body, data => {
+      setSplits([data.split]);
+      setItemCharacterSplits(data.itemCharacterSplit);
+      setLoading(false);
+    });
+    setModified(false);
   };
 
   if (!isReady({ statusMessage, percent, splits })) {
@@ -170,12 +191,19 @@ export const SplitsPage = () => {
   return (
     <div className="flex">
       <div className="text-center px-5 py-2 w-full">
-        <div className="relative">
-          <Link className="block border font-bold py-1.5 px-2 text-sm rounded w-auto absolute top-0 left-0" to={'..'}>
-            <BiChevronLeft className="inline-block w-5 h-5" />
-            To Setup Screen
-          </Link>
-          <h1 className="text-md font-bold py-2 w-full">Generated splits</h1>
+        <div className="flex justify-between mb-3">
+          <Button white small>
+            <Link className="text-sm" to={'..'}>
+              <BiChevronLeft className="inline-block w-5 h-5" />
+              To Setup Screen
+            </Link>
+          </Button>
+
+          <h1 className="text-md font-bold">Generated splits</h1>
+
+          <Button className="mr-4 text-sm w-24" white small onClick={onReset} loading={loading} disabled={!modified}>
+            Reset split
+          </Button>
         </div>
 
         <SplitLayout split={splits[0]} index={0} onAddorRemove={onAddorRemove} />

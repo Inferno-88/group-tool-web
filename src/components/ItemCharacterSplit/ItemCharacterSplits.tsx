@@ -7,11 +7,11 @@ import { ItemCharacterSplitItem } from './ItemCharacterSplitItem';
 interface Props {
   itemCharacterSplits?: itemCharacterSplitResponce[];
   onIcsChange: (ics: itemCharacterSplitResponce[]) => void;
-  showHint?: boolean;
+  temporaryVeiw?: boolean;
   loading?: boolean;
 }
 
-export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, showHint, loading }: Props) => {
+export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporaryVeiw, loading }: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [editedNumber, setEditedNumber] = useState<number | null>(null);
   const [currentICS, setCurrentICS] = useState<itemCharacterSplitResponce[]>(itemCharacterSplits || []);
@@ -78,6 +78,8 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, showHint
         onClick={() => {
           setIsAdd(true);
         }}
+        white={temporaryVeiw}
+        small={temporaryVeiw}
       >
         Add item
       </Button>
@@ -91,7 +93,7 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, showHint
           />
         ))}
       </div>
-      {!!showHint && (
+      {!!temporaryVeiw && (
         <div className="text-xs text-slate-500 text-center mt-2">
           Changing these item characters splits will not be saved for the Setup page. They are valid only for this
           split.
