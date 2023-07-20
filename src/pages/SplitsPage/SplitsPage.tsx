@@ -88,6 +88,7 @@ export const SplitsPage = () => {
     statusMessage: firstLoadedStatus,
     splits: firstLoadedSplits,
     itemCharacterSplits: firstLoadedItemCharacterSplits,
+    modified: firstLoadedModified,
   } = useLoaderData() as SplitsResponce;
 
   useEffect(() => {
@@ -95,6 +96,7 @@ export const SplitsPage = () => {
     setStatusMessage(firstLoadedStatus);
     setPercent(firstLoadedPercent);
     setItemCharacterSplits(firstLoadedItemCharacterSplits || []);
+    setModified(!!firstLoadedModified);
   }, [firstLoadedStatus, firstLoadedPercent, firstLoadedSplits, firstLoadedItemCharacterSplits]);
 
   const askAgain = async () => {
@@ -107,6 +109,7 @@ export const SplitsPage = () => {
       setStatusMessage(res.statusMessage);
       setPercent(res.percent);
       setItemCharacterSplits(res.itemCharacterSplits || []);
+      setModified(!!res.modified);
     }
   };
   useEffect(() => {
@@ -141,12 +144,12 @@ export const SplitsPage = () => {
       itemCharacterSplit: itemCharacterSplits,
     };
     setLoading(true);
-    setModified(true);
 
     sendUpdate(id, body, data => {
       setSplits([data.split]);
       setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
+      setModified(data.modified);
     });
   };
 
@@ -158,12 +161,12 @@ export const SplitsPage = () => {
       itemCharacterSplit: newIcs,
     };
     setLoading(true);
-    setModified(true);
 
     sendUpdate(id, body, data => {
       setSplits([data.split]);
       setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
+      setModified(data.modified);
     });
   };
 
@@ -180,8 +183,8 @@ export const SplitsPage = () => {
       setSplits([data.split]);
       setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
+      setModified(data.modified);
     });
-    setModified(false);
   };
 
   if (!isReady({ statusMessage, percent, splits })) {

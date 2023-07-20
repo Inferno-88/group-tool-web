@@ -110,6 +110,7 @@ export interface SplitsResponce {
   percent: number;
   splits: Split[];
   itemCharacterSplits?: itemCharacterSplitResponce[];
+  modified?: boolean;
 }
 
 export interface UpdateSplits {
