@@ -86,6 +86,7 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
       <div className="text-center">
         {currentICS.map((ics, index) => (
           <ItemCharacterSplitItem
+            key={ics.item + index}
             ics={ics}
             onDelete={() => onDelete(index)}
             onEdit={() => onEdit(index)}
@@ -104,9 +105,17 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
         <ItemCharacterSplitModal
           onCancel={onCancel}
           onSave={onSave}
-          presetItem={editedNumber ? currentICS[editedNumber].item : undefined}
-          presetCharacterLeft={editedNumber ? currentICS[editedNumber].characterLeft.join(', ') : undefined}
-          presetCharacterRight={editedNumber ? currentICS[editedNumber].characterRight.join(', ') : undefined}
+          presetItem={editedNumber !== undefined && editedNumber !== null ? currentICS[editedNumber].item : undefined}
+          presetCharacterLeft={
+            editedNumber !== undefined && editedNumber !== null
+              ? currentICS[editedNumber].characterLeft.join(', ')
+              : undefined
+          }
+          presetCharacterRight={
+            editedNumber !== undefined && editedNumber !== null
+              ? currentICS[editedNumber].characterRight.join(', ')
+              : undefined
+          }
         />
       )}
     </div>

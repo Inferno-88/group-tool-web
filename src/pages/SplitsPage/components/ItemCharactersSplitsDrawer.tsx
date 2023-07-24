@@ -23,7 +23,7 @@ export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, l
       </div>
 
       {open && (
-        <div className="pt-4 px-3 h-full">
+        <div className="pt-4 px-3 h-screen overflow-auto">
           <ItemCharacterSplits
             itemCharacterSplits={itemCharacterSplits}
             onIcsChange={onIcsChange}

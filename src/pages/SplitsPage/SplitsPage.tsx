@@ -97,7 +97,7 @@ export const SplitsPage = () => {
     setPercent(firstLoadedPercent);
     setItemCharacterSplits(firstLoadedItemCharacterSplits || []);
     setModified(!!firstLoadedModified);
-  }, [firstLoadedStatus, firstLoadedPercent, firstLoadedSplits, firstLoadedItemCharacterSplits]);
+  }, [firstLoadedStatus, firstLoadedPercent, firstLoadedSplits, firstLoadedItemCharacterSplits, firstLoadedModified]);
 
   const askAgain = async () => {
     const res = await getSplits(id);
@@ -202,7 +202,7 @@ export const SplitsPage = () => {
             </Link>
           </Button>
 
-          <h1 className="text-md font-bold">Generated splits</h1>
+          <h1 className="text-md font-bold capitalize">{splits[0].raidName.toLowerCase()} split</h1>
 
           <Button className="mr-4 text-sm w-24" white small onClick={onReset} loading={loading} disabled={!modified}>
             Reset split
