@@ -21,8 +21,8 @@ export const ItemCharacterSplitModal = ({
   const [characterRight, setCharacterRight] = useState<string>(presetCharacterRight || '');
 
   return (
-    <div className="absolute top-0 bottom-0 right-0 left-0 bg-slate-50/60">
-      <div className="text-center mt-7 rounded border-2 border-blue-200 top-32 absolute p-2 bg-blue-50 w-full">
+    <div className="w-full h-[300%] top-0 left-0 absolute bg-slate-50/60">
+      <div className="text-center rounded border-2 border-blue-200 p-2 bg-blue-50 fixed top-[35%]">
         <input
           type="text"
           placeholder="Item name"

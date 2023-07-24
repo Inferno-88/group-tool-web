@@ -6,6 +6,7 @@ import { BiChevronLeft } from 'react-icons/bi';
 import { SplitLayout } from './SplitLayout';
 import { ItemCharactersSplitsDrawer } from './components/ItemCharactersSplitsDrawer';
 import { Button } from 'src/components/Button';
+import { LoadingScreen } from './components/LoadingScreen/LoadingScreen';
 
 export async function loaderOfSplits({ params }: LoaderFunctionArgs) {
   return await getSplits(params.id);
@@ -103,6 +104,7 @@ export const SplitsPage = () => {
     const res = await getSplits(id);
     if (!isReady(res)) {
       setPercent(res.percent);
+      setStatusMessage(res.statusMessage);
       setTimeout(askAgain, 2000);
     } else {
       setSplits(res.splits);
@@ -188,7 +190,7 @@ export const SplitsPage = () => {
   };
 
   if (!isReady({ statusMessage, percent, splits })) {
-    return <div>Loading... {percent}</div>;
+    return <LoadingScreen percent={percent} statusMessage={statusMessage} />;
   }
 
   return (

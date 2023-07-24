@@ -72,7 +72,7 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
   };
 
   return (
-    <div className="h-full text-center relative overflow-auto">
+    <div className={`h-full text-center relative ${isAdd ? 'overflow-hidden' : 'overflow-auto'}`}>
       <Button
         className="m-auto px-6 mb-3"
         onClick={() => {
