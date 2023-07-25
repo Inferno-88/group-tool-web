@@ -1,8 +1,9 @@
 import { Character, Split, SplitsResponce, itemCharacterSplitResponce, UpdateSplits } from 'src/types';
-import { Link, LoaderFunctionArgs, useLoaderData } from 'react-router-dom';
+import { Link, LoaderFunctionArgs, useLoaderData, useNavigate } from 'react-router-dom';
 import { mockedSplits } from 'src/mocks/mockedSplits';
 import { useEffect, useState } from 'react';
 import { BiChevronLeft } from 'react-icons/bi';
+import { MdOutlineOpenInNew } from 'react-icons/md';
 import { SplitLayout } from './SplitLayout';
 import { ItemCharactersSplitsDrawer } from './components/ItemCharactersSplitsDrawer';
 import { Button } from 'src/components/Button';
@@ -39,8 +40,10 @@ const getSplits = async (id?: string | number): Promise<SplitsResponce> => {
       ],
     };
   }
+
   const res = await fetch(`${process.env.REACT_APP_URL}/splits/${id}`);
-  if (res.status === 404) {
+
+  if (res.status === 404 || res.status >= 500) {
     throw new Response('Not Found', { status: 404 });
   }
   const data = (await res.json()) as SplitsResponce;
@@ -49,7 +52,7 @@ const getSplits = async (id?: string | number): Promise<SplitsResponce> => {
 };
 
 const isReady = (data: Omit<SplitsResponce, 'id'>) => {
-  return data.statusMessage === 'Done!' && data.percent === 100 && data.splits;
+  return data.percent === 100 && data.splits;
 };
 
 const sendUpdate = (id: number, body: UpdateSplits, onReceiveData: (s: UpdateSplits) => void) => {
@@ -83,6 +86,8 @@ export const SplitsPage = () => {
   const [loading, setLoading] = useState(false);
   const [modified, setModified] = useState(false);
 
+  const navigate = useNavigate();
+
   const {
     id,
     percent: firstLoadedPercent,
@@ -102,6 +107,7 @@ export const SplitsPage = () => {
 
   const askAgain = async () => {
     const res = await getSplits(id);
+
     if (!isReady(res)) {
       setPercent(res.percent);
       setStatusMessage(res.statusMessage);
@@ -140,6 +146,7 @@ export const SplitsPage = () => {
     };
 
     const body: UpdateSplits = {
+      id,
       modified: true,
       reset: false,
       split: newSplit,
@@ -152,11 +159,16 @@ export const SplitsPage = () => {
       setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
       setModified(data.modified);
+
+      if (id !== data.id) {
+        navigate(`../split/${data.id}`);
+      }
     });
   };
 
   const onIcsChange = (newIcs: itemCharacterSplitResponce[]) => {
     const body: UpdateSplits = {
+      id,
       modified: true,
       reset: false,
       split: splits[0],
@@ -169,11 +181,16 @@ export const SplitsPage = () => {
       setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
       setModified(data.modified);
+
+      if (id !== data.id) {
+        navigate(`../split/${data.id}`);
+      }
     });
   };
 
   const onReset = () => {
     const body: UpdateSplits = {
+      id,
       modified: true,
       reset: true,
       split: splits[0],
@@ -182,14 +199,18 @@ export const SplitsPage = () => {
     setLoading(true);
 
     sendUpdate(id, body, data => {
-      setSplits([data.split]);
-      setItemCharacterSplits(data.itemCharacterSplit);
       setLoading(false);
-      setModified(data.modified);
+      window.open(`/split/${data.id}`, '_blank');
     });
   };
 
-  if (!isReady({ statusMessage, percent, splits })) {
+  if (
+    !isReady({
+      percent,
+      splits,
+      statusMessage,
+    })
+  ) {
     return <LoadingScreen percent={percent} statusMessage={statusMessage} />;
   }
 
@@ -204,10 +225,20 @@ export const SplitsPage = () => {
             </Link>
           </Button>
 
-          <h1 className="text-md font-bold capitalize">{splits[0].raidName.toLowerCase()} split</h1>
+          <h1 className="text-md font-bold capitalize">
+            {splits[0].raidName.toLowerCase()} split №{id}
+          </h1>
 
-          <Button className="mr-4 text-sm w-24" white small onClick={onReset} loading={loading} disabled={!modified}>
-            Reset split
+          <Button
+            className="mr-4 text-sm w-32 flex gap-1 items-center"
+            title="Open original split in new tab"
+            white
+            small
+            onClick={onReset}
+            loading={loading}
+            disabled={!modified}
+          >
+            <MdOutlineOpenInNew /> Open original
           </Button>
         </div>
 

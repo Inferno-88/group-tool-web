@@ -10,6 +10,8 @@ interface Props {
   white?: boolean;
   small?: boolean;
 
+  title?: string;
+
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
   children: React.ReactNode;
 }
@@ -23,6 +25,8 @@ export const Button = ({
   wide = false,
   white = false,
   small = false,
+
+  title,
 
   onClick,
   children,
@@ -42,7 +46,7 @@ export const Button = ({
     : `${baseClasses} ${borderedClasses} ${outlinedClasses}`;
 
   return (
-    <button disabled={disabled} className={`${finalClasses} ${className}`} onClick={onClick}>
+    <button disabled={disabled} className={`${finalClasses} ${className}`} onClick={onClick} title={title}>
       {loading ? <ImSpinner11 className="mx-auto animate-spin" /> : children}
     </button>
   );

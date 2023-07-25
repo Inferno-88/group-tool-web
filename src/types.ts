@@ -114,6 +114,7 @@ export interface SplitsResponce {
 }
 
 export interface UpdateSplits {
+  id: number;
   modified: boolean;
   reset: boolean;
   split: Split;
