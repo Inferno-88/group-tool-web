@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { itemCharacterSplit, localStorageICSKey, newLocalStorageICSKey, itemCharacterSplitResponce } from 'src/types';
+import { itemCharacterSplit, localStorageICSKey, newLocalStorageICSKey, ItemCharacterSplitResponce } from 'src/types';
 import { ItemCharacterSplits } from 'src/components/ItemCharacterSplit/ItemCharacterSplits';
 
 export const ItemCharacterSplitLayout = () => {
-  const [currentICS, setCurrentICS] = useState<itemCharacterSplitResponce[]>([]);
+  const [currentICS, setCurrentICS] = useState<ItemCharacterSplitResponce[]>([]);
 
   useEffect(() => {
     const currentOld = localStorage.getItem(localStorageICSKey);
@@ -11,7 +11,7 @@ export const ItemCharacterSplitLayout = () => {
     if (currentNew) {
       //localStorage.removeItem(localStorageICSKey);
       try {
-        const currentJson = JSON.parse(currentNew) as itemCharacterSplitResponce[];
+        const currentJson = JSON.parse(currentNew) as ItemCharacterSplitResponce[];
         setCurrentICS(currentJson);
       } catch (e) {
         localStorage.removeItem(newLocalStorageICSKey);
@@ -29,7 +29,7 @@ export const ItemCharacterSplitLayout = () => {
         return;
       }
 
-      const newICS: itemCharacterSplitResponce[] = currentJson.map(ics => {
+      const newICS: ItemCharacterSplitResponce[] = currentJson.map(ics => {
         return {
           ...ics,
           characterLeft: ics.characterLeft.replace(/\s/g, '').split(','),
@@ -43,7 +43,7 @@ export const ItemCharacterSplitLayout = () => {
     }
   }, []);
 
-  const onIcsChange = (ics: itemCharacterSplitResponce[]) => {
+  const onIcsChange = (ics: ItemCharacterSplitResponce[]) => {
     localStorage.setItem(newLocalStorageICSKey, JSON.stringify(ics));
     setCurrentICS(ics);
   };

@@ -107,7 +107,7 @@ export interface SplitsResponce {
   statusMessage: string; // "Done!"
   percent: number;
   splits: Split[];
-  itemCharacterSplits?: itemCharacterSplitResponce[];
+  itemCharacterSplits?: ItemCharacterSplitResponce[];
   modified?: boolean;
 }
 
@@ -116,13 +116,13 @@ export interface UpdateSplits {
   modified: boolean;
   reset: boolean;
   split: Split;
-  itemCharacterSplit: itemCharacterSplitResponce[];
+  itemCharacterSplit: ItemCharacterSplitResponce[];
 }
 
 export const localStorageICSKey = 'itemCaracterSplits';
-export const newLocalStorageICSKey = 'itemCharacterSplits';  
+export const newLocalStorageICSKey = 'itemCharacterSplits';
 
-export interface itemCharacterSplitResponce {
+export interface ItemCharacterSplitResponce {
   item: string;
   characterLeft: string[];
   characterRight: string[];

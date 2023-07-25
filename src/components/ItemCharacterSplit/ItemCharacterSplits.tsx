@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
-import { itemCharacterSplitResponce } from 'src/types';
+import { ItemCharacterSplitResponce } from 'src/types';
 import { Button } from 'src/components/Button';
 import { ItemCharacterSplitModal } from 'src/components/ItemCharacterSplit/ItemCharacterSplitModal';
 import { ItemCharacterSplitItem } from './ItemCharacterSplitItem';
 
 interface Props {
-  itemCharacterSplits?: itemCharacterSplitResponce[];
-  onIcsChange: (ics: itemCharacterSplitResponce[]) => void;
+  itemCharacterSplits?: ItemCharacterSplitResponce[];
+  onIcsChange: (ics: ItemCharacterSplitResponce[]) => void;
   temporaryVeiw?: boolean;
   loading?: boolean;
 }
@@ -14,7 +14,7 @@ interface Props {
 export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporaryVeiw, loading }: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [editedNumber, setEditedNumber] = useState<number | null>(null);
-  const [currentICS, setCurrentICS] = useState<itemCharacterSplitResponce[]>(itemCharacterSplits || []);
+  const [currentICS, setCurrentICS] = useState<ItemCharacterSplitResponce[]>(itemCharacterSplits || []);
 
   useEffect(() => {
     if (itemCharacterSplits) {

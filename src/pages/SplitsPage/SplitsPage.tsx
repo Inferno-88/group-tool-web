@@ -1,4 +1,4 @@
-import { Character, Split, SplitsResponce, itemCharacterSplitResponce, UpdateSplits } from 'src/types';
+import { Character, Split, SplitsResponce, ItemCharacterSplitResponce, UpdateSplits } from 'src/types';
 import { Link, LoaderFunctionArgs, useLoaderData, useNavigate } from 'react-router-dom';
 import { mockedSplits } from 'src/mocks/mockedSplits';
 import { useEffect, useState } from 'react';
@@ -80,7 +80,7 @@ const sendUpdate = (id: number, body: UpdateSplits, onReceiveData: (s: UpdateSpl
 
 export const SplitsPage = () => {
   const [splits, setSplits] = useState<Split[]>([]);
-  const [itemCharacterSplits, setItemCharacterSplits] = useState<itemCharacterSplitResponce[]>([]);
+  const [itemCharacterSplits, setItemCharacterSplits] = useState<ItemCharacterSplitResponce[]>([]);
   const [statusMessage, setStatusMessage] = useState('loading');
   const [percent, setPercent] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -166,7 +166,7 @@ export const SplitsPage = () => {
     });
   };
 
-  const onIcsChange = (newIcs: itemCharacterSplitResponce[]) => {
+  const onIcsChange = (newIcs: ItemCharacterSplitResponce[]) => {
     const body: UpdateSplits = {
       id,
       modified: true,

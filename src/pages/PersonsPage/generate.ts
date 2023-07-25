@@ -1,4 +1,4 @@
-import { itemCharacterSplitResponce, newLocalStorageICSKey, RaidName } from 'src/types';
+import { ItemCharacterSplitResponce, newLocalStorageICSKey, RaidName } from 'src/types';
 
 interface AvailablePersons {
   raid1: string[];
@@ -43,7 +43,7 @@ const getICS = () => {
     }
   }
 
-  return localICSparsesd.map((ic: itemCharacterSplitResponce) => {
+  return localICSparsesd.map((ic: ItemCharacterSplitResponce) => {
     const newCharLeft = ic.characterLeft.map((c: string) => c.trim().toLowerCase());
     const newCharRight = ic.characterRight.map((c: string) => c.trim().toLowerCase());
     return {

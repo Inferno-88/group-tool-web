@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
 import { ItemCharacterSplits } from 'src/components/ItemCharacterSplit/ItemCharacterSplits';
-import { itemCharacterSplitResponce } from 'src/types';
+import { ItemCharacterSplitResponce } from 'src/types';
 
 interface Props {
-  itemCharacterSplits?: itemCharacterSplitResponce[];
-  onIcsChange: (ics: itemCharacterSplitResponce[]) => void;
+  itemCharacterSplits?: ItemCharacterSplitResponce[];
+  onIcsChange: (ics: ItemCharacterSplitResponce[]) => void;
   loading?: boolean;
 }
 
