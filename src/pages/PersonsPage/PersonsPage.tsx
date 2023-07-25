@@ -123,7 +123,6 @@ export const PersonsPage = () => {
                 setLoading(true);
                 const splitID = await generate({ raid1, raid2 }, raidName);
                 setLoading(false);
-                console.log(splitID);
                 navigate(`/split/${splitID}`);
               }}
             >

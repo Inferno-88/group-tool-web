@@ -91,6 +91,7 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
             onDelete={() => onDelete(index)}
             onEdit={() => onEdit(index)}
             loading={loading}
+            noStatus={!temporaryVeiw}
           />
         ))}
       </div>

@@ -96,8 +96,6 @@ export interface Person {
   mainClassName: CharacterClass;
 }
 
-export const localStorageICSKey = 'itemCaracterSplits';  
-
 export enum RaidName {
    ULDUAR = "ULDUAR",
    TOGC = "TOGC",
@@ -120,6 +118,9 @@ export interface UpdateSplits {
   split: Split;
   itemCharacterSplit: itemCharacterSplitResponce[];
 }
+
+export const localStorageICSKey = 'itemCaracterSplits';
+export const newLocalStorageICSKey = 'itemCharacterSplits';  
 
 export interface itemCharacterSplitResponce {
   item: string;

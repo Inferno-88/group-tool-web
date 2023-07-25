@@ -1,11 +1,11 @@
-import { itemCharacterSplit, localStorageICSKey, RaidName} from 'src/types';
+import { itemCharacterSplitResponce, newLocalStorageICSKey, RaidName } from 'src/types';
 
 interface AvailablePersons {
   raid1: string[];
   raid2: string[];
 }
 
-export async function generate (available: AvailablePersons, raidName: RaidName) {
+export async function generate(available: AvailablePersons, raidName: RaidName) {
   // MOCKS
   if (process.env.REACT_APP_USE_MOCKS === 'true') {
     return await 1;
@@ -30,32 +30,26 @@ export async function generate (available: AvailablePersons, raidName: RaidName)
     alert('Something went wrong! Please try again');
     return await undefined;
   }
-};
+}
 
 const getICS = () => {
-  const localICS = localStorage.getItem(localStorageICSKey);
+  const localICS = localStorage.getItem(newLocalStorageICSKey);
   let localICSparsesd = [];
   if (localICS) {
     try {
       localICSparsesd = JSON.parse(localICS);
     } catch (e) {
-      localStorage.removeItem(localStorageICSKey);
+      localStorage.removeItem(newLocalStorageICSKey);
     }
   }
-  return localICSparsesd.map((ic: itemCharacterSplit) => {
-      const newCharLeft = ic.characterLeft
-        .toLowerCase()
-        .split(',')
-        .map((c: string) => c.trim());
-      const newCharRight = ic.characterRight
-        .toLowerCase()
-        .split(',')
-        .map((c: string) => c.trim());
-      return {
-        item: ic.item.toLowerCase(),
-        characterLeft: newCharLeft,
-        characterRight: newCharRight,
-      };
+
+  return localICSparsesd.map((ic: itemCharacterSplitResponce) => {
+    const newCharLeft = ic.characterLeft.map((c: string) => c.trim().toLowerCase());
+    const newCharRight = ic.characterRight.map((c: string) => c.trim().toLowerCase());
+    return {
+      item: ic.item.toLowerCase(),
+      characterLeft: newCharLeft,
+      characterRight: newCharRight,
+    };
   });
 };
-

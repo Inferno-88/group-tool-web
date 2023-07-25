@@ -13,16 +13,17 @@ interface Props {
   onDelete?: () => void;
   onEdit?: () => void;
   loading?: boolean;
+  noStatus?: boolean;
 }
 
-export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit, loading }: Props) => {
+export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit, loading, noStatus }: Props) => {
   const characterLeft = Array.isArray(ics.characterLeft) ? ics.characterLeft.join(', ') : ics.characterLeft;
   const characterRight = Array.isArray(ics.characterRight) ? ics.characterRight.join(', ') : ics.characterRight;
 
   return (
     <div className="border border-blue-300 text-sm mb-2 relative text-center">
       <div className="pl-2 py-1 break-words font-medium flex">
-        {ics.ok !== undefined && (
+        {ics.ok !== undefined && !noStatus && (
           <>
             {loading ? (
               <ImSpinner11 className="w-4 h-4 text-slate-500 animate-spin" />
