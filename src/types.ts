@@ -127,10 +127,21 @@ export interface ItemCharacterSplitResponce {
   characterLeft: string[];
   characterRight: string[];
   ok?: boolean;
+  raidName?: RaidName;
 }
 
 export interface itemCharacterSplit {
   item: string;
   characterLeft: string;
   characterRight: string;
+}
+
+export interface ItemDictionary {
+  id: number;
+  url: string;
+  name: string;
+  originalName: string;
+  itemType: 'CASTER' | 'PHYSICAL';
+  active: boolean;
+  raidName: RaidName;
 }

@@ -1,26 +1,72 @@
-import { useEffect, useState } from 'react';
-import { ItemCharacterSplitResponce } from 'src/types';
+import { useEffect, useMemo, useState } from 'react';
+import { ItemCharacterSplitResponce, ItemDictionary, RaidName } from 'src/types';
 import { Button } from 'src/components/Button';
 import { ItemCharacterSplitModal } from 'src/components/ItemCharacterSplit/ItemCharacterSplitModal';
 import { ItemCharacterSplitItem } from './ItemCharacterSplitItem';
+import { mockedItems } from 'src/mocks/mockedSplits';
 
 interface Props {
   itemCharacterSplits?: ItemCharacterSplitResponce[];
   onIcsChange: (ics: ItemCharacterSplitResponce[]) => void;
   temporaryVeiw?: boolean;
   loading?: boolean;
+  raidName?: RaidName;
 }
 
-export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporaryVeiw, loading }: Props) => {
+function formatItemsByRaidHandler(
+  itemCharacterSplits?: ItemCharacterSplitResponce[],
+  items?: ItemDictionary[],
+): ItemCharacterSplitResponce[] {
+  if (!itemCharacterSplits) return [];
+  if (!items) {
+    return itemCharacterSplits;
+  }
+
+  const result = itemCharacterSplits.map(ics => {
+    const fullIcs = items.find(item => item.name.toLowerCase() === ics.item.toLowerCase());
+
+    return {
+      ...ics,
+      raidName: fullIcs?.raidName,
+    };
+  });
+  console.log('formatItemsByRaidHandler', result);
+
+  return result;
+}
+
+export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporaryVeiw, loading, raidName }: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [editedNumber, setEditedNumber] = useState<number | null>(null);
-  const [currentICS, setCurrentICS] = useState<ItemCharacterSplitResponce[]>(itemCharacterSplits || []);
+  const [itemsDictionary, setItemsDictionary] = useState<ItemDictionary[]>([]);
+  const [currentICS, setCurrentICS] = useState<ItemCharacterSplitResponce[]>([]);
+
+  const formatItemsByRaid = useMemo(
+    () => formatItemsByRaidHandler(itemCharacterSplits, itemsDictionary),
+    [itemCharacterSplits, itemsDictionary],
+  );
 
   useEffect(() => {
-    if (itemCharacterSplits) {
-      setCurrentICS(itemCharacterSplits);
+    console.log('getItems');
+    if (process.env.REACT_APP_USE_MOCKS === 'true') {
+      // MOCKS
+      setItemsDictionary(mockedItems);
+      return;
     }
-  }, [itemCharacterSplits]);
+
+    fetch(`${process.env.REACT_APP_URL}/items`)
+      .then(data => data.json() as Promise<ItemDictionary[]>)
+      .then(data => {
+        console.log('items set');
+        setItemsDictionary(data);
+      });
+  }, []);
+
+  useEffect(() => {
+    console.log('effect', formatItemsByRaid);
+    setCurrentICS(formatItemsByRaid);
+    onIcsChange(formatItemsByRaid);
+  }, [formatItemsByRaid, onIcsChange]);
 
   const onDelete = (index: number) => {
     if (!currentICS.length) return;
@@ -41,11 +87,13 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
               characterLeft: input.characterLeft.replace(/\s/g, '').split(','),
               characterRight: input.characterRight.replace(/\s/g, '').split(','),
               ok: false,
+              raidName: itemsDictionary.find(item => item.name.toLowerCase() === input.item.toLowerCase())?.raidName,
             },
           ]
         : currentICS.map((ic, i) => {
             if (i === editedNumber) {
               return {
+                ...ic,
                 item: input.item,
                 characterLeft: input.characterLeft.replace(/\s/g, '').split(','),
                 characterRight: input.characterRight.replace(/\s/g, '').split(','),
@@ -84,16 +132,18 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
         Add item
       </Button>
       <div className="text-center">
-        {currentICS.map((ics, index) => (
-          <ItemCharacterSplitItem
-            key={ics.item + index}
-            ics={ics}
-            onDelete={() => onDelete(index)}
-            onEdit={() => onEdit(index)}
-            loading={loading}
-            noStatus={!temporaryVeiw}
-          />
-        ))}
+        {currentICS
+          .filter(ics => !raidName || !ics.raidName || ics.raidName === raidName)
+          .map((ics, index) => (
+            <ItemCharacterSplitItem
+              key={ics.item + index}
+              ics={ics}
+              onDelete={() => onDelete(index)}
+              onEdit={() => onEdit(index)}
+              loading={loading}
+              noStatus={!temporaryVeiw}
+            />
+          ))}
       </div>
       {!!temporaryVeiw && (
         <div className="text-xs text-slate-500 text-center mt-2">

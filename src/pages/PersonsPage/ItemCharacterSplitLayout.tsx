@@ -1,22 +1,26 @@
-import { useEffect, useState } from 'react';
-import { itemCharacterSplit, localStorageICSKey, newLocalStorageICSKey, ItemCharacterSplitResponce } from 'src/types';
+import {
+  itemCharacterSplit,
+  localStorageICSKey,
+  newLocalStorageICSKey,
+  ItemCharacterSplitResponce,
+  RaidName,
+} from 'src/types';
 import { ItemCharacterSplits } from 'src/components/ItemCharacterSplit/ItemCharacterSplits';
 
-export const ItemCharacterSplitLayout = () => {
-  const [currentICS, setCurrentICS] = useState<ItemCharacterSplitResponce[]>([]);
-
-  useEffect(() => {
+export const ItemCharacterSplitLayout = ({ raidName }: { raidName: RaidName }) => {
+  const getLocalStorageICS = (): ItemCharacterSplitResponce[] => {
     const currentOld = localStorage.getItem(localStorageICSKey);
     const currentNew = localStorage.getItem(newLocalStorageICSKey);
     if (currentNew) {
+      let currentJson: ItemCharacterSplitResponce[];
       //localStorage.removeItem(localStorageICSKey);
       try {
-        const currentJson = JSON.parse(currentNew) as ItemCharacterSplitResponce[];
-        setCurrentICS(currentJson);
+        currentJson = JSON.parse(currentNew) as ItemCharacterSplitResponce[];
       } catch (e) {
         localStorage.removeItem(newLocalStorageICSKey);
+        return [];
       }
-      return;
+      return currentJson;
     }
 
     // TODO remove after migration
@@ -26,7 +30,7 @@ export const ItemCharacterSplitLayout = () => {
         currentJson = JSON.parse(currentOld) as itemCharacterSplit[];
       } catch (e) {
         localStorage.removeItem(localStorageICSKey);
-        return;
+        return [];
       }
 
       const newICS: ItemCharacterSplitResponce[] = currentJson.map(ics => {
@@ -38,15 +42,17 @@ export const ItemCharacterSplitLayout = () => {
       });
       localStorage.setItem(newLocalStorageICSKey, JSON.stringify(newICS));
       //localStorage.removeItem(localStorageICSKey);
-      setCurrentICS(newICS);
-      return;
+      return newICS;
     }
-  }, []);
+
+    return [];
+  };
 
   const onIcsChange = (ics: ItemCharacterSplitResponce[]) => {
     localStorage.setItem(newLocalStorageICSKey, JSON.stringify(ics));
-    setCurrentICS(ics);
   };
 
-  return <ItemCharacterSplits itemCharacterSplits={currentICS} onIcsChange={onIcsChange} />;
+  return (
+    <ItemCharacterSplits itemCharacterSplits={getLocalStorageICS()} onIcsChange={onIcsChange} raidName={raidName} />
+  );
 };

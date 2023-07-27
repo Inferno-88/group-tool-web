@@ -20,7 +20,7 @@ export async function generate(available: AvailablePersons, raidName: RaidName) 
       body: JSON.stringify({
         raid1: available.raid1,
         raid2: available.raid2,
-        itemCharacterSplit: getICS(),
+        itemCharacterSplit: getICS(raidName),
         raidName,
       }),
     });
@@ -32,9 +32,9 @@ export async function generate(available: AvailablePersons, raidName: RaidName) 
   }
 }
 
-const getICS = () => {
+const getICS = (raidName: RaidName) => {
   const localICS = localStorage.getItem(newLocalStorageICSKey);
-  let localICSparsesd = [];
+  let localICSparsesd: ItemCharacterSplitResponce[] = [];
   if (localICS) {
     try {
       localICSparsesd = JSON.parse(localICS);
@@ -43,13 +43,15 @@ const getICS = () => {
     }
   }
 
-  return localICSparsesd.map((ic: ItemCharacterSplitResponce) => {
-    const newCharLeft = ic.characterLeft.map((c: string) => c.trim().toLowerCase());
-    const newCharRight = ic.characterRight.map((c: string) => c.trim().toLowerCase());
-    return {
-      item: ic.item.toLowerCase(),
-      characterLeft: newCharLeft,
-      characterRight: newCharRight,
-    };
-  });
+  return localICSparsesd
+    .filter(ics => ics.raidName === raidName)
+    .map((ic: ItemCharacterSplitResponce) => {
+      const newCharLeft = ic.characterLeft.map((c: string) => c.trim().toLowerCase());
+      const newCharRight = ic.characterRight.map((c: string) => c.trim().toLowerCase());
+      return {
+        item: ic.item.toLowerCase(),
+        characterLeft: newCharLeft,
+        characterRight: newCharRight,
+      };
+    });
 };

@@ -48,17 +48,10 @@ export const PersonsPage = () => {
             <div className="">
               <h1 className="mb-3 text-xl font-bold text-left ml-10 text-blue-50">1. Choose available persons</h1>
               <div className="flex mb-3 ml-8">
-                <Button
-                  disabled={loading}
-                  className="mr-4"
-                  onClick={() => selectAll()}
-                >
+                <Button disabled={loading} className="mr-4" onClick={() => selectAll()}>
                   Select All
                 </Button>
-                <Button
-                  disabled={loading}
-                  onClick={() => clearAll()}
-                >
+                <Button disabled={loading} onClick={() => clearAll()}>
                   Clear All
                 </Button>
               </div>
@@ -112,7 +105,7 @@ export const PersonsPage = () => {
 
         <div className="w-[30rem] p-3 flex flex-col bg-blue-50">
           <h2 className="mb-3 text-xl font-bold text-[#003366]">3. Split characters by items</h2>
-          <ItemCharacterSplitLayout />
+          <ItemCharacterSplitLayout raidName={raidName} />
           <div className="mt-auto ml-auto p-8 pr-0">
             <Button
               primary

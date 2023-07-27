@@ -2,6 +2,8 @@ import { MdDelete, MdEdit } from 'react-icons/md';
 import { GoCheckCircleFill } from 'react-icons/go';
 import { ImCross } from 'react-icons/im';
 import { ImSpinner11 } from 'react-icons/im';
+import { FaExclamationTriangle } from 'react-icons/fa';
+import { RaidName } from 'src/types';
 
 interface Props {
   ics: {
@@ -9,6 +11,7 @@ interface Props {
     characterLeft: string | string[];
     characterRight: string | string[];
     ok?: boolean;
+    raidName?: RaidName;
   };
   onDelete?: () => void;
   onEdit?: () => void;
@@ -34,7 +37,17 @@ export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit, loading, noStatu
             )}
           </>
         )}
-        <p className="m-auto">{ics.item}</p>
+        <p className="m-auto">
+          {ics.item}
+          {ics.raidName ? (
+            <span className="text-xs lowercase"> ({ics.raidName})</span>
+          ) : (
+            <FaExclamationTriangle
+              className="inline-block ml-1 text-rose-700"
+              title="We can't find item in a list! Check the spelling or write to Deadly"
+            />
+          )}
+        </p>
       </div>
       <div className="flex justify-around gap-1">
         <p className="px-2 pb-1 w-1/2 break-all">{characterLeft}</p>
