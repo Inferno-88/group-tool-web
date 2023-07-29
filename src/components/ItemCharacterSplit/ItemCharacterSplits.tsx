@@ -30,7 +30,6 @@ function formatItemsByRaidHandler(
       raidName: fullIcs?.raidName,
     };
   });
-  console.log('formatItemsByRaidHandler', result);
 
   return result;
 }
@@ -47,7 +46,6 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsVi
   );
 
   useEffect(() => {
-    console.log('getItems');
     if (process.env.REACT_APP_USE_MOCKS === 'true') {
       // MOCKS
       setItemsDictionary(mockedItems);
@@ -57,13 +55,12 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsVi
     fetch(`${process.env.REACT_APP_URL}/items`)
       .then(data => data.json() as Promise<ItemDictionary[]>)
       .then(data => {
-        console.log('items set');
         setItemsDictionary(data);
       });
   }, []);
 
   useEffect(() => {
-    console.log('effect', formatItemsByRaid);
+    console.log('effect update ics on formated change', formatItemsByRaid);
     setCurrentICS(formatItemsByRaid);
     if (!splitsView) {
       onIcsChange(formatItemsByRaid);
@@ -95,11 +92,11 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsVi
         : currentICS.map((ic, i) => {
             if (i === editedNumber) {
               return {
-                ...ic,
                 item: input.item,
                 characterLeft: input.characterLeft.replace(/\s/g, '').split(','),
                 characterRight: input.characterRight.replace(/\s/g, '').split(','),
                 ok: currentICS[editedNumber].ok,
+                raidName: itemsDictionary.find(item => item.name.toLowerCase() === input.item.toLowerCase())?.raidName,
               };
             }
             return ic;
@@ -134,18 +131,21 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsVi
         Add item
       </Button>
       <div className="text-center">
-        {currentICS
-          .filter(ics => !raidName || !ics.raidName || ics.raidName === raidName)
-          .map((ics, index) => (
-            <ItemCharacterSplitItem
-              key={ics.item + index}
-              ics={ics}
-              onDelete={() => onDelete(index)}
-              onEdit={() => onEdit(index)}
-              loading={loading}
-              noStatus={!splitsView}
-            />
-          ))}
+        {currentICS.map((ics, index) => {
+          if (!raidName || !ics.raidName || ics.raidName === raidName) {
+            return (
+              <ItemCharacterSplitItem
+                key={ics.item + index}
+                ics={ics}
+                onDelete={() => onDelete(index)}
+                onEdit={() => onEdit(index)}
+                loading={loading}
+                noStatus={!splitsView}
+              />
+            );
+          }
+          return null;
+        })}
       </div>
       {!!splitsView && (
         <div className="text-xs text-slate-500 text-center mt-2">
