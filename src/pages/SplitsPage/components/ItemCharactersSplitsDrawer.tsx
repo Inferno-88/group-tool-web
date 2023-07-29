@@ -27,7 +27,7 @@ export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, l
           <ItemCharacterSplits
             itemCharacterSplits={itemCharacterSplits}
             onIcsChange={onIcsChange}
-            temporaryVeiw
+            splitsView
             loading={loading}
           />
         </div>

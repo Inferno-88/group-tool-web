@@ -1,7 +1,7 @@
 import { Character, Split, SplitsResponce, ItemCharacterSplitResponce, UpdateSplits } from 'src/types';
 import { Link, LoaderFunctionArgs, useLoaderData, useNavigate } from 'react-router-dom';
 import { mockedSplits } from 'src/mocks/mockedSplits';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { BiChevronLeft } from 'react-icons/bi';
 import { MdOutlineOpenInNew } from 'react-icons/md';
 import { SplitLayout } from './SplitLayout';
@@ -166,27 +166,30 @@ export const SplitsPage = () => {
     });
   };
 
-  const onIcsChange = (newIcs: ItemCharacterSplitResponce[]) => {
-    const body: UpdateSplits = {
-      id,
-      modified: true,
-      reset: false,
-      split: splits[0],
-      itemCharacterSplit: newIcs,
-    };
-    setLoading(true);
+  const onIcsChange = useCallback(
+    (newIcs: ItemCharacterSplitResponce[]) => {
+      const body: UpdateSplits = {
+        id,
+        modified: true,
+        reset: false,
+        split: splits[0],
+        itemCharacterSplit: newIcs,
+      };
+      setLoading(true);
 
-    sendUpdate(id, body, data => {
-      setSplits([data.split]);
-      setItemCharacterSplits(data.itemCharacterSplit);
-      setLoading(false);
-      setModified(data.modified);
+      sendUpdate(id, body, data => {
+        setSplits([data.split]);
+        setItemCharacterSplits(data.itemCharacterSplit);
+        setLoading(false);
+        setModified(data.modified);
 
-      if (id !== data.id) {
-        navigate(`../split/${data.id}`);
-      }
-    });
-  };
+        if (id !== data.id) {
+          navigate(`../split/${data.id}`);
+        }
+      });
+    },
+    [id, navigate, splits],
+  );
 
   const onReset = () => {
     const body: UpdateSplits = {

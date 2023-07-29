@@ -8,7 +8,7 @@ import { mockedItems } from 'src/mocks/mockedSplits';
 interface Props {
   itemCharacterSplits?: ItemCharacterSplitResponce[];
   onIcsChange: (ics: ItemCharacterSplitResponce[]) => void;
-  temporaryVeiw?: boolean;
+  splitsView?: boolean;
   loading?: boolean;
   raidName?: RaidName;
 }
@@ -35,7 +35,7 @@ function formatItemsByRaidHandler(
   return result;
 }
 
-export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporaryVeiw, loading, raidName }: Props) => {
+export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsView, loading, raidName }: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [editedNumber, setEditedNumber] = useState<number | null>(null);
   const [itemsDictionary, setItemsDictionary] = useState<ItemDictionary[]>([]);
@@ -65,8 +65,10 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
   useEffect(() => {
     console.log('effect', formatItemsByRaid);
     setCurrentICS(formatItemsByRaid);
-    onIcsChange(formatItemsByRaid);
-  }, [formatItemsByRaid, onIcsChange]);
+    if (!splitsView) {
+      onIcsChange(formatItemsByRaid);
+    }
+  }, [formatItemsByRaid, onIcsChange, splitsView]);
 
   const onDelete = (index: number) => {
     if (!currentICS.length) return;
@@ -126,8 +128,8 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
         onClick={() => {
           setIsAdd(true);
         }}
-        white={temporaryVeiw}
-        small={temporaryVeiw}
+        white={splitsView}
+        small={splitsView}
       >
         Add item
       </Button>
@@ -141,11 +143,11 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, temporar
               onDelete={() => onDelete(index)}
               onEdit={() => onEdit(index)}
               loading={loading}
-              noStatus={!temporaryVeiw}
+              noStatus={!splitsView}
             />
           ))}
       </div>
-      {!!temporaryVeiw && (
+      {!!splitsView && (
         <div className="text-xs text-slate-500 text-center mt-2">
           Changing these item characters splits will not be saved for the Setup page. They are valid only for this
           split.
