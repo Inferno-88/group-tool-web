@@ -1440,37 +1440,545 @@ export const mockedSplits: Split[] = [
 ];
 
 export const mockedPersons: Person[] = [
-  { name: 'aryl', mainClassName: 'PALADIN' as CharacterClass },
-  { name: 'barrious', mainClassName: 'ROGUE' as CharacterClass },
-  { name: 'bride', mainClassName: 'ROGUE' as CharacterClass },
-  { name: 'bullette', mainClassName: 'DRUID' as CharacterClass },
-  { name: 'cotolento', mainClassName: 'MAGE' as CharacterClass },
-  { name: 'dauran', mainClassName: 'PRIEST' as CharacterClass },
-  { name: 'dave', mainClassName: 'PALADIN' as CharacterClass },
-  { name: 'deadly', mainClassName: 'PALADIN' as CharacterClass },
-  { name: 'doggle', mainClassName: 'DRUID' as CharacterClass },
-  { name: 'edenian', mainClassName: 'MAGE' as CharacterClass },
-  { name: 'emipian', mainClassName: 'WARLOCK' as CharacterClass },
-  { name: 'ethupan', mainClassName: 'HUNTER' as CharacterClass },
-  { name: 'fiachna', mainClassName: 'DRUID' as CharacterClass },
-  { name: 'frostyboy', mainClassName: 'DK' as CharacterClass },
-  { name: 'hallheim', mainClassName: 'WARRIOR' as CharacterClass },
-  { name: 'haumea', mainClassName: 'SHAMAN' as CharacterClass },
-  { name: 'jeyp', mainClassName: 'PRIEST' as CharacterClass },
-  { name: 'jj', mainClassName: 'WARLOCK' as CharacterClass },
-  { name: 'kelthal', mainClassName: 'WARRIOR' as CharacterClass },
-  { name: 'khaya', mainClassName: 'SHAMAN' as CharacterClass },
-  { name: 'kondo', mainClassName: 'WARLOCK' as CharacterClass },
-  { name: 'koobo', mainClassName: 'MAGE' as CharacterClass },
-  { name: 'mayv', mainClassName: 'DK' as CharacterClass },
-  { name: 'mist', mainClassName: 'DK' as CharacterClass },
-  { name: 'nagosa', mainClassName: 'SHAMAN' as CharacterClass },
-  { name: 'nurgl', mainClassName: 'ROGUE' as CharacterClass },
-  { name: 'paco', mainClassName: 'DK' as CharacterClass },
-  { name: 'sala', mainClassName: 'HUNTER' as CharacterClass },
-  { name: 'swerved', mainClassName: 'WARLOCK' as CharacterClass },
-  { name: 'tj', mainClassName: 'PALADIN' as CharacterClass },
-  { name: 'zul', mainClassName: 'DK' as CharacterClass },
+  {
+    "name": "aryl",
+    "mainClassName": CharacterClass.PALADIN,
+    "characters": [
+      {
+        "name": "arylpog",
+        "className": "PALADIN",
+        "main": true
+      },
+      {
+        "name": "aryllene",
+        "className": "PALADIN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "azmo",
+    "mainClassName": CharacterClass.DRUID,
+    "characters": [
+      {
+        "name": "azmocow",
+        "className": "DRUID",
+        "main": true
+      },
+      {
+        "name": "azmoroth",
+        "className": "WARLOCK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "barrious",
+    "mainClassName": CharacterClass.ROGUE,
+    "characters": [
+      {
+        "name": "barrious",
+        "className": "ROGUE",
+        "main": true
+      },
+      {
+        "name": "barrioustwo",
+        "className": "ROGUE",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "bride",
+    "mainClassName": CharacterClass.ROGUE,
+    "characters": [
+      {
+        "name": "bride",
+        "className": "ROGUE",
+        "main": true
+      },
+      {
+        "name": "bridew",
+        "className": "ROGUE",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "bullette",
+    "mainClassName": CharacterClass.DRUID,
+    "characters": [
+      {
+        "name": "bullette",
+        "className": "DRUID",
+        "main": true
+      },
+      {
+        "name": "tekala",
+        "className": "HUNTER",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "cotolento",
+    "mainClassName": CharacterClass.MAGE,
+    "characters": [
+      {
+        "name": "cotolento",
+        "className": "MAGE",
+        "main": true
+      },
+      {
+        "name": "shilke",
+        "className": "PRIEST",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "dauran",
+    "mainClassName": CharacterClass.PRIEST,
+    "characters": [
+      {
+        "name": "dauran",
+        "className": "PRIEST",
+        "main": true
+      },
+      {
+        "name": "cowran",
+        "className": "DRUID",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "dave",
+    "mainClassName": CharacterClass.PALADIN,
+    "characters": [
+      {
+        "name": "davetta",
+        "className": "PALADIN",
+        "main": true
+      },
+      {
+        "name": "pariah",
+        "className": "PRIEST",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "deadly",
+    "mainClassName": CharacterClass.PALADIN,
+    "characters": [
+      {
+        "name": "deadlyfaith",
+        "className": "PALADIN",
+        "main": true
+      },
+      {
+        "name": "deadlyblight",
+        "className": "DK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "doggle",
+    "mainClassName": CharacterClass.DRUID,
+    "characters": [
+      {
+        "name": "doggle",
+        "className": "DRUID",
+        "main": true
+      },
+      {
+        "name": "doggleplump",
+        "className": "MAGE",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "edenian",
+    "mainClassName": CharacterClass.MAGE,
+    "characters": [
+      {
+        "name": "edenian",
+        "className": "MAGE",
+        "main": true
+      },
+      {
+        "name": "palenian",
+        "className": "PALADIN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "fiachna",
+    "mainClassName": CharacterClass.DRUID,
+    "characters": [
+      {
+        "name": "fiachna",
+        "className": "DRUID",
+        "main": true
+      },
+      {
+        "name": "averonth",
+        "className": "WARRIOR",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "frostyboy",
+    "mainClassName": CharacterClass.DK,
+    "characters": [
+      {
+        "name": "frostyboy",
+        "className": "DK",
+        "main": true
+      },
+      {
+        "name": "aandariel",
+        "className": "MAGE",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "hallheim",
+    "mainClassName": CharacterClass.WARRIOR,
+    "characters": [
+      {
+        "name": "hallheim",
+        "className": "WARRIOR",
+        "main": true
+      },
+      {
+        "name": "kaboodles",
+        "className": "PALADIN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "haumea",
+    "mainClassName": CharacterClass.SHAMAN,
+    "characters": [
+      {
+        "name": "haumea",
+        "className": "SHAMAN",
+        "main": true
+      },
+      {
+        "name": "arusha",
+        "className": "PRIEST",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "jeyp",
+    "mainClassName": CharacterClass.PRIEST,
+    "characters": [
+      {
+        "name": "jeyp",
+        "className": "PRIEST",
+        "main": true
+      },
+      {
+        "name": "jeypx",
+        "className": "DRUID",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "jj",
+    "mainClassName": CharacterClass.WARLOCK,
+    "characters": [
+      {
+        "name": "nutkin",
+        "className": "WARLOCK",
+        "main": true
+      },
+      {
+        "name": "holynut",
+        "className": "PALADIN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "kelthal",
+    "mainClassName": CharacterClass.WARRIOR,
+    "characters": [
+      {
+        "name": "kelthal",
+        "className": "WARRIOR",
+        "main": true
+      },
+      {
+        "name": "mithandir",
+        "className": "PALADIN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "khaya",
+    "mainClassName": CharacterClass.SHAMAN,
+    "characters": [
+      {
+        "name": "khaya",
+        "className": "SHAMAN",
+        "main": true
+      },
+      {
+        "name": "khayo",
+        "className": "WARLOCK",
+        "main": false
+      },
+      {
+        "name": "khayaya",
+        "className": "SHAMAN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "kondo",
+    "mainClassName": CharacterClass.WARLOCK,
+    "characters": [
+      {
+        "name": "kondoriano",
+        "className": "WARLOCK",
+        "main": true
+      },
+      {
+        "name": "kondaddicted",
+        "className": "WARLOCK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "koobo",
+    "mainClassName": CharacterClass.MAGE,
+    "characters": [
+      {
+        "name": "koobo",
+        "className": "MAGE",
+        "main": true
+      },
+      {
+        "name": "koobonobo",
+        "className": "SHAMAN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "kororii",
+    "mainClassName": CharacterClass.DRUID,
+    "characters": [
+      {
+        "name": "kororii",
+        "className": "DRUID",
+        "main": true
+      }
+    ]
+  },
+  {
+    "name": "mist",
+    "mainClassName": CharacterClass.DK,
+    "characters": [
+      {
+        "name": "littlemist",
+        "className": "DK",
+        "main": true
+      },
+      {
+        "name": "misto",
+        "className": "SHAMAN",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "nagosa",
+    "mainClassName": CharacterClass.SHAMAN,
+    "characters": [
+      {
+        "name": "nagosa",
+        "className": "SHAMAN",
+        "main": true
+      },
+      {
+        "name": "nagodk",
+        "className": "DK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "notfife",
+    "mainClassName": CharacterClass.PALADIN,
+    "characters": [
+      {
+        "name": "notfife",
+        "className": "PALADIN",
+        "main": true
+      }
+    ]
+  },
+  {
+    "name": "notpolo",
+    "mainClassName": CharacterClass.WARLOCK,
+    "characters": [
+      {
+        "name": "notpolo",
+        "className": "WARLOCK",
+        "main": true
+      }
+    ]
+  },
+  {
+    "name": "nurgl",
+    "mainClassName": CharacterClass.ROGUE,
+    "characters": [
+      {
+        "name": "nurgl",
+        "className": "ROGUE",
+        "main": true
+      },
+      {
+        "name": "zurgl",
+        "className": "WARRIOR",
+        "main": false
+      },
+      {
+        "name": "nurghoul",
+        "className": "DK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "paco",
+    "mainClassName": CharacterClass.DK,
+    "characters": [
+      {
+        "name": "pacoknight",
+        "className": "DK",
+        "main": true
+      },
+      {
+        "name": "gorosm",
+        "className": "DRUID",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "sala",
+    "mainClassName": CharacterClass.HUNTER,
+    "characters": [
+      {
+        "name": "salabenji",
+        "className": "HUNTER",
+        "main": true
+      },
+      {
+        "name": "salabonobo",
+        "className": "HUNTER",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "shock",
+    "mainClassName": CharacterClass.SHAMAN,
+    "characters": [
+      {
+        "name": "shock",
+        "className": "SHAMAN",
+        "main": true
+      }
+    ]
+  },
+  {
+    "name": "subcom",
+    "mainClassName": CharacterClass.DK,
+    "characters": [
+      {
+        "name": "subcom",
+        "className": "DK",
+        "main": true
+      }
+    ]
+  },
+  {
+    "name": "swerved",
+    "mainClassName": CharacterClass.WARLOCK,
+    "characters": [
+      {
+        "name": "swerved",
+        "className": "WARLOCK",
+        "main": true
+      },
+      {
+        "name": "nuubie",
+        "className": "MAGE",
+        "main": false
+      },
+      {
+        "name": "erm",
+        "className": "DK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "tj",
+    "mainClassName": CharacterClass.PALADIN,
+    "characters": [
+      {
+        "name": "tjholy",
+        "className": "PALADIN",
+        "main": true
+      },
+      {
+        "name": "tjcardinal",
+        "className": "PALADIN",
+        "main": false
+      },
+      {
+        "name": "tjbaracus",
+        "className": "DK",
+        "main": false
+      }
+    ]
+  },
+  {
+    "name": "zul",
+    "mainClassName": CharacterClass.DK,
+    "characters": [
+      {
+        "name": "tadano",
+        "className": "DK",
+        "main": true
+      },
+      {
+        "name": "komachi",
+        "className": "WARLOCK",
+        "main": false
+      }
+    ]
+  }
 ];
 
 export const mockedItems: ItemDictionary[] = [

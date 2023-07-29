@@ -8,9 +8,16 @@ interface Props {
   onIcsChange: (ics: ItemCharacterSplitResponce[]) => void;
   loading?: boolean;
   raidName?: RaidName;
+  charactersList?: { value: string; label: string }[];
 }
 
-export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, loading, raidName }: Props) => {
+export const ItemCharactersSplitsDrawer = ({
+  itemCharacterSplits,
+  onIcsChange,
+  loading,
+  raidName,
+  charactersList,
+}: Props) => {
   const [open, setOpen] = useState(true);
   const widthClass = open ? 'w-3/12' : 'w-2';
 
@@ -31,6 +38,7 @@ export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, l
             splitsView
             loading={loading}
             raidName={raidName}
+            charactersList={charactersList}
           />
         </div>
       )}

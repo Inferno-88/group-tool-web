@@ -40,6 +40,14 @@ export const PersonsPage = () => {
     setRaid2([]);
   };
 
+  const getCharactersList = () => {
+    const charactersList: { value: string; label: string }[] = [];
+    persons.forEach(person => {
+      person.characters?.forEach(char => charactersList.push({ value: char.name, label: char.name }));
+    });
+    return charactersList;
+  };
+
   return (
     <div className={`relative bg-[#003366] ${styles.lich}`}>
       <div className="text-center h-screen flex justify-end lg:justify-center min-w-[875px] max-w-[1600px] mx-auto">
@@ -105,7 +113,7 @@ export const PersonsPage = () => {
 
         <div className="w-[30rem] p-3 flex flex-col bg-blue-50">
           <h2 className="mb-3 text-xl font-bold text-[#003366]">3. Split characters by items</h2>
-          <ItemCharacterSplitLayout raidName={raidName} />
+          <ItemCharacterSplitLayout raidName={raidName} charactersList={getCharactersList()} />
           <div className="mt-auto ml-auto p-8 pr-0">
             <Button
               primary

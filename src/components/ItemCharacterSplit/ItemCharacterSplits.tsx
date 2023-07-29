@@ -11,6 +11,7 @@ interface Props {
   splitsView?: boolean;
   loading?: boolean;
   raidName?: RaidName;
+  charactersList?: { value: string; label: string }[];
 }
 
 function formatItemsByRaidHandler(
@@ -34,7 +35,14 @@ function formatItemsByRaidHandler(
   return result;
 }
 
-export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsView, loading, raidName }: Props) => {
+export const ItemCharacterSplits = ({
+  itemCharacterSplits,
+  onIcsChange,
+  splitsView,
+  loading,
+  raidName,
+  charactersList,
+}: Props) => {
   const [isAdd, setIsAdd] = useState<boolean>(false);
   const [editedNumber, setEditedNumber] = useState<number | null>(null);
   const [itemsDictionary, setItemsDictionary] = useState<ItemDictionary[]>([]);
@@ -175,6 +183,7 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsVi
               value: item.name,
               label: item.name,
             }))}
+          charactersList={charactersList || []}
         />
       )}
     </div>

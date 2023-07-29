@@ -96,6 +96,7 @@ export const characterColorsText: Record<CharacterClass, string> = {
 export interface Person {
   name: string;
   mainClassName: CharacterClass;
+  characters?: Character[];
 }
 
 export enum RaidName {

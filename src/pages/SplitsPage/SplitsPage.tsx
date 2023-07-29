@@ -217,6 +217,19 @@ export const SplitsPage = () => {
     return <LoadingScreen percent={percent} statusMessage={statusMessage} />;
   }
 
+  const getAllCharacters = () => {
+    const allCharacters = new Set([
+      ...splits[0].raid1.occupiedCharacters.map(char => char.name),
+      ...splits[0].raid2.occupiedCharacters.map(char => char.name),
+    ]);
+    return Array.from(allCharacters)
+      .sort()
+      .map(name => ({
+        value: name,
+        label: name,
+      }));
+  };
+
   return (
     <div className="flex">
       <div className="text-center px-5 py-2 w-full">
@@ -253,6 +266,7 @@ export const SplitsPage = () => {
         onIcsChange={onIcsChange}
         loading={loading}
         raidName={splits[0].raidName}
+        charactersList={getAllCharacters()}
       />
     </div>
   );

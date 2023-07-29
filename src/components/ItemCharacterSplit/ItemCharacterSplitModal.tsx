@@ -14,6 +14,7 @@ interface Props {
   onCancel: () => void;
   onSave: (input: { item: string; characterLeft: string; characterRight: string }) => void;
   itemsList: Option[];
+  charactersList: Option[];
 }
 
 export const ItemCharacterSplitModal = ({
@@ -21,12 +22,20 @@ export const ItemCharacterSplitModal = ({
   presetCharacterLeft,
   presetCharacterRight,
   itemsList,
+  charactersList,
   onCancel,
   onSave,
 }: Props) => {
   const [item, setItem] = useState<string>(presetItem || '');
-  const [characterLeft, setCharacterLeft] = useState<string>(presetCharacterLeft || '');
-  const [characterRight, setCharacterRight] = useState<string>(presetCharacterRight || '');
+  const [characterLeft, setCharacterLeft] = useState<string | undefined>(presetCharacterLeft || undefined);
+  const [characterRight, setCharacterRight] = useState<string | undefined>(presetCharacterRight || undefined);
+  console.log('characterLeft', characterLeft?.split(', ').map(character => ({ value: character, label: character })));
+  console.log('characterLeft clear', characterLeft);
+
+  const getValue = (chars: string | undefined) => {
+    if (!chars) return undefined;
+    return chars.split(', ').map(character => ({ value: character, label: character }));
+  };
 
   return (
     <div className="w-full h-[300%] top-0 left-0 absolute bg-slate-50/60">
@@ -42,17 +51,27 @@ export const ItemCharacterSplitModal = ({
           }}
         />
         <div className="flex gap-2 m-3 text-center">
-          <textarea
-            placeholder="Characters left"
-            className="p-2 w-full"
-            value={characterLeft}
-            onChange={e => setCharacterLeft(e.target.value)}
+          <Select
+            isSearchable={true}
+            isMulti={true}
+            name="characterLeft"
+            value={getValue(characterLeft)}
+            options={charactersList}
+            onChange={options => {
+              console.log(options);
+              setCharacterLeft(options?.map(option => option.value).join(', '));
+            }}
           />
-          <textarea
-            placeholder="Characters right"
-            className="p-2 w-full"
-            value={characterRight}
-            onChange={e => setCharacterRight(e.target.value)}
+          <Select
+            isSearchable={true}
+            isMulti={true}
+            name="characterRight"
+            value={getValue(characterRight)}
+            options={charactersList}
+            onChange={options => {
+              console.log(options);
+              setCharacterRight(options?.map(option => option.value).join(', '));
+            }}
           />
         </div>
         <div className="flex justify-center gap-2">
@@ -63,7 +82,10 @@ export const ItemCharacterSplitModal = ({
           <Button
             className="w-24"
             primary
-            onClick={() => onSave({ item, characterLeft, characterRight })}
+            onClick={() => {
+              if (!characterLeft || !characterRight) return;
+              onSave({ item, characterLeft, characterRight });
+            }}
             disabled={!item || !characterLeft || !characterRight}
           >
             Save

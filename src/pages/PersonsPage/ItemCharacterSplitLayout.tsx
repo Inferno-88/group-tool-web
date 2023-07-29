@@ -7,7 +7,13 @@ import {
 } from 'src/types';
 import { ItemCharacterSplits } from 'src/components/ItemCharacterSplit/ItemCharacterSplits';
 
-export const ItemCharacterSplitLayout = ({ raidName }: { raidName: RaidName }) => {
+export const ItemCharacterSplitLayout = ({
+  raidName,
+  charactersList,
+}: {
+  raidName: RaidName;
+  charactersList: { value: string; label: string }[];
+}) => {
   const getLocalStorageICS = (): ItemCharacterSplitResponce[] => {
     const currentOld = localStorage.getItem(localStorageICSKey);
     const currentNew = localStorage.getItem(newLocalStorageICSKey);
@@ -53,6 +59,11 @@ export const ItemCharacterSplitLayout = ({ raidName }: { raidName: RaidName }) =
   };
 
   return (
-    <ItemCharacterSplits itemCharacterSplits={getLocalStorageICS()} onIcsChange={onIcsChange} raidName={raidName} />
+    <ItemCharacterSplits
+      itemCharacterSplits={getLocalStorageICS()}
+      onIcsChange={onIcsChange}
+      raidName={raidName}
+      charactersList={charactersList}
+    />
   );
 };
