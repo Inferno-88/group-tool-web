@@ -1,6269 +1,1434 @@
 import { CharacterClass, Person, Raid, RaidName, Split, ItemDictionary } from '../types';
 
 const raid1: Raid = {
-  tanks: [
+  "tanks": [
     {
-      name: 'davetta',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'ProtectionPaladin',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "davetta",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'tjbaracus',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Blood',
-        },
-      ],
-      main: false,
-      items: [],
-    },
+      "name": "pacoknight",
+      "className": "DK",
+      "main": true
+    }
   ],
-  healers: [
+  "healers": [
     {
-      name: 'arusha',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Discipline',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 5,
-            url: null,
-            name: 'Constellus',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "aryllene",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'palenian',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 11,
-            url: null,
-            name: 'Belt of the Fallen Wyrm',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 10,
-            url: null,
-            name: 'Pyrelight Circle',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 9,
-            url: null,
-            name: "Wisdom's Hold",
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "tjholy",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'bullette',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'RestorationDruid',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 3,
-            url: null,
-            name: 'Show of Faith',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 2,
-            url: null,
-            name: 'Valanyr',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "khaya",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'kaboodles',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 11,
-            url: null,
-            name: 'Belt of the Fallen Wyrm',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 10,
-            url: null,
-            name: 'Pyrelight Circle',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "arusha",
+      "className": "PRIEST",
+      "main": false
     },
     {
-      name: 'arylpog',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 7,
-            url: null,
-            name: 'Star-beaded Clutch',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 8,
-            url: null,
-            name: 'Breastplate of the Devoted',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
+      "name": "dauran",
+      "className": "PRIEST",
+      "main": true
+    }
   ],
-  dps: [
+  "dps": [
     {
-      name: 'deadlyfaith',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'Retribution',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 32,
-            url: null,
-            name: 'Shoulderpads of the Intruder',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 41,
-            url: null,
-            name: 'Sabatons of Lifeless Night',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "deadlyfaith",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'misto',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Enhancement',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 25,
-            url: null,
-            name: 'Golden Saronite Dragon',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 40,
-            url: null,
-            name: 'Boundless Gaze',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "misto",
+      "className": "SHAMAN",
+      "main": false
     },
     {
-      name: 'tadano',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "nagosa",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'erm',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 27,
-            url: null,
-            name: 'Warhelm of the Champion',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "koobonobo",
+      "className": "SHAMAN",
+      "main": false
     },
     {
-      name: 'mayv',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 28,
-            url: null,
-            name: 'Belt of Colossal Rage',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 38,
-            url: null,
-            name: 'Seal of the Betrayed King',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "tadano",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'bride',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Assassination',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 34,
-            url: null,
-            name: 'Skyforge Crossbow',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 32,
-            url: null,
-            name: 'Shoulderpads of the Intruder',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "frostyboy",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'nurgl',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Combat',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 22,
-            url: null,
-            name: 'Drape of Icy Intent',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 32,
-            url: null,
-            name: 'Shoulderpads of the Intruder',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "subcom",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'ethupan',
-      className: 'HUNTER',
-      specs: [
-        {
-          main: true,
-          type: 'Survival',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 34,
-            url: null,
-            name: 'Skyforge Crossbow',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 19,
-            url: null,
-            name: 'Dreambinder',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "nurgl",
+      "className": "ROGUE",
+      "main": true
     },
     {
-      name: 'jeypx',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'FeralDps',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "barrious",
+      "className": "ROGUE",
+      "main": true
     },
     {
-      name: 'kelthal',
-      className: 'WARRIOR',
-      specs: [
-        {
-          main: true,
-          type: 'Fury',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 42,
-            url: null,
-            name: 'Frigid Strength of Hodir',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 36,
-            url: null,
-            name: 'Voldrethar, Dark Blade of Oblivion',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "tekala",
+      "className": "HUNTER",
+      "main": false
     },
     {
-      name: 'shilke',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Shadow',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "hallheim",
+      "className": "WARRIOR",
+      "main": true
     },
     {
-      name: 'doggle',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'Balance',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "fiachna",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'nagosa',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Elemental',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 6,
-            url: null,
-            name: 'Drape of Mortal Downfall',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 7,
-            url: null,
-            name: 'Star-beaded Clutch',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "kororii",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'koobo',
-      className: 'MAGE',
-      specs: [
-        {
-          main: true,
-          type: 'Fire',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "cotolento",
+      "className": "MAGE",
+      "main": true
     },
     {
-      name: 'khayo',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "nuubie",
+      "className": "MAGE",
+      "main": false
     },
     {
-      name: 'kondaddicted',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "kondoriano",
+      "className": "WARLOCK",
+      "main": true
     },
     {
-      name: 'emipian',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "nutkin",
+      "className": "WARLOCK",
+      "main": true
     },
+    {
+      "name": "azmoroth",
+      "className": "WARLOCK",
+      "main": false
+    }
   ],
-  occupiedCharacters: [
+  "occupiedCharacters": [
     {
-      name: 'davetta',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'ProtectionPaladin',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "davetta",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'tjbaracus',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Blood',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "pacoknight",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'arusha',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Discipline',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 5,
-            url: null,
-            name: 'Constellus',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "aryllene",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'palenian',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 11,
-            url: null,
-            name: 'Belt of the Fallen Wyrm',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 10,
-            url: null,
-            name: 'Pyrelight Circle',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 9,
-            url: null,
-            name: "Wisdom's Hold",
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "tjholy",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'bullette',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'RestorationDruid',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 3,
-            url: null,
-            name: 'Show of Faith',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 2,
-            url: null,
-            name: 'Valanyr',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "khaya",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'kaboodles',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 11,
-            url: null,
-            name: 'Belt of the Fallen Wyrm',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 10,
-            url: null,
-            name: 'Pyrelight Circle',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "arusha",
+      "className": "PRIEST",
+      "main": false
     },
     {
-      name: 'arylpog',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 7,
-            url: null,
-            name: 'Star-beaded Clutch',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 8,
-            url: null,
-            name: 'Breastplate of the Devoted',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "dauran",
+      "className": "PRIEST",
+      "main": true
     },
     {
-      name: 'deadlyfaith',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'Retribution',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 32,
-            url: null,
-            name: 'Shoulderpads of the Intruder',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 41,
-            url: null,
-            name: 'Sabatons of Lifeless Night',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "tekala",
+      "className": "HUNTER",
+      "main": false
     },
     {
-      name: 'misto',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Enhancement',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 25,
-            url: null,
-            name: 'Golden Saronite Dragon',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 40,
-            url: null,
-            name: 'Boundless Gaze',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "misto",
+      "className": "SHAMAN",
+      "main": false
     },
     {
-      name: 'tadano',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "tadano",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'erm',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 27,
-            url: null,
-            name: 'Warhelm of the Champion',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "frostyboy",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'mayv',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 28,
-            url: null,
-            name: 'Belt of Colossal Rage',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 38,
-            url: null,
-            name: 'Seal of the Betrayed King',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "hallheim",
+      "className": "WARRIOR",
+      "main": true
     },
     {
-      name: 'bride',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Assassination',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 34,
-            url: null,
-            name: 'Skyforge Crossbow',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 32,
-            url: null,
-            name: 'Shoulderpads of the Intruder',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "deadlyfaith",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'nurgl',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Combat',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 22,
-            url: null,
-            name: 'Drape of Icy Intent',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 32,
-            url: null,
-            name: 'Shoulderpads of the Intruder',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "fiachna",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'ethupan',
-      className: 'HUNTER',
-      specs: [
-        {
-          main: true,
-          type: 'Survival',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 34,
-            url: null,
-            name: 'Skyforge Crossbow',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 19,
-            url: null,
-            name: 'Dreambinder',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "nurgl",
+      "className": "ROGUE",
+      "main": true
     },
     {
-      name: 'jeypx',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'FeralDps',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "barrious",
+      "className": "ROGUE",
+      "main": true
     },
     {
-      name: 'kelthal',
-      className: 'WARRIOR',
-      specs: [
-        {
-          main: true,
-          type: 'Fury',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 42,
-            url: null,
-            name: 'Frigid Strength of Hodir',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 36,
-            url: null,
-            name: 'Voldrethar, Dark Blade of Oblivion',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "nagosa",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'shilke',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Shadow',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "cotolento",
+      "className": "MAGE",
+      "main": true
     },
     {
-      name: 'doggle',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'Balance',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "koobonobo",
+      "className": "SHAMAN",
+      "main": false
     },
     {
-      name: 'nagosa',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Elemental',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 6,
-            url: null,
-            name: 'Drape of Mortal Downfall',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 7,
-            url: null,
-            name: 'Star-beaded Clutch',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "kondoriano",
+      "className": "WARLOCK",
+      "main": true
     },
     {
-      name: 'koobo',
-      className: 'MAGE',
-      specs: [
-        {
-          main: true,
-          type: 'Fire',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "nutkin",
+      "className": "WARLOCK",
+      "main": true
     },
     {
-      name: 'khayo',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "nuubie",
+      "className": "MAGE",
+      "main": false
     },
     {
-      name: 'kondaddicted',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "azmoroth",
+      "className": "WARLOCK",
+      "main": false
     },
     {
-      name: 'emipian',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "kororii",
+      "className": "DRUID",
+      "main": true
     },
+    {
+      "name": "subcom",
+      "className": "DK",
+      "main": true
+    }
   ],
-  raidAvailableChars: [
+  "raidAvailableChars": [
     {
-      name: 'gorosm',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'Balance',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "bridew",
+      "className": "ROGUE",
+      "main": false
     },
     {
-      name: 'aandariel',
-      className: 'MAGE',
-      specs: [
-        {
-          main: true,
-          type: 'Fire',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "palenian",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'salabonobo',
-      className: 'HUNTER',
-      specs: [
-        {
-          main: true,
-          type: 'Survival',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 43,
-            url: null,
-            name: 'Greaves of Swift Vengeance',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
-    {
-      name: 'averonth',
-      className: 'WARRIOR',
-      specs: [
-        {
-          main: true,
-          type: 'Fury',
-        },
-      ],
-      main: false,
-      items: [],
-    },
-    {
-      name: 'barrioustwo',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Combat',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 25,
-            url: null,
-            name: 'Golden Saronite Dragon',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 24,
-            url: null,
-            name: 'Bladetwister',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
-    {
-      name: 'dauran',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Shadow',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 5,
-            url: null,
-            name: 'Constellus',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 4,
-            url: null,
-            name: 'Sapphire Amulet of Renewal',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
-    {
-      name: 'nutkin',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Demonology',
-        },
-      ],
-      main: true,
-      items: [],
-    },
+      "name": "salabonobo",
+      "className": "HUNTER",
+      "main": false
+    }
   ],
-  itemCharactersMap: {
-    'Breastplate of the Devoted': [
-      {
-        name: 'arylpog',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 7,
-              url: null,
-              name: 'Star-beaded Clutch',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 8,
-              url: null,
-              name: 'Breastplate of the Devoted',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    "Wisdom's Hold": [
-      {
-        name: 'palenian',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 9,
-              url: null,
-              name: "Wisdom's Hold",
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    Valanyr: [
-      {
-        name: 'bullette',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'RestorationDruid',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 3,
-              url: null,
-              name: 'Show of Faith',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 2,
-              url: null,
-              name: 'Valanyr',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Voldrethar, Dark Blade of Oblivion': [
-      {
-        name: 'kelthal',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    Dreambinder: [
-      {
-        name: 'ethupan',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Sabatons of Lifeless Night': [
-      {
-        name: 'deadlyfaith',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'Retribution',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Legguards of Cunning Deception': [
-      {
-        name: 'ethupan',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Golden Saronite Dragon': [
-      {
-        name: 'misto',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Enhancement',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 25,
-              url: null,
-              name: 'Golden Saronite Dragon',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 40,
-              url: null,
-              name: 'Boundless Gaze',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Belt of the Fallen Wyrm': [
-      {
-        name: 'palenian',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 9,
-              url: null,
-              name: "Wisdom's Hold",
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'kaboodles',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Drape of Mortal Downfall': [
-      {
-        name: 'nagosa',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Elemental',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 6,
-              url: null,
-              name: 'Drape of Mortal Downfall',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 7,
-              url: null,
-              name: 'Star-beaded Clutch',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Star-beaded Clutch': [
-      {
-        name: 'arylpog',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 7,
-              url: null,
-              name: 'Star-beaded Clutch',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 8,
-              url: null,
-              name: 'Breastplate of the Devoted',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'nagosa',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Elemental',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 6,
-              url: null,
-              name: 'Drape of Mortal Downfall',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 7,
-              url: null,
-              name: 'Star-beaded Clutch',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Pyrelight Circle': [
-      {
-        name: 'palenian',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 9,
-              url: null,
-              name: "Wisdom's Hold",
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'kaboodles',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Belt of Colossal Rage': [
-      {
-        name: 'mayv',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'FrostDk',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 38,
-              url: null,
-              name: 'Seal of the Betrayed King',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Solar Bindings': [
-      {
-        name: 'bride',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Seal of the Betrayed King': [
-      {
-        name: 'mayv',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'FrostDk',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 38,
-              url: null,
-              name: 'Seal of the Betrayed King',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Drape of Icy Intent': [
-      {
-        name: 'nurgl',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Combat',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Skyforge Crossbow': [
-      {
-        name: 'bride',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'ethupan',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Show of Faith': [
-      {
-        name: 'bullette',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'RestorationDruid',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 3,
-              url: null,
-              name: 'Show of Faith',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 2,
-              url: null,
-              name: 'Valanyr',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Boundless Gaze': [
-      {
-        name: 'misto',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Enhancement',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 25,
-              url: null,
-              name: 'Golden Saronite Dragon',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 40,
-              url: null,
-              name: 'Boundless Gaze',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Plated Leggings of Ruination': [
-      {
-        name: 'deadlyfaith',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'Retribution',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'mayv',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'FrostDk',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 38,
-              url: null,
-              name: 'Seal of the Betrayed King',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Frigid Strength of Hodir': [
-      {
-        name: 'kelthal',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
+  "originalRaidAvailableChars": [
+    {
+      "name": "davetta",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "pariah",
+      "className": "PRIEST",
+      "main": false
+    },
+    {
+      "name": "pacoknight",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "gorosm",
+      "className": "DRUID",
+      "main": false
+    },
+    {
+      "name": "bullette",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "tekala",
+      "className": "HUNTER",
+      "main": false
+    },
+    {
+      "name": "arylpog",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "aryllene",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "tjholy",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "tjcardinal",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "jeyp",
+      "className": "PRIEST",
+      "main": true
+    },
+    {
+      "name": "khaya",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "khayaya",
+      "className": "SHAMAN",
+      "main": false
+    },
+    {
+      "name": "littlemist",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "misto",
+      "className": "SHAMAN",
+      "main": false
+    },
+    {
+      "name": "tadano",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "komachi",
+      "className": "WARLOCK",
+      "main": false
+    },
+    {
+      "name": "frostyboy",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "salabenji",
+      "className": "HUNTER",
+      "main": true
+    },
+    {
+      "name": "salabonobo",
+      "className": "HUNTER",
+      "main": false
+    },
+    {
+      "name": "hallheim",
+      "className": "WARRIOR",
+      "main": true
+    },
+    {
+      "name": "kaboodles",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "deadlyfaith",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "deadlyblight",
+      "className": "DK",
+      "main": false
+    },
+    {
+      "name": "fiachna",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "nurgl",
+      "className": "ROGUE",
+      "main": true
+    },
+    {
+      "name": "nurghoul",
+      "className": "DK",
+      "main": false
+    },
+    {
+      "name": "bride",
+      "className": "ROGUE",
+      "main": true
+    },
+    {
+      "name": "bridew",
+      "className": "ROGUE",
+      "main": false
+    },
+    {
+      "name": "barrious",
+      "className": "ROGUE",
+      "main": true
+    },
+    {
+      "name": "barrioustwo",
+      "className": "ROGUE",
+      "main": false
+    },
+    {
+      "name": "haumea",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "arusha",
+      "className": "PRIEST",
+      "main": false
+    },
+    {
+      "name": "doggle",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "nagosa",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "nagodk",
+      "className": "DK",
+      "main": false
+    },
+    {
+      "name": "cotolento",
+      "className": "MAGE",
+      "main": true
+    },
+    {
+      "name": "koobo",
+      "className": "MAGE",
+      "main": true
+    },
+    {
+      "name": "koobonobo",
+      "className": "SHAMAN",
+      "main": false
+    },
+    {
+      "name": "edenian",
+      "className": "MAGE",
+      "main": true
+    },
+    {
+      "name": "palenian",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "dauran",
+      "className": "PRIEST",
+      "main": true
+    },
+    {
+      "name": "cowran",
+      "className": "DRUID",
+      "main": false
+    },
+    {
+      "name": "kondoriano",
+      "className": "WARLOCK",
+      "main": true
+    },
+    {
+      "name": "kondaddicted",
+      "className": "WARLOCK",
+      "main": false
+    },
+    {
+      "name": "nutkin",
+      "className": "WARLOCK",
+      "main": true
+    },
+    {
+      "name": "holynut",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "swerved",
+      "className": "WARLOCK",
+      "main": true
+    },
+    {
+      "name": "nuubie",
+      "className": "MAGE",
+      "main": false
+    },
+    {
+      "name": "kelthal",
+      "className": "WARRIOR",
+      "main": true
+    },
+    {
+      "name": "azmocow",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "azmoroth",
+      "className": "WARLOCK",
+      "main": false
+    },
+    {
+      "name": "shock",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "kororii",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "subcom",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "notfife",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "notpolo",
+      "className": "WARLOCK",
+      "main": true
+    }
+  ],
+  "raidName": RaidName.ULDUAR,
+  "itemCharactersMap": {
     "Comet's Trail": [
       {
-        name: 'deadlyfaith',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'Retribution',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "hallheim",
+        "className": "WARRIOR",
+        "main": true
       },
       {
-        name: 'misto',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Enhancement',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 25,
-              url: null,
-              name: 'Golden Saronite Dragon',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 40,
-              url: null,
-              name: 'Boundless Gaze',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "fiachna",
+        "className": "DRUID",
+        "main": true
       },
       {
-        name: 'bride',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "nurgl",
+        "className": "ROGUE",
+        "main": true
       },
       {
-        name: 'nurgl',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Combat',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "barrious",
+        "className": "ROGUE",
+        "main": true
+      }
     ],
-    'Warhelm of the Champion': [
+    "Star-beaded Clutch": [
       {
-        name: 'erm',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Unholy',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 27,
-              url: null,
-              name: 'Warhelm of the Champion',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "aryllene",
+        "className": "PALADIN",
+        "main": false
       },
+      {
+        "name": "koobonobo",
+        "className": "SHAMAN",
+        "main": false
+      }
     ],
-    'Embrace of the Gladiator': [
+    "Treads of the False Oracle": [
       {
-        name: 'deadlyfaith',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'Retribution',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "khaya",
+        "className": "SHAMAN",
+        "main": true
       },
       {
-        name: 'bride',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'nurgl',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Combat',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'ethupan',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "cotolento",
+        "className": "MAGE",
+        "main": true
+      }
     ],
-    'Shoulderpads of the Intruder': [
+    "Pharos Gloves": [
       {
-        name: 'deadlyfaith',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'Retribution',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "tjholy",
+        "className": "PALADIN",
+        "main": true
       },
       {
-        name: 'bride',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'bridelollol',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'bride',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 34,
-              url: null,
-              name: 'Skyforge Crossbow',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'nurgl',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Combat',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 32,
-              url: null,
-              name: 'Shoulderpads of the Intruder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "khaya",
+        "className": "SHAMAN",
+        "main": true
+      }
     ],
-    Constellus: [
+    "Seal of the Betrayed King": [
       {
-        name: 'arusha',
-        className: 'PRIEST',
-        specs: [
-          {
-            main: true,
-            type: 'Discipline',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 5,
-              url: null,
-              name: 'Constellus',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "pacoknight",
+        "className": "DK",
+        "main": true
+      }
     ],
+    "Pendulum of Infinity": [
+      {
+        "name": "nurgl",
+        "className": "ROGUE",
+        "main": true
+      }
+    ],
+    "Solar Bindings": [
+      {
+        "name": "fiachna",
+        "className": "DRUID",
+        "main": true
+      }
+    ],
+    "Starshard Edge": [
+      {
+        "name": "nuubie",
+        "className": "MAGE",
+        "main": false
+      }
+    ],
+    "Cosmos": [
+      {
+        "name": "nuubie",
+        "className": "MAGE",
+        "main": false
+      }
+    ],
+    "Conductive Seal": [
+      {
+        "name": "nutkin",
+        "className": "WARLOCK",
+        "main": true
+      }
+    ],
+    "Flare of the Heavens": [
+      {
+        "name": "khaya",
+        "className": "SHAMAN",
+        "main": true
+      }
+    ],
+    "Show of Faith": [
+      {
+        "name": "dauran",
+        "className": "PRIEST",
+        "main": true
+      }
+    ]
   },
-  freeItems: [],
+  "freeItems": [
+    "Armbands of Bedlam",
+    "Crown of Luminescence",
+    "Dark Edge of Depravity",
+    "Legguards of Cunning Deception",
+    "Sabatons of Lifeless Night",
+    "Starwatcher's Binding",
+    "Titanskin Cloak",
+    "Val'anyr, Hammer of Ancient Kings",
+    "Voldrethar, Dark Blade of Oblivion"
+  ]
 };
 
-const raid2: Raid = {
-  tanks: [
+const raid2: Raid ={
+  "tanks": [
     {
-      name: 'pacoknight',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Blood',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 38,
-            url: null,
-            name: 'Seal of the Betrayed King',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 35,
-            url: null,
-            name: 'Armbands of Bedlam',
-          },
-          status: 'OS',
-        },
-      ],
+      "name": "holynut",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'holynut',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'ProtectionPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 13,
-            url: null,
-            name: 'Bulwark of Algalon',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
+      "name": "gorosm",
+      "className": "DRUID",
+      "main": false
+    }
   ],
-  healers: [
+  "healers": [
     {
-      name: 'khaya',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'RestorationShaman',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 1,
-            url: null,
-            name: 'Bindings of Winter Gale',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 2,
-            url: null,
-            name: 'Valanyr',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "arylpog",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'aryllene',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 11,
-            url: null,
-            name: 'Belt of the Fallen Wyrm',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 10,
-            url: null,
-            name: 'Pyrelight Circle',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 9,
-            url: null,
-            name: "Wisdom's Hold",
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "kaboodles",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'jeyp',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Discipline',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 3,
-            url: null,
-            name: 'Show of Faith',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 4,
-            url: null,
-            name: 'Sapphire Amulet of Renewal',
-          },
-          status: 'OS',
-        },
-      ],
+      "name": "bullette",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'cowran',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'RestorationDruid',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "cowran",
+      "className": "DRUID",
+      "main": false
     },
     {
-      name: 'tjholy',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 8,
-            url: null,
-            name: 'Breastplate of the Devoted',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
+      "name": "jeyp",
+      "className": "PRIEST",
+      "main": true
+    }
   ],
-  dps: [
+  "dps": [
     {
-      name: 'mayvi',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'Retribution',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "notfife",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'haumea',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Enhancement',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 40,
-            url: null,
-            name: 'Boundless Gaze',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "haumea",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'littlemist',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 27,
-            url: null,
-            name: 'Warhelm of the Champion',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 28,
-            url: null,
-            name: 'Belt of Colossal Rage',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "shock",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'deadlyblight',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "littlemist",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'nagodk',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "deadlyblight",
+      "className": "DK",
+      "main": false
     },
     {
-      name: 'frostyboy',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 35,
-            url: null,
-            name: 'Armbands of Bedlam',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "nagodk",
+      "className": "DK",
+      "main": false
     },
     {
-      name: 'barrious',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Assassination',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "bride",
+      "className": "ROGUE",
+      "main": true
     },
     {
-      name: 'bridew',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Assassination',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 22,
-            url: null,
-            name: 'Drape of Icy Intent',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 24,
-            url: null,
-            name: 'Bladetwister',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "barrioustwo",
+      "className": "ROGUE",
+      "main": false
     },
     {
-      name: 'salabenji',
-      className: 'HUNTER',
-      specs: [
-        {
-          main: true,
-          type: 'Survival',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 43,
-            url: null,
-            name: 'Greaves of Swift Vengeance',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 19,
-            url: null,
-            name: 'Dreambinder',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "salabenji",
+      "className": "HUNTER",
+      "main": true
     },
     {
-      name: 'fiachna',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'FeralDps',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 12,
-            url: null,
-            name: 'Heart of Iron',
-          },
-          status: 'OS',
-        },
-      ],
+      "name": "kelthal",
+      "className": "WARRIOR",
+      "main": true
     },
     {
-      name: 'hallheim',
-      className: 'WARRIOR',
-      specs: [
-        {
-          main: true,
-          type: 'Fury',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 13,
-            url: null,
-            name: 'Bulwark of Algalon',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 42,
-            url: null,
-            name: 'Frigid Strength of Hodir',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 12,
-            url: null,
-            name: 'Heart of Iron',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 36,
-            url: null,
-            name: 'Voldrethar, Dark Blade of Oblivion',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 41,
-            url: null,
-            name: 'Sabatons of Lifeless Night',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "doggle",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'pariah',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Shadow',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 5,
-            url: null,
-            name: 'Constellus',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "azmocow",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'goll',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Elemental',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "pariah",
+      "className": "PRIEST",
+      "main": false
     },
     {
-      name: 'edenian',
-      className: 'MAGE',
-      specs: [
-        {
-          main: true,
-          type: 'Fire',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "koobo",
+      "className": "MAGE",
+      "main": true
     },
     {
-      name: 'kondoriano',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "edenian",
+      "className": "MAGE",
+      "main": true
     },
     {
-      name: 'komachi',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "komachi",
+      "className": "WARLOCK",
+      "main": false
     },
     {
-      name: 'swerved',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "swerved",
+      "className": "WARLOCK",
+      "main": true
     },
+    {
+      "name": "notpolo",
+      "className": "WARLOCK",
+      "main": true
+    }
   ],
-  occupiedCharacters: [
+  "occupiedCharacters": [
     {
-      name: 'pacoknight',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Blood',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 38,
-            url: null,
-            name: 'Seal of the Betrayed King',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 35,
-            url: null,
-            name: 'Armbands of Bedlam',
-          },
-          status: 'OS',
-        },
-      ],
+      "name": "gorosm",
+      "className": "DRUID",
+      "main": false
     },
     {
-      name: 'holynut',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'ProtectionPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 13,
-            url: null,
-            name: 'Bulwark of Algalon',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "holynut",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'khaya',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'RestorationShaman',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 1,
-            url: null,
-            name: 'Bindings of Winter Gale',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 2,
-            url: null,
-            name: 'Valanyr',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "bullette",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'aryllene',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 11,
-            url: null,
-            name: 'Belt of the Fallen Wyrm',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 10,
-            url: null,
-            name: 'Pyrelight Circle',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 9,
-            url: null,
-            name: "Wisdom's Hold",
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "arylpog",
+      "className": "PALADIN",
+      "main": true
     },
     {
-      name: 'jeyp',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Discipline',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 3,
-            url: null,
-            name: 'Show of Faith',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 4,
-            url: null,
-            name: 'Sapphire Amulet of Renewal',
-          },
-          status: 'OS',
-        },
-      ],
+      "name": "jeyp",
+      "className": "PRIEST",
+      "main": true
     },
     {
-      name: 'cowran',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'RestorationDruid',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "kaboodles",
+      "className": "PALADIN",
+      "main": false
     },
     {
-      name: 'tjholy',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'HolyPaladin',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 8,
-            url: null,
-            name: 'Breastplate of the Devoted',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "cowran",
+      "className": "DRUID",
+      "main": false
     },
     {
-      name: 'mayvi',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'Retribution',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "pariah",
+      "className": "PRIEST",
+      "main": false
     },
     {
-      name: 'haumea',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Enhancement',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 40,
-            url: null,
-            name: 'Boundless Gaze',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "littlemist",
+      "className": "DK",
+      "main": true
     },
     {
-      name: 'littlemist',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 27,
-            url: null,
-            name: 'Warhelm of the Champion',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 28,
-            url: null,
-            name: 'Belt of Colossal Rage',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "komachi",
+      "className": "WARLOCK",
+      "main": false
     },
     {
-      name: 'deadlyblight',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'Unholy',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 31,
-            url: null,
-            name: 'Plated Leggings of Ruination',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "salabenji",
+      "className": "HUNTER",
+      "main": true
     },
     {
-      name: 'nagodk',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "deadlyblight",
+      "className": "DK",
+      "main": false
     },
     {
-      name: 'frostyboy',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 35,
-            url: null,
-            name: 'Armbands of Bedlam',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "bride",
+      "className": "ROGUE",
+      "main": true
     },
     {
-      name: 'barrious',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Assassination',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "barrioustwo",
+      "className": "ROGUE",
+      "main": false
     },
     {
-      name: 'bridew',
-      className: 'ROGUE',
-      specs: [
-        {
-          main: true,
-          type: 'Assassination',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 22,
-            url: null,
-            name: 'Drape of Icy Intent',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 24,
-            url: null,
-            name: 'Bladetwister',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "haumea",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'salabenji',
-      className: 'HUNTER',
-      specs: [
-        {
-          main: true,
-          type: 'Survival',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 43,
-            url: null,
-            name: 'Greaves of Swift Vengeance',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 19,
-            url: null,
-            name: 'Dreambinder',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "doggle",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'fiachna',
-      className: 'DRUID',
-      specs: [
-        {
-          main: true,
-          type: 'FeralDps',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 33,
-            url: null,
-            name: 'Embrace of the Gladiator',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 12,
-            url: null,
-            name: 'Heart of Iron',
-          },
-          status: 'OS',
-        },
-      ],
+      "name": "nagodk",
+      "className": "DK",
+      "main": false
     },
     {
-      name: 'hallheim',
-      className: 'WARRIOR',
-      specs: [
-        {
-          main: true,
-          type: 'Fury',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 13,
-            url: null,
-            name: 'Bulwark of Algalon',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 37,
-            url: null,
-            name: 'Legguards of Cunning Deception',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 26,
-            url: null,
-            name: "Comet's Trail",
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 42,
-            url: null,
-            name: 'Frigid Strength of Hodir',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 39,
-            url: null,
-            name: 'Solar Bindings',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 12,
-            url: null,
-            name: 'Heart of Iron',
-          },
-          status: 'OS',
-        },
-        {
-          item: {
-            id: 36,
-            url: null,
-            name: 'Voldrethar, Dark Blade of Oblivion',
-          },
-          status: 'BIS',
-        },
-        {
-          item: {
-            id: 41,
-            url: null,
-            name: 'Sabatons of Lifeless Night',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "koobo",
+      "className": "MAGE",
+      "main": true
     },
     {
-      name: 'pariah',
-      className: 'PRIEST',
-      specs: [
-        {
-          main: true,
-          type: 'Shadow',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 5,
-            url: null,
-            name: 'Constellus',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "edenian",
+      "className": "MAGE",
+      "main": true
     },
     {
-      name: 'goll',
-      className: 'SHAMAN',
-      specs: [
-        {
-          main: true,
-          type: 'Elemental',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "swerved",
+      "className": "WARLOCK",
+      "main": true
     },
     {
-      name: 'edenian',
-      className: 'MAGE',
-      specs: [
-        {
-          main: true,
-          type: 'Fire',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "kelthal",
+      "className": "WARRIOR",
+      "main": true
     },
     {
-      name: 'kondoriano',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "azmocow",
+      "className": "DRUID",
+      "main": true
     },
     {
-      name: 'komachi',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "shock",
+      "className": "SHAMAN",
+      "main": true
     },
     {
-      name: 'swerved',
-      className: 'WARLOCK',
-      specs: [
-        {
-          main: true,
-          type: 'Affliction',
-        },
-      ],
-      main: true,
-      items: [],
+      "name": "notfife",
+      "className": "PALADIN",
+      "main": true
     },
+    {
+      "name": "notpolo",
+      "className": "WARLOCK",
+      "main": true
+    }
   ],
-  raidAvailableChars: [
+  "raidAvailableChars": [
     {
-      name: 'tekala',
-      className: 'HUNTER',
-      specs: [
-        {
-          main: true,
-          type: 'Survival',
-        },
-      ],
-      main: false,
-      items: [
-        {
-          item: {
-            id: 43,
-            url: null,
-            name: 'Greaves of Swift Vengeance',
-          },
-          status: 'BIS',
-        },
-      ],
+      "name": "khayaya",
+      "className": "SHAMAN",
+      "main": false
     },
     {
-      name: 'ethupanDk',
-      className: 'DK',
-      specs: [
-        {
-          main: true,
-          type: 'FrostDk',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "kondaddicted",
+      "className": "WARLOCK",
+      "main": false
     },
     {
-      name: 'zurgle',
-      className: 'WARRIOR',
-      specs: [
-        {
-          main: true,
-          type: 'Fury',
-        },
-      ],
-      main: false,
-      items: [],
+      "name": "nurghoul",
+      "className": "DK",
+      "main": false
     },
     {
-      name: 'cotolento',
-      className: 'MAGE',
-      specs: [
-        {
-          main: true,
-          type: 'Fire',
-        },
-      ],
-      main: true,
-      items: [
-        {
-          item: {
-            id: 6,
-            url: null,
-            name: 'Drape of Mortal Downfall',
-          },
-          status: 'BIS',
-        },
-      ],
-    },
-    {
-      name: 'mithrandir',
-      className: 'PALADIN',
-      specs: [
-        {
-          main: true,
-          type: 'Retribution',
-        },
-      ],
-      main: false,
-      items: [],
-    },
+      "name": "tjcardinal",
+      "className": "PALADIN",
+      "main": false
+    }
   ],
-  itemCharactersMap: {
-    'Greaves of Swift Vengeance': [
+  "originalRaidAvailableChars": [
+    {
+      "name": "davetta",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "pariah",
+      "className": "PRIEST",
+      "main": false
+    },
+    {
+      "name": "pacoknight",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "gorosm",
+      "className": "DRUID",
+      "main": false
+    },
+    {
+      "name": "bullette",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "tekala",
+      "className": "HUNTER",
+      "main": false
+    },
+    {
+      "name": "arylpog",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "aryllene",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "tjholy",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "tjcardinal",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "jeyp",
+      "className": "PRIEST",
+      "main": true
+    },
+    {
+      "name": "khaya",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "khayaya",
+      "className": "SHAMAN",
+      "main": false
+    },
+    {
+      "name": "littlemist",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "misto",
+      "className": "SHAMAN",
+      "main": false
+    },
+    {
+      "name": "tadano",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "komachi",
+      "className": "WARLOCK",
+      "main": false
+    },
+    {
+      "name": "frostyboy",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "salabenji",
+      "className": "HUNTER",
+      "main": true
+    },
+    {
+      "name": "salabonobo",
+      "className": "HUNTER",
+      "main": false
+    },
+    {
+      "name": "hallheim",
+      "className": "WARRIOR",
+      "main": true
+    },
+    {
+      "name": "kaboodles",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "deadlyfaith",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "deadlyblight",
+      "className": "DK",
+      "main": false
+    },
+    {
+      "name": "fiachna",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "nurgl",
+      "className": "ROGUE",
+      "main": true
+    },
+    {
+      "name": "nurghoul",
+      "className": "DK",
+      "main": false
+    },
+    {
+      "name": "bride",
+      "className": "ROGUE",
+      "main": true
+    },
+    {
+      "name": "bridew",
+      "className": "ROGUE",
+      "main": false
+    },
+    {
+      "name": "barrious",
+      "className": "ROGUE",
+      "main": true
+    },
+    {
+      "name": "barrioustwo",
+      "className": "ROGUE",
+      "main": false
+    },
+    {
+      "name": "haumea",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "arusha",
+      "className": "PRIEST",
+      "main": false
+    },
+    {
+      "name": "doggle",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "nagosa",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "nagodk",
+      "className": "DK",
+      "main": false
+    },
+    {
+      "name": "cotolento",
+      "className": "MAGE",
+      "main": true
+    },
+    {
+      "name": "koobo",
+      "className": "MAGE",
+      "main": true
+    },
+    {
+      "name": "koobonobo",
+      "className": "SHAMAN",
+      "main": false
+    },
+    {
+      "name": "edenian",
+      "className": "MAGE",
+      "main": true
+    },
+    {
+      "name": "palenian",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "dauran",
+      "className": "PRIEST",
+      "main": true
+    },
+    {
+      "name": "cowran",
+      "className": "DRUID",
+      "main": false
+    },
+    {
+      "name": "kondoriano",
+      "className": "WARLOCK",
+      "main": true
+    },
+    {
+      "name": "kondaddicted",
+      "className": "WARLOCK",
+      "main": false
+    },
+    {
+      "name": "nutkin",
+      "className": "WARLOCK",
+      "main": true
+    },
+    {
+      "name": "holynut",
+      "className": "PALADIN",
+      "main": false
+    },
+    {
+      "name": "swerved",
+      "className": "WARLOCK",
+      "main": true
+    },
+    {
+      "name": "nuubie",
+      "className": "MAGE",
+      "main": false
+    },
+    {
+      "name": "kelthal",
+      "className": "WARRIOR",
+      "main": true
+    },
+    {
+      "name": "azmocow",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "azmoroth",
+      "className": "WARLOCK",
+      "main": false
+    },
+    {
+      "name": "shock",
+      "className": "SHAMAN",
+      "main": true
+    },
+    {
+      "name": "kororii",
+      "className": "DRUID",
+      "main": true
+    },
+    {
+      "name": "subcom",
+      "className": "DK",
+      "main": true
+    },
+    {
+      "name": "notfife",
+      "className": "PALADIN",
+      "main": true
+    },
+    {
+      "name": "notpolo",
+      "className": "WARLOCK",
+      "main": true
+    }
+  ],
+  "raidName": RaidName.ULDUAR,
+  "itemCharactersMap": {
+    "Legguards of Cunning Deception": [
       {
-        name: 'salabenji',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 43,
-              url: null,
-              name: 'Greaves of Swift Vengeance',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "azmocow",
+        "className": "DRUID",
+        "main": true
       },
+      {
+        "name": "barrioustwo",
+        "className": "ROGUE",
+        "main": false
+      }
     ],
-    'Breastplate of the Devoted': [
+    "Star-beaded Clutch": [
       {
-        name: 'tjholy',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 8,
-              url: null,
-              name: 'Breastplate of the Devoted',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "kaboodles",
+        "className": "PALADIN",
+        "main": false
       },
+      {
+        "name": "cowran",
+        "className": "DRUID",
+        "main": false
+      }
     ],
-    "Wisdom's Hold": [
+    "Starshard Edge": [
       {
-        name: 'aryllene',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 9,
-              url: null,
-              name: "Wisdom's Hold",
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "pariah",
+        "className": "PRIEST",
+        "main": false
       },
+      {
+        "name": "komachi",
+        "className": "WARLOCK",
+        "main": false
+      }
     ],
-    Valanyr: [
+    "Cosmos": [
       {
-        name: 'khaya',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'RestorationShaman',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 1,
-              url: null,
-              name: 'Bindings of Winter Gale',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 2,
-              url: null,
-              name: 'Valanyr',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "pariah",
+        "className": "PRIEST",
+        "main": false
       },
+      {
+        "name": "komachi",
+        "className": "WARLOCK",
+        "main": false
+      }
     ],
-    'Voldrethar, Dark Blade of Oblivion': [
+    "Flare of the Heavens": [
       {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "bullette",
+        "className": "DRUID",
+        "main": true
       },
+      {
+        "name": "jeyp",
+        "className": "PRIEST",
+        "main": true
+      }
     ],
-    'Sabatons of Lifeless Night': [
+    "Pharos Gloves": [
       {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    Dreambinder: [
-      {
-        name: 'salabenji',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 43,
-              url: null,
-              name: 'Greaves of Swift Vengeance',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Legguards of Cunning Deception': [
-      {
-        name: 'salabenji',
-        className: 'HUNTER',
-        specs: [
-          {
-            main: true,
-            type: 'Survival',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 43,
-              url: null,
-              name: 'Greaves of Swift Vengeance',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 19,
-              url: null,
-              name: 'Dreambinder',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "jeyp",
+        "className": "PRIEST",
+        "main": true
       },
       {
-        name: 'fiachna',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'FeralDps',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-      {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Seal of the Betrayed King': [
-      {
-        name: 'pacoknight',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Blood',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 38,
-              url: null,
-              name: 'Seal of the Betrayed King',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 35,
-              url: null,
-              name: 'Armbands of Bedlam',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-    ],
-    'Belt of the Fallen Wyrm': [
-      {
-        name: 'aryllene',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 9,
-              url: null,
-              name: "Wisdom's Hold",
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Pyrelight Circle': [
-      {
-        name: 'aryllene',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'HolyPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 11,
-              url: null,
-              name: 'Belt of the Fallen Wyrm',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 10,
-              url: null,
-              name: 'Pyrelight Circle',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 9,
-              url: null,
-              name: "Wisdom's Hold",
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Belt of Colossal Rage': [
-      {
-        name: 'littlemist',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Unholy',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 27,
-              url: null,
-              name: 'Warhelm of the Champion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Bindings of Winter Gale': [
-      {
-        name: 'khaya',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'RestorationShaman',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 1,
-              url: null,
-              name: 'Bindings of Winter Gale',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 2,
-              url: null,
-              name: 'Valanyr',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Solar Bindings': [
-      {
-        name: 'barrious',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'fiachna',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'FeralDps',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-      {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Heart of Iron': [
-      {
-        name: 'fiachna',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'FeralDps',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-      {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Bulwark of Algalon': [
-      {
-        name: 'holynut',
-        className: 'PALADIN',
-        specs: [
-          {
-            main: true,
-            type: 'ProtectionPaladin',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Armbands of Bedlam': [
-      {
-        name: 'pacoknight',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Blood',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 38,
-              url: null,
-              name: 'Seal of the Betrayed King',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 35,
-              url: null,
-              name: 'Armbands of Bedlam',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-    ],
-    'Drape of Icy Intent': [
-      {
-        name: 'bridew',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 24,
-              url: null,
-              name: 'Bladetwister',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Show of Faith': [
-      {
-        name: 'jeyp',
-        className: 'PRIEST',
-        specs: [
-          {
-            main: true,
-            type: 'Discipline',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 3,
-              url: null,
-              name: 'Show of Faith',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 4,
-              url: null,
-              name: 'Sapphire Amulet of Renewal',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-    ],
-    'Boundless Gaze': [
-      {
-        name: 'haumea',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Enhancement',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 40,
-              url: null,
-              name: 'Boundless Gaze',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Plated Leggings of Ruination': [
-      {
-        name: 'littlemist',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Unholy',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 27,
-              url: null,
-              name: 'Warhelm of the Champion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'deadlyblight',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Unholy',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    'Frigid Strength of Hodir': [
-      {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-    ],
-    Bladetwister: [
-      {
-        name: 'bridew',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 24,
-              url: null,
-              name: 'Bladetwister',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "doggle",
+        "className": "DRUID",
+        "main": true
+      }
     ],
     "Comet's Trail": [
       {
-        name: 'haumea',
-        className: 'SHAMAN',
-        specs: [
-          {
-            main: true,
-            type: 'Enhancement',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 40,
-              url: null,
-              name: 'Boundless Gaze',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "bride",
+        "className": "ROGUE",
+        "main": true
       },
       {
-        name: 'littlemist',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Unholy',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 27,
-              url: null,
-              name: 'Warhelm of the Champion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'barrious',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'bridew',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 22,
-              url: null,
-              name: 'Drape of Icy Intent',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 24,
-              url: null,
-              name: 'Bladetwister',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'fiachna',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'FeralDps',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-        ],
-      },
-      {
-        name: 'hallheim',
-        className: 'WARRIOR',
-        specs: [
-          {
-            main: true,
-            type: 'Fury',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 13,
-              url: null,
-              name: 'Bulwark of Algalon',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 42,
-              url: null,
-              name: 'Frigid Strength of Hodir',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-          {
-            item: {
-              id: 36,
-              url: null,
-              name: 'Voldrethar, Dark Blade of Oblivion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 41,
-              url: null,
-              name: 'Sabatons of Lifeless Night',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "azmocow",
+        "className": "DRUID",
+        "main": true
+      }
     ],
-    'Warhelm of the Champion': [
+    "Starwatcher's Binding": [
       {
-        name: 'littlemist',
-        className: 'DK',
-        specs: [
-          {
-            main: true,
-            type: 'Unholy',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 27,
-              url: null,
-              name: 'Warhelm of the Champion',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 31,
-              url: null,
-              name: 'Plated Leggings of Ruination',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 28,
-              url: null,
-              name: 'Belt of Colossal Rage',
-            },
-            status: 'BIS',
-          },
-        ],
+        "name": "bullette",
+        "className": "DRUID",
+        "main": true
       },
+      {
+        "name": "doggle",
+        "className": "DRUID",
+        "main": true
+      }
     ],
-    'Embrace of the Gladiator': [
+    "Crown of Luminescence": [
       {
-        name: 'barrious',
-        className: 'ROGUE',
-        specs: [
-          {
-            main: true,
-            type: 'Assassination',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
-      {
-        name: 'fiachna',
-        className: 'DRUID',
-        specs: [
-          {
-            main: true,
-            type: 'FeralDps',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 37,
-              url: null,
-              name: 'Legguards of Cunning Deception',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 26,
-              url: null,
-              name: "Comet's Trail",
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 33,
-              url: null,
-              name: 'Embrace of the Gladiator',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 39,
-              url: null,
-              name: 'Solar Bindings',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 12,
-              url: null,
-              name: 'Heart of Iron',
-            },
-            status: 'OS',
-          },
-        ],
-      },
+        "name": "bullette",
+        "className": "DRUID",
+        "main": true
+      }
     ],
-    'Sapphire Amulet of Renewal': [
+    "Treads of the False Oracle": [
       {
-        name: 'jeyp',
-        className: 'PRIEST',
-        specs: [
-          {
-            main: true,
-            type: 'Discipline',
-          },
-        ],
-        main: true,
-        items: [
-          {
-            item: {
-              id: 3,
-              url: null,
-              name: 'Show of Faith',
-            },
-            status: 'BIS',
-          },
-          {
-            item: {
-              id: 4,
-              url: null,
-              name: 'Sapphire Amulet of Renewal',
-            },
-            status: 'OS',
-          },
-        ],
-      },
+        "name": "bullette",
+        "className": "DRUID",
+        "main": true
+      }
     ],
-    Constellus: [
+    "Sabatons of Lifeless Night": [
       {
-        name: 'pariah',
-        className: 'PRIEST',
-        specs: [
-          {
-            main: true,
-            type: 'Shadow',
-          },
-        ],
-        main: false,
-        items: [
-          {
-            item: {
-              id: 5,
-              url: null,
-              name: 'Constellus',
-            },
-            status: 'BIS',
-          },
-        ],
-      },
+        "name": "deadlyblight",
+        "className": "DK",
+        "main": false
+      }
     ],
+    "Val'anyr, Hammer of Ancient Kings": [
+      {
+        "name": "cowran",
+        "className": "DRUID",
+        "main": false
+      }
+    ],
+    "Dark Edge of Depravity": [
+      {
+        "name": "gorosm",
+        "className": "DRUID",
+        "main": false
+      }
+    ],
+    "Pendulum of Infinity": [
+      {
+        "name": "azmocow",
+        "className": "DRUID",
+        "main": true
+      }
+    ],
+    "Solar Bindings": [
+      {
+        "name": "gorosm",
+        "className": "DRUID",
+        "main": false
+      }
+    ],
+    "Conductive Seal": [
+      {
+        "name": "bullette",
+        "className": "DRUID",
+        "main": true
+      }
+    ],
+    "Show of Faith": [
+      {
+        "name": "cowran",
+        "className": "DRUID",
+        "main": false
+      }
+    ]
   },
-  freeItems: [],
+  "freeItems": [
+    "Armbands of Bedlam",
+    "Seal of the Betrayed King",
+    "Titanskin Cloak",
+    "Voldrethar, Dark Blade of Oblivion"
+  ]
 };
 
 export const mockedSplits: Split[] = [
