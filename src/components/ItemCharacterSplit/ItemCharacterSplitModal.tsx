@@ -1,5 +1,11 @@
 import { Button } from 'src/components/Button';
 import { useState } from 'react';
+import Select from 'react-select';
+
+interface Option {
+  value: string;
+  label: string;
+}
 
 interface Props {
   presetItem?: string;
@@ -7,12 +13,14 @@ interface Props {
   presetCharacterRight?: string;
   onCancel: () => void;
   onSave: (input: { item: string; characterLeft: string; characterRight: string }) => void;
+  itemsList: Option[];
 }
 
 export const ItemCharacterSplitModal = ({
   presetItem,
   presetCharacterLeft,
   presetCharacterRight,
+  itemsList,
   onCancel,
   onSave,
 }: Props) => {
@@ -22,15 +30,18 @@ export const ItemCharacterSplitModal = ({
 
   return (
     <div className="w-full h-[300%] top-0 left-0 absolute bg-slate-50/60">
-      <div className="text-center rounded border-2 border-blue-200 p-2 bg-blue-50 fixed top-[35%]">
-        <input
-          type="text"
-          placeholder="Item name"
-          className="p-2 w-4/5"
-          value={item}
-          onChange={e => setItem(e.target.value)}
+      <div className="text-left rounded border-2 border-blue-200 p-2 bg-blue-50 fixed top-[35%]">
+        <Select
+          isClearable={true}
+          isSearchable={true}
+          name="item"
+          value={{ value: item, label: item }}
+          options={itemsList}
+          onChange={option => {
+            setItem(option?.value || '');
+          }}
         />
-        <div className="flex gap-2 m-3">
+        <div className="flex gap-2 m-3 text-center">
           <textarea
             placeholder="Characters left"
             className="p-2 w-full"

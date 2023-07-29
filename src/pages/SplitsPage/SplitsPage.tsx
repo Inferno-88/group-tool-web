@@ -252,6 +252,7 @@ export const SplitsPage = () => {
         itemCharacterSplits={itemCharacterSplits}
         onIcsChange={onIcsChange}
         loading={loading}
+        raidName={splits[0].raidName}
       />
     </div>
   );

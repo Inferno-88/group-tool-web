@@ -169,6 +169,12 @@ export const ItemCharacterSplits = ({ itemCharacterSplits, onIcsChange, splitsVi
               ? currentICS[editedNumber].characterRight.join(', ')
               : undefined
           }
+          itemsList={itemsDictionary
+            .filter(item => !raidName || item.raidName === raidName)
+            .map(item => ({
+              value: item.name,
+              label: item.name,
+            }))}
         />
       )}
     </div>

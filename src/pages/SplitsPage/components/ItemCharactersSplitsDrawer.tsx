@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import { BiChevronRight, BiChevronLeft } from 'react-icons/bi';
 import { ItemCharacterSplits } from 'src/components/ItemCharacterSplit/ItemCharacterSplits';
-import { ItemCharacterSplitResponce } from 'src/types';
+import { ItemCharacterSplitResponce, RaidName } from 'src/types';
 
 interface Props {
   itemCharacterSplits?: ItemCharacterSplitResponce[];
   onIcsChange: (ics: ItemCharacterSplitResponce[]) => void;
   loading?: boolean;
+  raidName?: RaidName;
 }
 
-export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, loading }: Props) => {
+export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, loading, raidName }: Props) => {
   const [open, setOpen] = useState(true);
   const widthClass = open ? 'w-3/12' : 'w-2';
 
@@ -29,6 +30,7 @@ export const ItemCharactersSplitsDrawer = ({ itemCharacterSplits, onIcsChange, l
             onIcsChange={onIcsChange}
             splitsView
             loading={loading}
+            raidName={raidName}
           />
         </div>
       )}
