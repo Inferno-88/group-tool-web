@@ -1,6 +1,7 @@
 import { Button } from 'src/components/Button';
 import { useState } from 'react';
 import Select from 'react-select';
+import styles from './styles.module.css';
 
 interface Option {
   value: string;
@@ -13,6 +14,7 @@ interface Props {
   presetCharacterRight?: string;
   onCancel: () => void;
   onSave: (input: { item: string; characterLeft: string; characterRight: string }) => void;
+  splitsView?: boolean;
   itemsList: Option[];
   charactersList: Option[];
 }
@@ -23,6 +25,7 @@ export const ItemCharacterSplitModal = ({
   presetCharacterRight,
   itemsList,
   charactersList,
+  splitsView,
   onCancel,
   onSave,
 }: Props) => {
@@ -39,7 +42,11 @@ export const ItemCharacterSplitModal = ({
 
   return (
     <div className="w-full h-[300%] top-0 left-0 absolute bg-slate-50/60">
-      <div className="text-left rounded border-2 border-blue-200 p-2 bg-blue-50 fixed top-[35%]">
+      <div
+        className={`text-left rounded border-2 border-blue-200 p-2 bg-blue-50 fixed top-[35%] ${
+          splitsView ? '' : 'w-[29rem]'
+        }`}
+      >
         <Select
           isClearable={true}
           isSearchable={true}
@@ -61,6 +68,11 @@ export const ItemCharacterSplitModal = ({
               console.log(options);
               setCharacterLeft(options?.map(option => option.value).join(', '));
             }}
+            classNames={{
+              container: () => 'w-1/2',
+              indicatorsContainer: () => styles.iconsContainer,
+              valueContainer: () => 'p-1',
+            }}
           />
           <Select
             isSearchable={true}
@@ -71,6 +83,11 @@ export const ItemCharacterSplitModal = ({
             onChange={options => {
               console.log(options);
               setCharacterRight(options?.map(option => option.value).join(', '));
+            }}
+            classNames={{
+              container: () => 'w-1/2',
+              indicatorsContainer: () => styles.iconsContainer,
+              valueContainer: () => 'p-1',
             }}
           />
         </div>

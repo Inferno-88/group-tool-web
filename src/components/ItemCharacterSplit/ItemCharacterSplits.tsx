@@ -184,6 +184,7 @@ export const ItemCharacterSplits = ({
               label: item.name,
             }))}
           charactersList={charactersList || []}
+          splitsView={splitsView}
         />
       )}
     </div>
