@@ -44,7 +44,7 @@ export const ItemCharacterSplitModal = ({
     <div className="w-full h-[300%] top-0 left-0 absolute bg-slate-50/60">
       <div
         className={`text-left rounded border-2 border-blue-200 p-2 bg-blue-50 fixed top-[35%] ${
-          splitsView ? '' : 'w-[29rem]'
+          splitsView ? 'w-[19%]' : 'w-[29rem]'
         }`}
       >
         <Select
