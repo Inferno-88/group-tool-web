@@ -57,7 +57,7 @@ export const ItemCharacterSplitModal = ({
             setItem(option?.value || '');
           }}
         />
-        <div className="flex gap-2 my-3 mx-1 text-center">
+        <div className="flex gap-1 my-3 text-center">
           <Select
             isSearchable={true}
             isMulti={true}
@@ -87,7 +87,7 @@ export const ItemCharacterSplitModal = ({
             classNames={{
               container: () => 'w-1/2',
               indicatorsContainer: () => styles.iconsContainer,
-              valueContainer: () => 'p-1',
+              valueContainer: () => '!p-1',
             }}
           />
         </div>
