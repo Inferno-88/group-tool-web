@@ -37,10 +37,10 @@ export const ItemCharacterSplitItem = ({ ics, onDelete, onEdit, loading, noStatu
             )}
           </>
         )}
-        <p className="m-auto">
+        <p className="m-auto font-semibold">
           {ics.item}
           {ics.raidName ? (
-            <span className="text-xs lowercase"> ({ics.raidName})</span>
+            <span className="text-xs lowercase font-normal"> ({ics.raidName})</span>
           ) : (
             <FaExclamationTriangle
               className="inline-block ml-1 text-rose-700"
